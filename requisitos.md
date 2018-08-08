@@ -31,4 +31,6 @@ Haverá abas e menus para auxiliar o usúario a achar a informação que procura
 
 O software será disponibilizado em português, sem versões internacionais.
 
-
+### RNF 8
+ 
+O sistema poderá ser modificado apenas on-line, mas pode ser visualizado off-line.
