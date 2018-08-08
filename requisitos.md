@@ -4,7 +4,7 @@
 
 ### RNF 1
 
- Todos os registros dos alunos cadastrados no sistema poderão ser mantidos (alterados/consultados/excluídos) com o sistema off-line e novos registros poderão ser incluídos também com o sistema off-line. Todos os relatórios do módulo de informações cadastrais também precisarão rodar off-line.
+ Todos os registros dos alunos cadastrados no sistema poderão ser mantidos (alterados/consultados/excluídos) com o sistema off-line e novos registros poderão ser incluídos também com o sistema on-line.Todos os relatórios do módulo de informações cadastrais também precisarão rodar on-line.
 
 
 ### RNF 2
