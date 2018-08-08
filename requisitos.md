@@ -11,3 +11,6 @@
 
 O sistema poderá ser executado a qualquer hora do dia. 
 
+### RNF 3
+
+Será solicitado a matricula e uma senha para aqueles que terão acesso para acessar as informações contidas no software, por questões de segurança para não expor o(s) aluno(s).
