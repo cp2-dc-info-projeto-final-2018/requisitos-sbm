@@ -27,4 +27,8 @@ Terá uma conexão com o Excel para o acesso da notas e faltas.
 
 Haverá abas e menus para auxiliar o usúario a achar a informação que procura.
 
+### RNF 7
+
+O software será disponibilizado em português, sem versões internacionais.
+
 
