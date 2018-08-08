@@ -23,3 +23,8 @@ Para constar a segurança do software serão testados com um banco de dados fake
 
 Terá uma conexão com o Excel para o acesso da notas e faltas.
 
+### RNF 6
+
+Haverá abas e menus para auxiliar o usúario a achar a informação que procura.
+
+
