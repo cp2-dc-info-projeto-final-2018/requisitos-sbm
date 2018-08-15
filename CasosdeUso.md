@@ -1,6 +1,20 @@
 # Casos de Uso
 
-## CDU1:
+
+## CDU1(Cadastrar Aluno)
+
+### Ator: SESOP. 
+
+### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+
+### Fluxo Principal: 
+
+
+1)	SESOP utiliza os dados dos alunos presentes em suas fichas;
+2)	Cadastro no sistema;
+3)	Atualizar o sistema. 
+
+
 
 ## CDU2
 
