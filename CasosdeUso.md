@@ -10,7 +10,11 @@
 
 ### Autores: SESOP e Direção.
 
-### Pré-Condições: 
+### Pré-Condições: Autenticar a matrícula do usúario.
+
+### Fluxo Principal:
+
+	1.
 
 ## CDU5
 
