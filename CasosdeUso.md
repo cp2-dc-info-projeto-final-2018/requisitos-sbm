@@ -30,45 +30,45 @@ Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específic
 
 ## CDU3 (Cadastrar Usuário)
 
-### Ator: SESOP. 
+##### Ator: SESOP. 
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 ## CDU4: (Visualizar Calendário)
 
-### Autores: SESOP e Direção.
+##### Autores: SESOP e Direção.
 
-### Pré-Condições: Autenticar a matrícula do usúario.
+##### Pré-Condições: Autenticar a matrícula do usúario.
 
-### Fluxo Principal:
+##### Fluxo Principal:
 
 	1.
 
 ## CDU5 (Pesquisar Aluno)
 
-### Atores: SESOP e Direção.
+##### Atores: SESOP e Direção.
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
-1.Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações.
-2. Filtros especializados em ambas as telas para facilitar a procura de informações.
+	1.Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações.
+	2. Filtros especializados em ambas as telas para facilitar a procura de informações.
 
 Uma tela de início irá aparecer a qual deverá ser informada a matrícula e senha do usúario, 
 
 
 ## CDU6 (Gerenciar Calendário)
 
-### Ator: SESOP. 
+##### Ator: SESOP. 
 
-### Pré-condições : Usuário do SESOP tem que controlar os atendimentos diários.
+##### Pré-condições : Usuário do SESOP tem que controlar os atendimentos diários.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 1) Marcar o horário com os discentes, docentes, responsáveis ou outros;
@@ -81,20 +81,20 @@ Contudo, as alterações do calendário serão feitas somente pelo SESOP, já qu
 
 ## CDU7 (Registrar Atendimento)
 
-### Ator: SESOP. 
+##### Ator: SESOP. 
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 ## CDU8 (Visualizar Atendimento)
 
-### Atores: SESOP e Direção. 
+##### Atores: SESOP e Direção. 
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 
