@@ -92,11 +92,11 @@ Contudo, as alterações do calendário serão feitas somente pelo SESOP, já qu
 
 ##### Fluxo Principal: 
 
-1)    Registrar o atedimento consite em escrever na ficha do aluno o que foi realizado.
-2)    Registrar o horário será obrigatório, pois o SESOP terá que ser comprovado o atendimento, caso um responsável do aluno ou da equipe escolar.
+1)    Registrar o atedimento consite em escrever na ficha do aluno o que foi realizado no mesmo.
+2)    É obrigatório que registrem o horário de início do atendimento. Com isso o SESOP terá como comprovar o atendimento, caso um responsável do aluno ou da equipe escolar tenha interesse.
 
-O registro deve conter uma pequena descrição sobre o que foi realizado no atendimento, e haverão checklist para selecionar o motivo do atendimento aos que procuram o SESOP sendo totalmente editável para atender as necessidades específicas.
-O fluxo do processo de atendimento deve permitir desenvolver a estrutura básica para a gestão do entre o relacionamento do SESOP e aluno. Da mesma forma, deve garantir que seja possível o acompanhamento dos alunos, através do checklist, pois no modo de pesquisa haverá uma bolinha com uma cor e sua intensidade, demostra a gravidade daquele fato.
+O registro deve conter uma pequena descrição sobre o que foi realizado no atendimento e haverão checklists para selecionar o motivo do atendimento aos que procuram o SESOP sendo totalmente editável para atender as necessidades específicas.
+O fluxo do processo de atendimento deve permitir desenvolver a estrutura básica para a gestão entre o relacionamento do SESOP e aluno. Da mesma forma, deve garantir que seja possível o acompanhamento dos alunos, através do checklist, pois no modo de pesquisa haverá uma bolinha com uma cor e sua intensidade, demostra a gravidade daquele fato.
 
 
 ## CDU8 (Visualizar Atendimento)
