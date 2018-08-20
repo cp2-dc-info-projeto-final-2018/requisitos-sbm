@@ -3,9 +3,9 @@
 
 ## CDU1(Cadastrar Aluno)
 
-### Ator: SESOP.
+###### Ator: SESOP.
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+###### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
 ### Fluxo Principal: 
 
