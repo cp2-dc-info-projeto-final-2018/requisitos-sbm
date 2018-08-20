@@ -51,7 +51,13 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 ##### Fluxo Principal:
 
-1)    
+1)     Será como uma agenda, onde há atendimentos que o SESOP faz, durante um certo período.
+
+Poderá ser visualizado no período semanal ou mensal todos os atendimentos que o SESOP realizou ou irá realizar no período selecionado.
+A visualização não poderá alterar nada do sistema, mas sim ter um panorama de quantos atendimentos o SESOP estará fazendo. 
+*O SESOP deverá consultar o caledário antes de gerenciar, já precisam saber se há um atendimento agendado*
+
+
 
 
 
@@ -87,6 +93,7 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 
 Haverá uma tela para o responsável do SESOP cadastrar o agendamento estabelecendo o dia, mês e ano, no horário escolhido pela preferência. Depois de agendar, deverá escolher um tema objetivo para se alguém visualizar, o lembrete, não haverá uma divulgação dos dados do discente.
 Contudo, as alterações do calendário serão feitas somente pelo SESOP, já que são estes que realizam o atendimento.
+*Para criar uma tarefa em um calendário, clique em um espaço vazio na data desejada e um editor de tarefas vai aparecer.*
 
 
 ## CDU7 (Registrar Atendimento)
