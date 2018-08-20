@@ -3,11 +3,11 @@
 
 ## CDU1(Cadastrar Aluno)
 
-###### Ator: SESOP.
+##### Ator: SESOP.
 
-###### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 1)	SESOP utiliza os dados dos alunos presentes em suas fichas;
@@ -21,11 +21,11 @@ Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específic
 
 ## CDU2 (Autenticar)
 
-### Atores : SESOP e Direção.
+##### Atores : SESOP e Direção.
 
-### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
 
-### Fluxo Principal: 
+##### Fluxo Principal: 
 
 
 ## CDU3 (Cadastrar Usuário)
