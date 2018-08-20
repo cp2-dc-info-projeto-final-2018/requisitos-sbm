@@ -45,7 +45,7 @@ Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específic
 
 ##### Fluxo Principal:
 
-	1.
+
 
 ## CDU5 (Pesquisar Aluno)
 
@@ -56,8 +56,9 @@ Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específic
 ##### Fluxo Principal: 
 
 
-	1.Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações.
-	2. Filtros especializados em ambas as telas para facilitar a procura de informações.
+	
+   1.Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações.
+   2. Filtros especializados em ambas as telas para facilitar a procura de informações.
 
 Uma tela de início irá aparecer a qual deverá ser informada a matrícula e senha do usúario, 
 
