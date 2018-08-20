@@ -30,8 +30,8 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 1)   Verificar quem está entrando no software.
 
-Este é um procedimento para atestar a identidade e a autenticidade de um indivíduo simplesmente através da detecção dasenha criada no cadastramento do usuário. Para que este método seja eficiente, é necessário, a matrícula e a senha estarem registradas para saber se são autenticas ou não. Caso não sejam autenticas, o usuário será informado e terá a chance de resgatar sua senha através do e-mail que foi utilizado para fazer o cadastro.
-As autentificações terão funções distintas já que dependendo se o usuário for membro do SESOP ou direção, terão visualizaçõesde telas e atribuições diferentes.
+Este é um procedimento para atestar a identidade e a autenticidade de um indivíduo simplesmente através da detecção da senha criada no cadastramento do usuário. Para que este método seja eficiente, é necessário, que a matrícula e a senha estarem registradas para saber se são autenticas ou não. Caso não sejam autenticas, o usuário será informado e terá a chance de resgatar sua senha através do e-mail que foi utilizado para fazer o cadastro.
+As autentificações terão funções distintas já que dependendo se o usuário for membro do SESOP ou da direção, terão visualizações de telas e atribuições diferentes.
 *Este e-mail será o do SESOP para evitar que qualquer um se cadastre*
 
 ## CDU3 (Cadastrar Usuário)
