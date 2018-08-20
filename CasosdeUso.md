@@ -15,7 +15,8 @@
 3)	Atualizar o sistema. 
 
 Deve ser cadrastado o aluno através da supervisão do pessoal do SESOP, só esses poderam alterar/adicionar o prontuário do aluno(Adicionar os dados também será responsabilidade do SESOP).
-Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específica.
+Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específica, isso fará com que as informações dos discentes fiquem em segurança. 
+A direção jamais poderá modificar os elementos do banco de dados.
 
 
 
@@ -60,7 +61,9 @@ Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específic
    1.Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações.
    2. Filtros especializados em ambas as telas para facilitar a procura de informações.
 
-Uma tela de início irá aparecer a qual deverá ser informada a matrícula e senha do usúario, 
+Uma tela de início irá aparecer a qual deverá ser informada a matrícula e senha do usuário, depois iram aparecer um menu de opções para a visualização do aluno como: exibir por foto de perfil, nome, matricula ou gravidade. Se for selicionado gravidade será aberto um submenu para escolher entre: quantidade(s) do(s) apoio(s), as faltas e atrasos.
+Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se encaixam na pesquisa até o usuário achar o aluno que procura.
+*Isto será válido para a direção e o SESOP, mas a única diferença é que o SESOP pode adicionar/modificar/excluir os dados da ficha dos alunos*
 
 
 ## CDU6 (Gerenciar Calendário)
