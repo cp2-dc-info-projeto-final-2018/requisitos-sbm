@@ -55,7 +55,7 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 Poderá ser visualizado no período semanal ou mensal todos os atendimentos que o SESOP realizou ou irá realizar no período selecionado.
 A visualização não poderá alterar nada do sistema, mas sim ter um panorama de quantos atendimentos o SESOP estará fazendo. 
-*O SESOP deverá consultar o caledário antes de gerenciar, já precisam saber se há um atendimento agendado*
+*O SESOP deverá consultar o caledário antes de gerenciar, já precisam saber se há um atendimento agendado ou não.*
 
 
 
