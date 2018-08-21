@@ -5,20 +5,22 @@
 
 ##### Ator: SESOP.
 
-##### Pré-condições : Só o SESOP poderá cadastrar um aluno novo.
+##### Pré-condições : Usuário deve estar autenticado.
 
 ##### Fluxo Principal: 
 
 
-1)	SESOP utiliza os dados dos alunos presentes em suas fichas;
-2)	Cadastro no sistema;
-3)	Atualizar o sistema. 
-
-Deve ser cadrastado o aluno através da supervisão do pessoal do SESOP, só esses poderam alterar/adicionar o prontuário do aluno(Adicionar os dados também será responsabilidade do SESOP).
-Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específica, isso fará com que as informações dos discentes fiquem em segurança. 
-A direção jamais poderá modificar os elementos do banco de dados.
-
-
+1)	Usuário deve acessar a tela de cadastramento;
+2)	Usuário deve inserir os dados do aluno: 
+	- Nome;
+	- E-mail(alunos - opcional); 
+	- Matrícula;
+	- Telefone;
+	- E-mail(pais);
+	- Turma;
+	- Endereço.
+3)	Sistema irá guardar os dados;
+4)  Usuário poderá atualizar o sistema. 
 
 ## CDU2 (Autenticar)
 
