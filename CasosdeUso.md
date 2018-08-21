@@ -13,11 +13,11 @@
 
 ## CDU1(Cadastrar Aluno)
 
-##### **Ator:** SESOP.
+**Ator:** SESOP.
 
-##### **Pré-condições:** Só o SESOP poderá cadastrar um aluno novo.
+**Pré-condições:** Só o SESOP poderá cadastrar um aluno novo.
 
-##### **Fluxo Principal:** 
+**Fluxo Principal:** 
 
 
 1)	SESOP utiliza os dados dos alunos presentes em suas fichas;
@@ -32,11 +32,11 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 ## CDU2(Autenticar)
 
-##### **Atores:** SESOP e Direção.
+**Atores:** SESOP e Direção.
 
-##### **Pré-condições:** Autenticar a matrícula do usúario.
+**Pré-condições:** Autenticar a matrícula do usúario.
 
-##### **Fluxo Principal:**
+**Fluxo Principal:**
 
 1)Verificar quem está entrando no software.
 
@@ -46,11 +46,11 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 ## CDU3 (Cadastrar Usuário)
 
-##### **Ator:** SESOP. 
+**Ator:** SESOP. 
 
-##### **Pré-condições:** Só o SESOP poderá confirmar o cadastro do novo usuário.
+**Pré-condições:** Só o SESOP poderá confirmar o cadastro do novo usuário.
 
-##### **Fluxo Principal:** 
+**Fluxo Principal:** 
 
 1)Este cadastro só poderá ser feito pelo administrador do SESOP, através de uma senha especial;
 2)Será necessário cadastrar com senha, nome, e-mail, matrícula, categoria( se atua no SESOP ou na direção ), será mandado um pedido para entrar no software através do e-mail do SESOP por questão de segurança.
@@ -69,11 +69,11 @@ O sistema verifica os dados digitados. Logo, depois da confirmação este guarda
 
 ## CDU4: (Visualizar Calendário)
 
-##### **Autores:** SESOP e Direção.
+**Autores:** SESOP e Direção.
 
-##### **Pré-Condições:** Visualização dos agendamentos semanais ou mensais.
+**Pré-Condições:** Visualização dos agendamentos semanais ou mensais.
 
-##### **Fluxo Principal:**
+**Fluxo Principal:**
 
 1)Será como uma agenda, onde há atendimentos que o SESOP faz, durante um certo período.
 
@@ -84,11 +84,11 @@ A visualização não poderá alterar nada do sistema, mas sim ter um panorama d
 
 ## CDU5 (Pesquisar Aluno)
 
-##### **Atores:** SESOP e Direção.
+**Atores:** SESOP e Direção.
 
-##### **Pré-condições:** Uma pequena busca por um aluno específico ou com especificações de filtros. 
+**Pré-condições:** Uma pequena busca por um aluno específico ou com especificações de filtros. 
 
-##### **Fluxo Principal:** 
+**Fluxo Principal:** 
  
  1)	Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações;
  2)	Filtros especializados em ambas as telas para facilitar a procura de informações mais específicas.
@@ -101,11 +101,11 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 
 ## CDU6 (Gerenciar Calendário)
 
-##### **Ator:** SESOP. 
+**Ator:** SESOP. 
 
-##### **Pré-condições:** Agendamento do atendimentos.
+**Pré-condições:** Agendamento do atendimentos.
 
-##### **Fluxo Principal:** 
+**Fluxo Principal:** 
 
 
 1) 	Marcar o horário com os discentes, docentes, responsáveis ou outros;
@@ -117,7 +117,7 @@ Contudo, as alterações do calendário serão feitas somente pelo SESOP, já qu
 *Para criar uma tarefa em um calendário, clique em um espaço vazio na data desejada e um editor de tarefas vai aparecer.*
 
 
-CDU7 (Registrar Atendimento)
+## CDU7 (Registrar Atendimento)
 
 **Ator:** SESOP. 
 
@@ -134,11 +134,11 @@ O fluxo do processo de atendimento deve permitir desenvolver a estrutura básica
 
 ## CDU8 (Visualizar Atendimento)
 
-##### **Atores:** SESOP e Direção. 
+**Atores:** SESOP e Direção. 
 
-##### **Pré-condições:** Visualização dos atendimentos para que estejam cientes dos casos do aluno.
+**Pré-condições:** Visualização dos atendimentos para que estejam cientes dos casos do aluno.
 
-##### **Fluxo Principal:** 
+**Fluxo Principal:** 
 
 1) Não será obigatório uma descrição longa do atendimento;
 2) Ambos terão o acesso para ficarem cientes da situação do aluno.
