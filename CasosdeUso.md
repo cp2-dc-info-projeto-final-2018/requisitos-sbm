@@ -49,12 +49,12 @@ O usuário seleciona a opção cadastrar, conectado no e-mail do SESOP, senão f
 O usuário preenche os dados e depois de clicar em confirmar é enviado as informações para o e-mail do SESOP para ser aprovado.
 O sistema verifica os dados digitados. Logo, depois da confirmação este guarda os dados do usuário, fzendo isto é encaminhado ao usuário para página inicial e retorna mensagem de cadastro realizado.
 <p> Haverá uma tela que deverá ser preenchida com base dos dados abaixo:</p>
-  **Nome**	No mínimo 3 no máximo 70 caracteres.
-  **Matrícula:** Deve possuir números e letras.
-  **Categoria**	Deve ser uma das duas opções: atuante do SESOP ou atuante da direção.
-  **E-mail**	Deve possuir formato válido como: email@exemplo.com.
-  **Senha**	Deve possuir no mínino 6 e no máximo 12 caracteres.
-  **Confirmação** de senha	Deve estar preenchido de forma idêntica a senha.
+<p>  *Nome	No mínimo 3 no máximo 70 caracteres.</p>
+<p>  *Matrícula: Deve possuir números e letras.</p>
+<p>  *Categoria:	Deve ser uma das duas opções: atuante do SESOP ou atuante da direção.</p>
+<p>  *E-mail:	Deve possuir formato válido como: email@exemplo.com.</p>
+<p>  *Senha:	Deve possuir no mínino 6 e no máximo 12 caracteres.</p>
+<p>  *Confirmação de senha:	Deve estar preenchido de forma idêntica a senha.</p>
 
 
 ## CDU4: (Visualizar Calendário)
