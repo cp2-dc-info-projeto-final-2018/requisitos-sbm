@@ -2,9 +2,14 @@
 
 # Sumário
 
-- [CDU1 (Cadastrar Aluno)](#cdu1-(Cadastrar-Aluno))
-- [CDU2 (Autenticar)](#cdu2-(Autenticar))
-- [CDU3 (Cadastrar Usuário)](#cdu3-(Cadastrar-Usuário))
+- [CDU1 (Cadastrar Aluno)](#cdu1-(cadastrar-aluno))
+- [CDU2 (Autenticar)](#cdu2-(autenticar))
+- [CDU3 (Cadastrar Usuário)](#cdu3-(cadastrar-usuário))
+- [CDU4 (Visualizar Calendário)](#cdu4-(visualizar-calendário))
+- [CDU5 (Pesquisar Aluno)](#cdu5-(pesquisar-aluno))
+- [CDU6 (Gerenciar Calendário)](#cdu6-(gerenciar-calendário))
+- [CDU7 (Registrar Atendimento)](#cdu7-(registrar-atendimento))
+- [CDU8 (Visualizar Atendimento)](#cdu8-(visualizar-atendimento))
 
 ## CDU1(Cadastrar Aluno)
 
