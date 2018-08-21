@@ -28,11 +28,11 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 ##### Fluxo Principal:
 
-1)   Verificar quem está entrando no software.
+1)Verificar quem está entrando no software.
 
 Este é um procedimento para atestar a identidade e a autenticidade de um indivíduo simplesmente através da detecção da senha criada no cadastramento do usuário. Para que este método seja eficiente, é necessário, que a matrícula e a senha estarem registradas para saber se são autenticas ou não. Caso não sejam autenticas, o usuário será informado e terá a chance de resgatar sua senha através do e-mail que foi utilizado para fazer o cadastro.
 As autentificações terão funções distintas já que dependendo se o usuário for membro do SESOP ou da direção, terão visualizações de telas e atribuições diferentes.
-*Este e-mail será o do SESOP para evitar que qualquer um se cadastre*
+*Este e-mail será o do SESOP para evitar que qualquer um se cadastre.*
 
 ## CDU3 (Cadastrar Usuário)
 
@@ -42,14 +42,17 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 ##### Fluxo Principal: 
 
-1)     Este cadastro só poderá ser feito pelo administrador do SESOP, através de uma senha especial;
-2)     Será necessário cadastrar com senha, nome, e-mail, matrícula, categoria( se atua no SESOP ou na direção ), será mandado um pedido para entrar no software através do e-mail do SESOP por questão de segurança.
+1)Este cadastro só poderá ser feito pelo administrador do SESOP, através de uma senha especial;
+2)Será necessário cadastrar com senha, nome, e-mail, matrícula, categoria( se atua no SESOP ou na direção ), será mandado um pedido para entrar no software através do e-mail do SESOP por questão de segurança.
 
+O usuário seleciona a opção cadastrar, conectado no e-mail do SESOP, senão for assim o usuário não poderá ser cadastrado.
+O usuário preenche os dados e depois de clicar em confirmar é enviado as informações para o e-mail do SESOP para ser aprovado.
+O sistema verifica os dados digitados. Logo, depois da confirmação este guarda os dados do usuário, fzendo isto é encaminhado ao usuário para página inicial e retorna mensagem de cadastro realizado.
 <p> Haverá uma tela que deverá ser preenchida com base dos dados abaixo:</p>
   **Nome**	No mínimo 3 no máximo 70 caracteres.
   **Matrícula:** Deve possuir números e letras.
   **Categoria**	Deve ser uma das duas opções: atuante do SESOP ou atuante da direção.
-  **E-mail**	Deve possuir formato válido como no exemplo: email@exemplo.com.
+  **E-mail**	Deve possuir formato válido como: email@exemplo.com.
   **Senha**	Deve possuir no mínino 6 e no máximo 12 caracteres.
   **Confirmação** de senha	Deve estar preenchido de forma idêntica a senha.
 
@@ -62,7 +65,7 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 ##### Fluxo Principal:
 
-1)     Será como uma agenda, onde há atendimentos que o SESOP faz, durante um certo período.
+1)Será como uma agenda, onde há atendimentos que o SESOP faz, durante um certo período.
 
 Poderá ser visualizado no período semanal ou mensal todos os atendimentos que o SESOP realizou ou irá realizar no período selecionado.
 A visualização não poderá alterar nada do sistema, mas sim ter um panorama de quantos atendimentos o SESOP estará fazendo. 
