@@ -45,13 +45,13 @@ As autentificações terão funções distintas já que dependendo se o usuário
 1)     Este cadastro só poderá ser feito pelo administrador do SESOP, através de uma senha especial;
 2)     Será necessário cadastrar com senha, nome, e-mail, matrícula, categoria( se atua no SESOP ou na direção ), será mandado um pedido para entrar no software através do e-mail do SESOP por questão de segurança.
 
-Haverá uma tela que deverá ser preenchida com base dos dados abaixo:
-*Nome*	No mínimo 3 no máximo 70 caracteres.
-*Matrícula*	Deve possuir números e letras.
-*Categoria*	Deve ser uma das duas opções: atuante do SESOP ou atuante da direção.
-*E-mail*	Deve possuir formato válido como no exemplo: email@exemplo.com.
-*Senha*	Deve possuir no mínino 6 e no máximo 12 caracteres.
-*Confirmação* de senha	Deve estar preenchido de forma idêntica a senha.
+<p> Haverá uma tela que deverá ser preenchida com base dos dados abaixo:</p>
+  **Nome**	No mínimo 3 no máximo 70 caracteres.
+  **Matrícula:** Deve possuir números e letras.
+  **Categoria**	Deve ser uma das duas opções: atuante do SESOP ou atuante da direção.
+  **E-mail**	Deve possuir formato válido como no exemplo: email@exemplo.com.
+  **Senha**	Deve possuir no mínino 6 e no máximo 12 caracteres.
+  **Confirmação** de senha	Deve estar preenchido de forma idêntica a senha.
 
 
 ## CDU4: (Visualizar Calendário)
