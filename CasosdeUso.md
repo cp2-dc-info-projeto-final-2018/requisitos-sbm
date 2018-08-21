@@ -20,9 +20,9 @@
 **Fluxo Principal:** 
 
 
-1)	SESOP utiliza os dados dos alunos presentes em suas fichas;
-2)	Cadastro no sistema;
-3)	Atualizar o sistema. 
+1.	SESOP utiliza os dados dos alunos presentes em suas fichas;
+2.	Cadastro no sistema;
+3.	Atualizar o sistema. 
 
 Deve ser cadrastado o aluno através da supervisão do pessoal do SESOP, só esses poderam alterar/adicionar o prontuário do aluno(Adicionar os dados também será responsabilidade do SESOP).
 Isso será feito ao indíviduo ao entrar com a matrícula e uma senha específica, isso fará com que as informações dos discentes fiquem em segurança. 
@@ -38,7 +38,7 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 **Fluxo Principal:**
 
-1)Verificar quem está entrando no software.
+1. Verificar quem está entrando no software.
 
 Este é um procedimento para atestar a identidade e a autenticidade de um indivíduo simplesmente através da detecção da senha criada no cadastramento do usuário. Para que este método seja eficiente, é necessário, que a matrícula e a senha estarem registradas para saber se são autenticas ou não. Caso não sejam autenticas, o usuário será informado e terá a chance de resgatar sua senha através do e-mail que foi utilizado para fazer o cadastro.
 As autentificações terão funções distintas já que dependendo se o usuário for membro do SESOP ou da direção, terão visualizações de telas e atribuições diferentes.
