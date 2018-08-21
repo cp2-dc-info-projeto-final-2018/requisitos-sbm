@@ -117,13 +117,13 @@ Contudo, as alterações do calendário serão feitas somente pelo SESOP, já qu
 *Para criar uma tarefa em um calendário, clique em um espaço vazio na data desejada e um editor de tarefas vai aparecer.*
 
 
-## CDU7 (Registrar Atendimento)
+CDU7 (Registrar Atendimento)
 
-##### **Ator:** SESOP. 
+**Ator:** SESOP. 
 
-##### **Pré-condições:** O SESOP terá que registrar o atendimento.
+**Pré-condições:** O SESOP terá que registrar o atendimento.
 
-##### **Fluxo Principal:**
+**Fluxo Principal:**
 
 1)    Registrar o atedimento consite em escrever na ficha do aluno o que foi realizado no mesmo;
 2)    É obrigatório que registrem o horário de início do atendimento. Com isso o SESOP terá como comprovar o atendimento, caso um responsável do aluno ou da equipe escolar tenha interesse.
