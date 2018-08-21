@@ -1,8 +1,10 @@
 # Casos de Uso
 
-#Sumário
+# Sumário
 
-- [CDU1(Cadastrar Aluno)](#cdu1(Cadastrar-Aluno))
+- [CDU1 (Cadastrar Aluno)](#cdu1-(Cadastrar-Aluno))
+- [CDU2 (Autenticar)](#cdu2-(Autenticar))
+- [CDU3 (Cadastrar Usuário)](#cdu3-(Cadastrar-Usuário))
 
 ## CDU1(Cadastrar Aluno)
 
@@ -23,7 +25,7 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 
 
-## CDU2 (Autenticar)
+## CDU2(Autenticar)
 
 ##### Atores : SESOP e Direção.
 
