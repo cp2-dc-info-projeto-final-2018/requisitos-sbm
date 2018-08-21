@@ -5,7 +5,7 @@
 
 ##### Ator: SESOP.
 
-##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Só o SESOP poderá cadastrar um aluno novo.
 
 ##### Fluxo Principal: 
 
@@ -24,7 +24,7 @@ A direção jamais poderá modificar os elementos do banco de dados.
 
 ##### Atores : SESOP e Direção.
 
-##### Pré-condições : .
+##### Pré-condições : Autenticar a matrícula do usúario.
 
 ##### Fluxo Principal:
 
@@ -38,7 +38,7 @@ As autentificações terão funções distintas já que dependendo se o usuário
 
 ##### Ator: SESOP. 
 
-##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Só o SESOP poderá confirmar o cadastro do novo usuário.
 
 ##### Fluxo Principal: 
 
@@ -61,7 +61,7 @@ O sistema verifica os dados digitados. Logo, depois da confirmação este guarda
 
 ##### Autores: SESOP e Direção.
 
-##### Pré-Condições: Autenticar a matrícula do usúario.
+##### Pré-Condições: Visualização dos agendamentos semanais ou mensais.
 
 ##### Fluxo Principal:
 
@@ -79,7 +79,7 @@ A visualização não poderá alterar nada do sistema, mas sim ter um panorama d
 
 ##### Atores: SESOP e Direção.
 
-##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Uma pequena busca por um aluno específico ou com especificações de filtros. 
 
 ##### Fluxo Principal: 
  
@@ -96,7 +96,7 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 
 ##### Ator: SESOP. 
 
-##### Pré-condições : Usuário do SESOP tem que controlar os atendimentos diários.
+##### Pré-condições : Agendamento do atendimentos.
 
 ##### Fluxo Principal: 
 
@@ -114,7 +114,7 @@ Contudo, as alterações do calendário serão feitas somente pelo SESOP, já qu
 
 ##### Ator: SESOP. 
 
-##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : O SESOP terá que registrar o atendimento.
 
 ##### Fluxo Principal: 
 
@@ -129,7 +129,7 @@ O fluxo do processo de atendimento deve permitir desenvolver a estrutura básica
 
 ##### Atores: SESOP e Direção. 
 
-##### Pré-condições : Usuário do SESOP tem que estar autenticado no sistema.
+##### Pré-condições : Visualização dos atendimentos para que estejam cientes dos casos do aluno.
 
 ##### Fluxo Principal: 
 
@@ -139,7 +139,3 @@ O fluxo do processo de atendimento deve permitir desenvolver a estrutura básica
 Diferente do visualizar calendário, o visualizar atendimento é onde o usuário poderá ver a ficha do aluno e a descrição do que foi ocorrido no atendimento com o SESOP. Será exibido a ficha tanto do atendimento do aluno, tanto do atendimento dos resposáveis, dos discentes.
 Poderão ser obtidos comentários objetivos, caso o aluno queira descrição da conversa, ou seja, um caso mais pessoal e muito grave.
 *Na visualização do atendimento poderá ser informado se o aluno é atendido pelo NAPNE ou se tem algo que precisa ser observado com atenção, como alguma repetencia ou aprovação por COC.*
-
-
-
-
