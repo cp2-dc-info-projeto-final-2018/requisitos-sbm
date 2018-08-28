@@ -32,7 +32,7 @@
 3.	Sistema irá guardar os dados;
 4.  Usuário poderá atualizar o sistema. 
 
-## CDU2(Autenticar)
+## CDU 2 - Autenticar
 
 **Atores:** SESOP e Direção.
 
@@ -43,7 +43,7 @@
 1. Usuário informa login e senha;
 2. Sistema averigua e mostra a tela de acordo com o usuário;
 
-## CDU3 (Cadastrar Usuário)
+## CDU 3 - Cadastrar Usuário
 
 **Ator:** SESOP. 
 
@@ -61,7 +61,7 @@
 
 3. Sistema irá cadastrar o usuário e atualizar o sistema.
 
-## CDU4: (Visualizar Calendário)
+## CDU 4 - Visualizar Calendário
 
 **Autores:** SESOP e Direção.
 
@@ -71,7 +71,7 @@
 
 1. Usuário acessa o calendário.
 
-## CDU5 (Pesquisar Aluno)
+## CDU 5 - Pesquisar Aluno
 
 **Atores:** SESOP e Direção.
 
@@ -87,7 +87,7 @@ Caso seja selecionado gravidade será aberto um submenu para escolher entre: qua
 Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se encaixam na pesquisa até o usuário achar o aluno que procura.
 *Isto será válido para a direção e o SESOP, mas a única diferença é que o SESOP poderá adicionar, modificar ou excluir os dados da ficha dos alunos*
 
-## CDU6 (Gerenciar Calendário)
+## CDU 6 - Gerenciar Calendário
 
 **Ator:** SESOP. 
 
@@ -100,7 +100,7 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 3. Sistema verifica se já possui algum evento no horário e dia determinados;
 4. Usuário atualizará o sistema.
 
-## CDU7 (Registrar Atendimento)
+## CDU 7 - Registrar Atendimento
 
 **Ator:** SESOP. 
 
@@ -112,7 +112,7 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 2.  Usuário irá informar o que aconteceu durante a reunião com o aluno.
 3.	Sistema irá atualizar o sistema.
 
-## CDU8 (Visualizar Atendimento)
+## CDU 8 - Visualizar Atendimento
 
 **Atores:** SESOP e Direção. 
 
