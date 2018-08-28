@@ -2,7 +2,7 @@
 
 # Sumário
 
-- [CDU1(Cadastrar Aluno)](#cdu1-(cadastrar-aluno))
+- [CDU 1 - Cadastrar Aluno](#cdu-1---cadastrar-aluno)
 - [CDU2(Autenticar)](#cdu2-(autenticar))
 - [CDU3(Cadastrar Usuário)](#cdu3-(cadastrar-usuário))
 - [CDU4(Visualizar Calendário)](#cdu4-(visualizar-calendário))
@@ -11,7 +11,7 @@
 - [CDU7(Registrar Atendimento)](#cdu7-(registrar-atendimento))
 - [CDU8(Visualizar Atendimento)](#cdu8-(visualizar-atendimento))
 
-## CDU1(Cadastrar Aluno)
+## CDU 1 - Cadastrar Aluno
 
 
 **Ator:** SESOP.
