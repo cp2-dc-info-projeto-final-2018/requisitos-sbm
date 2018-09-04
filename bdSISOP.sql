@@ -27,8 +27,12 @@ CREATE TABLE atendimento(
   hora TIME NOT NULL,
   descricao VARCHAR(1000),
   id_sesop INT NOT NULL,
+  id_aluno INT NOT NULL,
+  id_responsavel INT NOT NULL,
   PRIMARY KEY(id_atendimento),
-  FOREIGN KEY (id_sesop) REFERENCES sesop(id_sesop)
+  FOREIGN KEY (id_sesop) REFERENCES sesop(id_sesop),
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
+  FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
 
 CREATE TABLE aluno (
@@ -38,9 +42,7 @@ CREATE TABLE aluno (
   telefone INT NOT NULL,
   email VARCHAR(50),
   turma VARCHAR(6) NOT NULL,
-  id_atendimento INT NOT NULL,
-  PRIMARY KEY(id_aluno),
-  FOREIGN KEY (id_atendimento) REFERENCES atendimento(id_atendimento)
+  PRIMARY KEY(id_aluno)
 );
   
 CREATE TABLE disciplina(
@@ -59,7 +61,7 @@ CREATE TABLE aluno_disciplina(
 	FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
 );
 
-CREATE TABLE notas(
+CREATE TABLE avaliacao(
   id_aluno INT NOT NULL,
   id_disciplina INT NOT NULL,
   c1 FLOAT,
@@ -81,10 +83,8 @@ CREATE TABLE responsavel(
   email VARCHAR(50) NOT NULL,
   endereco VARCHAR(100),
   id_aluno INT NOT NULL,
-  id_atendimento INT NOT NULL,
   PRIMARY KEY(id_responsavel),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
-  FOREIGN KEY (id_atendimento) REFERENCES atendimento(id_atendimento)
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
 );
 
 CREATE TABLE responsavel_aluno(
@@ -95,3 +95,5 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
+
+
