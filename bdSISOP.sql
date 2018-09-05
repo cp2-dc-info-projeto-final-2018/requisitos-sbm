@@ -1,4 +1,4 @@
-CREATE TABLE usuariio(
+CREATE TABLE usuario(
   id_usuario INT NOT NULL,
   matricula VARCHAR(10) NOT NULL,
   senha VARCHAR(20) NOT NULL,
@@ -95,5 +95,3 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
-
-
