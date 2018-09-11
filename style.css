@@ -14,6 +14,34 @@ html, body {
     background: url("editado.png") no-repeat;
     margin-left: auto;
     margin-right: auto;
+
+  }
+  #fundinho
+  {
+    width :990px;
+    height:30px;
+    background: #004772;
+  }
+  ul {
+    padding: 0;
+    margin : 0 0 12px 0 px;
+  }
+  a, li
+  {
+    list-style:none;
+    text-decoration: none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size : .95em;
+    font-weight:bold;
+  }
+  li
+  {
+    line-height:18px;
+  }
+  element.style {
+  }
+  
+
     }
 
   #aaa{
@@ -25,3 +53,4 @@ html, body {
     margin-bottom: auto;
     height: 50px;
   }
+
