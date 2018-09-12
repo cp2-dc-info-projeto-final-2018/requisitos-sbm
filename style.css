@@ -203,15 +203,41 @@ strong, b {
   element.style {
   }
 
-
     }
 
-  #aaa{
+  .primeira{
     text-align: left;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     margin-top: auto;
     margin-bottom: auto;
     height: 50px;
+    vertical-align: middle;
+    min-height: 20em;
+    display: table-cell;
+  }
+
+  .segunda{
+    text-align: left;
+    font-family: Cookie;
+    font-size: 50px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    vertical-align: middle;
+    min-height: 10em;
+    display: table-cell;
+  }
+
+  .caixinhadoform{
+    border: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: #d7d1d166;
+
   }
