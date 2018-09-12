@@ -14,52 +14,41 @@ html, body {
     background: url("editado.png") no-repeat;
     margin-left: auto;
     margin-right: auto;
-
-  }
-  #fundinho
-  {
-    width :990px;
-    height:30px;
-    background: #004772;
-  }
-  ul {
-    padding: 0;
-    margin : 0 0 12px 0 px;
-  }
-  a, li
-  {
-    list-style:none;
-    text-decoration: none;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size : .95em;
-    font-weight:bold;
-  }
-  li
-  {
-    line-height:18px;
-  }
-  element.style {
-  }
-
-
     }
 
-  #primeira{
+  .primeira{
     text-align: left;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     margin-top: auto;
     margin-bottom: auto;
     height: 50px;
+    vertical-align: middle;
+    min-height: 20em;
+    display: table-cell;
   }
 
-  #segunda{
+  .segunda{
     text-align: left;
-    font-family: Impact;
+    font-family: Cookie;
     font-size: 50px;
     color: white;
     margin-top: auto;
     margin-bottom: auto;
     height: 50px;
+    vertical-align: middle;
+    min-height: 10em;
+    display: table-cell;
+  }
+
+  .caixinhadoform{
+    border: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: #d7d1d166;
+
   }
