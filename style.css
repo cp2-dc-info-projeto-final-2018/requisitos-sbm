@@ -16,10 +16,20 @@ html, body {
     margin-right: auto;
     }
 
-  #aaa{
+  #primeira{
     text-align: left;
     font-family: Arial;
     font-size: 30px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+  }
+
+  #segunda{
+    text-align: left;
+    font-family: Impact;
+    font-size: 50px;
     color: white;
     margin-top: auto;
     margin-bottom: auto;
