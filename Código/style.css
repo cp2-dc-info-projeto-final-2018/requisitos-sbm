@@ -16,11 +16,11 @@ html, body {
     margin-right: auto;
 
   }
-  #fundinho
+  #menu
   {
 
-    max-height:30px;
-    background: #004772;
+    max-height:20px;
+    background: url("topo.png") repeat;
     max-width: 990px;
     margin: auto;
     margin-top: 10px;
@@ -49,6 +49,18 @@ html, body {
     height: 50px;
     vertical-align: middle;
     min-height: 10em;
+    display: table-cell;
+  }
+  .primeira2{
+    text-align: left;
+    font-family: Cookie;
+    font-size: 15px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    vertical-align: middle;
+    min-height: 20em;
     display: table-cell;
   }
 
