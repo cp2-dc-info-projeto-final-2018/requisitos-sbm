@@ -1,0 +1,75 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+  #topo{
+    width: 100%;
+    height: 125px;
+    background: url("topo.png") repeat;
+  }
+
+  #topo2{
+    width: 960px;
+    height: 125px;
+    background: url("editado.png") no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  #menu
+  {
+
+    max-height:20px;
+    background: url("topo.png") repeat;
+    max-width: 990px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .primeira{
+    text-align: left;
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    vertical-align: middle;
+    min-height: 20em;
+    display: table-cell;
+  }
+
+  .segunda{
+    text-align: left;
+    font-family: Cookie;
+    font-size: 50px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    vertical-align: middle;
+    min-height: 10em;
+    display: table-cell;
+  }
+  .primeira2{
+    text-align: left;
+    font-family: Cookie;
+    font-size: 15px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    vertical-align: middle;
+    min-height: 20em;
+    display: table-cell;
+  }
+
+  .caixinhadoform{
+    border: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: #d7d1d166;
+  }
