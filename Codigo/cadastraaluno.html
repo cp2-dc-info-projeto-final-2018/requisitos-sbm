@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+  <head>
+      <meta charset="utf-8">
+      <title> SISOP </title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="topo">
+      <div id="topo2">
+        <div class="primeira"> <b>COLÉGIO <br> </div>
+          <div class= "segunda"> PEDRO II<b>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+
+        <a href="login.html"><div class="primeira2"> Tela inicial <br> </div>  </a>
+        <a href="atendimentos.html"><div class="primeira2"> Atendimentos <br> </div>  </a>
+        <a href="agendamentos.html"><div class="primeira2"> Agendamentos <br> </div>  </a>
+        <a href=""><div class="primeira2"> Calendário <br> </div>  </a>
+
+  </div>
+
+  <br> <br> <br>
+  <div class="caixinhadoform">
+  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="Verificacao.php">
+
+								<input class="formcss" required="" tabindex="1" title="Informe sua Matricula - Obrigatrio" placeholder="Matricula" autocomplete="off" type="text" name="matricula" id="matricula"/>
+                <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
+  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' placeholder="Sobrenome" required />
+  				      <input name="email" type="email" placeholder="E-Mail" />
+                <input name= "telefone" type="tel" placeholder="Telefone" required/>
+                <input name="turma" type="text" minlength='3' maxlength='7' placeholder="Turma" required />
+                <input name="endereço" type="text" minlength='10' maxlength='100' placeholder="Endereço" required />
+
+                </form>
+                <br>
+							           <button href="#" type="button" id="submitAluno" class="btn btn-small">
+							 	                  <i class="icon-publish"></i><span>Cadastrar Aluno</span>
+							            </button>
+						</div>
+					</div>
+
+  </div>
+</div>
+    </div>
+  </body>
+
+</html>
