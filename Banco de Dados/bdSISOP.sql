@@ -33,6 +33,7 @@ CREATE TABLE aluno (
   email VARCHAR(50),
   turma VARCHAR(6) NOT NULL,
   endereco VARCHAR(100) NOT NULL,
+  datNasc DATE NOT NULL,
   PRIMARY KEY(id_aluno)
 );
   
