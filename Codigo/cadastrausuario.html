@@ -36,11 +36,14 @@
                 <input name="confirmaSenha" type="password" min='6' max='12' placeholder="Confirmar senha" required /><br>
                 <input name="datNasc" type="date" placeholder="Data de Nascimento" required />
                   ​<fieldset>
+                  <br>​
+                  <fieldset>
                   	<legend> Qual área da atuação no Colégio Pedro II?</legend>
                     <input type="radio" name="atuacao" value= "sesop"> SESOP<br>
                     <input type="radio" name="atuacao" value="direcao"> Direção<br><br>
                   </fieldset>
-
+​                   </fieldset>
+                  <br>
 							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="Continuar o cadastramento"/>
 							        </form>
 						</div>
@@ -52,3 +55,62 @@
   </body>
 
 </html>
+=======
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+  <head>
+      <meta charset="utf-8">
+      <title> SISOP </title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="topo">
+      <div id="topo2">
+        <div class="primeira"> <b>COLÉGIO <br> </div>
+          <div class= "segunda"> PEDRO II<b>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+
+        <a href="login.html"><div class="primeira2"> Tela inicial <br> </div>  </a>
+        <a href="atendimentos.html"><div class="primeira2"> Atendimentos <br> </div>  </a>
+        <a href="agendamentos.html"><div class="primeira2"> Agendamentos <br> </div>  </a>
+        <a href=""><div class="primeira2"> Calendário <br> </div>  </a>
+
+  </div>
+
+  <br> <br> <br>
+  <div class="caixinhadoform">
+  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastrarsesopdirecao.php">
+
+								<input name="matricula" class="formcss" required="" tabindex="1" title="Informe sua Matricula - Obrigatrio" placeholder="Matricula" autocomplete="off" type="text"  id="matricula"/>
+                <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
+  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' placeholder="Sobrenome" required />
+  				      <input name="email" type="email" placeholder="E-Mail" required />
+  				      <input name="senha" type="password" placeholder="Digite a Senha" required="" class="formcss" type="text" size="20" minlengh="3" maxlengh="20" tabindex="2">
+                <input name="confirmaSenha" type="password" min='6' max='12' placeholder="Confirmar senha" required /><br>
+                <input name="datNasc" type="date" placeholder="Data de Nascimento" required />
+                  ​<fieldset>
+                  <br>​
+                  <fieldset>
+                  	<legend> Qual área da atuação no Colégio Pedro II?</legend>
+                    <input type="radio" name="atuacao" value= "sesop"> SESOP<br>
+                    <input type="radio" name="atuacao" value="direcao"> Direção<br><br>
+               
+​                   </fieldset>
+                  <br>
+							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="Continuar o cadastramento"/>
+							        </form>
+						</div>
+					</div>
+
+  </div>
+</div>
+    </div>
+  </body>
+
+</html>
+>>>>>>> before discard
