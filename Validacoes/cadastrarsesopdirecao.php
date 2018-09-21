@@ -86,21 +86,12 @@ if ($senha != $confirma)
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
-    $datnasc = $request['datNasc'];
 
-  $data = DateTime::createFromFormat('Y-m-d', $datnasc);
+  $datNasc = $request['datNasc'];
+  $data = DateTime::createFromFormat('d-m-Y', $datnasc);
 
-  if ($data == false){
+  if ($datNasc == false){
     $erros[] = "Valor de Data inválido";
-  }
-  else if(array_key_exists('dia', $_REQUEST)){
-    $dia = $_REQUEST['dia'];
-    $data = DateTime::createFromFormat('Y-m-d', $datnasc);
-    $hoje = new DateTime();
-    $diferença = $data -> diff ($hoje);
-    if($anoscorridos < 16){
-      $erros[] = "É necessário ter mais de 16 anos";
-    }
   }
   if (empty($erros))
 {
