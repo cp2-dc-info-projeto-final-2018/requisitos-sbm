@@ -1,9 +1,12 @@
-CREATE TABLE usuario(
-  id_usuario INT NOT NULL,
-  matricula VARCHAR(10) NOT NULL,
-  senha VARCHAR(20) NOT NULL,
-  login VARCHAR(50) NOT NULL,
+CREATE TABLE usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  matricula VARCHAR(9) NOT NULL,
+  nome VARCHAR(35) NOT NULL,
+  sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
+  senha VARCHAR(12) NOT NULL,
+  confirmaSenha VARCHAR(12) NOT NULL,
+  
   PRIMARY KEY(id_usuario)
 );
 
