@@ -11,21 +11,21 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE direcao(
-  id_direcao INT NOT NULL,
+  id_direcao INT NOT NULL AUTO_INCREMENT,
   id_usuario INT NOT NULL,
   PRIMARY KEY(id_direcao),
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE sesop(
-  id_sesop INT NOT NULL,
+  id_sesop INT NOT NULL  AUTO_INCREMENT,
   id_usuario INT NOT NULL,
   PRIMARY KEY(id_sesop),
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE aluno (
-  id_aluno INT NOT NULL,
+  id_aluno INT NOT NULL	AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   matricula VARCHAR(10) NOT NULL,
   telefone INT NOT NULL,
@@ -35,14 +35,14 @@ CREATE TABLE aluno (
 );
   
 CREATE TABLE disciplina(
-  id_disciplina INT NOT NULL,
+  id_disciplina INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(20) NOT NULL,
   quant_tempos INT NOT NULL,
   PRIMARY KEY (id_disciplina)
 );
 
 CREATE TABLE aluno_disciplina(
-	id_aluno INT NOT NULL,
+	id_aluno INT NOT NULL ,
 	id_disciplina INT NOT NULL,
 	frequencia FLOAT,
 	PRIMARY KEY(id_aluno, id_disciplina),
@@ -66,7 +66,7 @@ CREATE TABLE avaliacao(
 );
 
 CREATE TABLE responsavel(
-  id_responsavel INT NOT NULL,
+  id_responsavel INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE responsavel(
 );
 
 CREATE TABLE atendimento(
-  id_atendimento INT NOT NULL,
+  id_atendimento INT NOT NULL AUTO_INCREMENT,
   data DATE NOT NULL,
   hora TIME NOT NULL,
   descricao VARCHAR(1000),
