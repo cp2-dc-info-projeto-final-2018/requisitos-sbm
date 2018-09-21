@@ -12,7 +12,7 @@ $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $bd;
 }
 
-function InsereUsuario($dadosnovoAluno)
+function InsereAluno($dadosnovoAluno)
 
 {
 $bd = Conexão();
