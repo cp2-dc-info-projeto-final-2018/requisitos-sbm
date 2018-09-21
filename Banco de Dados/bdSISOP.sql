@@ -5,8 +5,6 @@ CREATE TABLE usuario (
   sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
   senha VARCHAR(12) NOT NULL,
-  confirmaSenha VARCHAR(12) NOT NULL,
-  
   PRIMARY KEY(id_usuario)
 );
 
@@ -26,19 +24,16 @@ CREATE TABLE sesop(
 
 CREATE TABLE aluno (
   id_aluno INT NOT NULL	AUTO_INCREMENT,
-  nome VARCHAR(100) NOT NULL,
+  nome VARCHAR(35) NOT NULL,
   matricula VARCHAR(10) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50),
-  turma VARCHAR(6) NOT NULL,
-<<<<<<< HEAD
+  turma VARCHAR(7) NOT NULL,
   endereco VARCHAR(100) NOT NULL,
   datNasc DATE NOT NULL,
-=======
->>>>>>> 818f00f7dd5e3740ace206ddf8932704aeb72bc0
   PRIMARY KEY(id_aluno)
 );
-  
+
 CREATE TABLE disciplina(
   id_disciplina INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(20) NOT NULL,

@@ -24,7 +24,7 @@ $turma = $dadosnovoAluno['turma'];
 $endereco = $dadosnovoAluno['endereco'];
 $datNasc = $dadosnovoAluno['datNasc'];
 $sql = $bd -> prepare(
-  "INSERT INTO usuario(matricula,nome,sobrenome,email,turma,endereco,datNasc)
+  "INSERT INTO aluno(matricula,nome,sobrenome,email,turma,endereco,datNasc)
   VALUES (:valmatricula, :valnome,:valsobrenome,:valemail,:valturma,:valendereco,:valdat);");
 
  $sql -> bindValue(':valmatricula',$dadosnovoAluno['matricula']);
