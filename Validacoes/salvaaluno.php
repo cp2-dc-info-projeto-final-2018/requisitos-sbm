@@ -22,9 +22,10 @@ $sobrenome = $dadosnovoAluno['sobrenome'];
 $email = $dadosnovoAluno['email'];
 $turma = $dadosnovoAluno['turma'];
 $endereco = $dadosnovoAluno['endereco'];
+$datNasc = $dadosnovoAluno['datNasc'];
 $sql = $bd -> prepare(
-  "INSERT INTO usuario(matricula,nome,sobrenome,email,turma,endereco)
-  VALUES (:valmatricula, :valnome,:valsobrenome,:valemail,:valturma,:valendereco);");
+  "INSERT INTO usuario(matricula,nome,sobrenome,email,turma,endereco,datNasc)
+  VALUES (:valmatricula, :valnome,:valsobrenome,:valemail,:valturma,:valendereco,:valdat);");
 
  $sql -> bindValue(':valmatricula',$dadosnovoAluno['matricula']);
  $sql -> bindValue(':valnome',$dadosnovoAluno['nome']);
@@ -32,6 +33,7 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valemail',$dadosnovoAluno['email']);
  $sql -> bindValue(':valturma',$dadosnovoAluno['turma']);
  $sql -> bindValue(':valendereco',$dadosnovoAluno['endereco']);
+ $sql -> bindValue(':valdat',$dadosnovoAluno['datNasc']);
  $sql -> execute();
 
 }
