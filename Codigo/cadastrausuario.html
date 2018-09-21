@@ -26,23 +26,23 @@
 
   <br> <br> <br>
   <div class="caixinhadoform">
-  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="Verificacao.php">
+  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastrarsesopdirecao.php">
 
 								<input name="matricula" class="formcss" required="" tabindex="1" title="Informe sua Matricula - Obrigatrio" placeholder="Matricula" autocomplete="off" type="text"  id="matricula"/>
                 <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
   				      <input name="sobrenome" type="text" minlength='3' maxlength='35' placeholder="Sobrenome" required />
   				      <input name="email" type="email" placeholder="E-Mail" required />
-  				      <input name="senha" placeholder="Digite a Senha" required="" class="formcss" type="text" size="20" minlengh="3" maxlengh="20" tabindex="2">
+  				      <input name="senha" type="password" placeholder="Digite a Senha" required="" class="formcss" type="text" size="20" minlengh="3" maxlengh="20" tabindex="2">
                 <input name="confirmaSenha" type="password" min='6' max='12' placeholder="Confirmar senha" required /><br>
                 <input name="datNasc" type="date" placeholder="Data de Nascimento" required />
-                  ​<form action="categoria"> <p> Qual área da atuação no Colégio Pedro II?</p>
-                    <input type="radio" name="sesop" value= "sesop"> SESOP<br>
-                    <input type="radio" name="direcao" value="direcao"> Direção<br><br>
-                  </form>
-                </form>
-							           <button href="#" type="button" id="submitPrimeiroAcesso" class="btn btn-small">
-							 	                  <i class="icon-publish"></i><span>Continuar o cadastramento</span>
-							            </button>
+                  ​<fieldset>
+                  	<legend> Qual área da atuação no Colégio Pedro II?</legend>
+                    <input type="radio" name="atuacao" value= "sesop"> SESOP<br>
+                    <input type="radio" name="atuacao" value="direcao"> Direção<br><br>
+                  </fieldset>
+               
+							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="Continuar o cadastramento"/>
+							        </form>
 						</div>
 					</div>
 

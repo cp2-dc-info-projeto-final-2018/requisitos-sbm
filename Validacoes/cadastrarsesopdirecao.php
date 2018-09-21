@@ -1,6 +1,6 @@
 <?php
 
-require_once('salva.php');
+require_once('salvasesopdirecao.php');
 
 $erros = [];
   $request = array_map('trim',$_REQUEST);
@@ -12,8 +12,8 @@ $erros = [];
       'sobrenome' => FILTER_DEFAULT,
       'email' => FILTER_VALIDATE_EMAIL,
       'senha' => FILTER_DEFAULT,
-      'confirmaSenha' => FILTER_DEFAULT
-
+      'confirmaSenha' => FILTER_DEFAULT,
+      'datNasc' => FILTER_DEFAULT
     ]
   );
 $matricula = $request['matricula'];
@@ -23,7 +23,7 @@ if($matricula == false)
 }
 else if(strlen($matricula)<6 || strlen($matricula)>9)
 {
-   $erros[] = "A Matrícula tem que ter no mínimo 6 digítos e no máximo 6";
+   $erros[] = "A Matrícula tem que ter no mínimo 6 digítos e no máximo 9";
 }
 $nome = $request['nome'];
 if ($nome == false)
