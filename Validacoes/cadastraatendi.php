@@ -6,7 +6,8 @@ erros = [];
     [
       'Matricula' => FILTER_DEFAULT,
       'Data' => FILTER_DEFAULT,
-      'Duracao' => FILTER_DEFAULT
+      'Inicio' => FILTER_DEFAULT,
+      'Fim' => FILTER_DEFAULT
 
     ]
   );
@@ -19,19 +20,40 @@ else if(strlen($matricula)<9 || strlen($matricula)>11)
 {
    $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
 }
-$datNasc = $request['Data'];
+$Data = $request['Data'];
 
-$data = DateTime::createFromFormat('d-m-Y', $datNasc);
+$Data = DateTime::createFromFormat('d-m-Y', $Data);
 
-if ($datNasc == false){
+if ($Data == false){
 $erros[] = "Valor de Data inválido";
+}
+$Inicio = $request['Inicio'];
+
+if($Inicio == false)
+{
+  $erros [] = "Hora não inserida";
+}
+else if(intval($Inicio) < 7)
+{
+  $erros [] = "Hora não permitida";
+}
+$fim = $request['fim'];
+if($fim == false)
+{
+  $erros [] = "Hora não inserida";
+}
+else if(intval($fim) < 18)
+{
+  $erros [] = "Hora não permitida";
 }
   if (empty($erros))
 {
-      $novoAluno = [
+      $novoAtendimento = [
       'Matricula' => $request['Matricula'],
       'Data' => $request['Data'],
-      'Duracao' => $request['Duracao']
+      'Inicio' => $request['Inicio'],
+      'Fim' => $request['Fim'],
+      'descricao' => $request['descricao']
     ];
    InsereAtendimento($novoAtendimento);
 }
