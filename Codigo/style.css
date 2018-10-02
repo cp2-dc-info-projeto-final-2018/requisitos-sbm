@@ -2,6 +2,17 @@ html, body {
   padding: 0px;
   margin: 0px;
 }
+#menu
+{
+
+  max-height:20px;
+  background: url("topo.png") repeat;
+  max-width: 990px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 #divBusca{
   background-color:#c4c6e1;
   border:solid 2px #c4c6e1;
@@ -52,16 +63,7 @@ html, body {
     margin-right: auto;
 
   }
-  #menu
-  {
 
-    max-height:30px;
-    background: url("gray.jpg") repeat;
-    margin: 0px;
-    margin-top: 0px;
-    padding: 10px;
-    vertical-align: inherit;
-  }
   .primeira{
     text-align: left;
     font-family: Arial;

@@ -93,6 +93,8 @@ if ($senha != $confirma)
   if ($data == false){
     $erros[] = "Valor de Data inválido";
   }
+<<<<<<< HEAD
+=======
   else if(array_key_exists('dia', $_REQUEST)){
     $dia = $_REQUEST['dia'];
     $data = DateTime::createFromFormat('Y-m-d', $datnasc);
@@ -102,6 +104,7 @@ if ($senha != $confirma)
       $erros[] = "É necessário ter mais de 16 anos";
     }
   }
+>>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   if (empty($erros))
 {
       $novoUsuario = [
