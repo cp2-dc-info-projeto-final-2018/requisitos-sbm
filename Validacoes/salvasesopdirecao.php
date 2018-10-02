@@ -24,8 +24,8 @@ $email = $dadosnovoUsuario['email'];
 $senha = $dadosnovoUsuario['senha'];
 $dataNasc = $dadosnovoUsuario['datNasc'];
 $sql = $bd -> prepare(
-  "INSERT INTO usuario(matricula,nome,sobrenome,email,senha,confirmaSenha,datNasc)
-  VALUES (:valmatricula, :valnome,:valsobrenome,:valemail,:valsenha,:valConfirmaSenha,:valdatanasc);");
+  "INSERT INTO usuario(matricula,nome,sobrenome,email,senha)
+  VALUES (:valmatricula,:valnome,:valsobrenome,:valemail,:valsenha);");
  $hash = password_hash($senha, PASSWORD_DEFAULT);
 
  $sql -> bindValue(':valmatricula',$dadosnovoUsuario['matricula']);
@@ -33,8 +33,7 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valsobrenome',$dadosnovoUsuario['sobrenome']);
  $sql -> bindValue(':valemail',$dadosnovoUsuario['email']);
  $sql -> bindValue(':valsenha',$dadosnovoUsuario['senha']);
- $sql -> bindValue(':valConfirmaSenha',$dadosnovoUsuario['confirmaSenha']);
- $sql -> bindValue(':valdatanasc',$dadosnovoUsuario['datNasc']);
+ //$sql -> bindValue(':valdatanasc',$dadosnovoUsuario['datNasc']);
  $sql -> execute();
 
 }
