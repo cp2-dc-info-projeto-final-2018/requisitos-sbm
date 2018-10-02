@@ -18,7 +18,7 @@
 
 
       <?php
-       for ($i = 0; $i <= 23; $i++)
+       for ($i = 7; $i <= 18; $i++)
        {
       ?>
       <tr>
@@ -36,11 +36,14 @@
       <?php }
       ?>
 
-  </table>
-  <form>
+  </table><br>
+  <form action="..\Validacoes\cadastraatendi.php">
     <input type="text" name="Matricula" placeholder="Matrícula"><br>
-    <input type="date" name="Data" placeholder="inicio"><br>
-    <input
+    <input type="date" name="Data" placeholder="Data"><br>
+    <input type="text" name="Inicio" placeholder="Início do Atendimento"><br>
+    <input type="text" name="Fim" placeholder="Fim do Atendimento"><br>
+    <input type="text" name="desc" placeholder="Digite uma descrição: "><br>
+    <input type="submit" value="Cadastrar"><br>
   </form>
 </body>
 </html>
