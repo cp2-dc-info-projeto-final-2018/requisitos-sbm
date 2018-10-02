@@ -1,45 +1,60 @@
-CREATE TABLE usuariio(
-  id_usuario INT NOT NULL,
-  matricula VARCHAR(10) NOT NULL,
-  senha VARCHAR(20) NOT NULL,
-  login VARCHAR(50) NOT NULL,
+CREATE TABLE usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  matricula VARCHAR(9) NOT NULL,
+  nome VARCHAR(35) NOT NULL,
+  sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
+  senha VARCHAR(12) NOT NULL,
+<<<<<<< HEAD
+=======
+  datNasc DATE NOT NULL,
+>>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   PRIMARY KEY(id_usuario)
 );
 
 CREATE TABLE direcao(
-  id_direcao INT NOT NULL,
+  id_direcao INT NOT NULL AUTO_INCREMENT,
   id_usuario INT NOT NULL,
   PRIMARY KEY(id_direcao),
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE sesop(
-  id_sesop INT NOT NULL,
+  id_sesop INT NOT NULL  AUTO_INCREMENT,
   id_usuario INT NOT NULL,
   PRIMARY KEY(id_sesop),
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE aluno (
-  id_aluno INT NOT NULL,
-  nome VARCHAR(100) NOT NULL,
+  id_aluno INT NOT NULL	AUTO_INCREMENT,
   matricula VARCHAR(10) NOT NULL,
+  nome VARCHAR(35) NOT NULL,
+<<<<<<< HEAD
+  sobrenome VARCHAR(35) NOT NULL,
+=======
+  sobrenome VARCHAR (35) NOT NULL,
+>>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   telefone INT NOT NULL,
   email VARCHAR(50),
-  turma VARCHAR(6) NOT NULL,
+  turma VARCHAR(7) NOT NULL,
+  endereco VARCHAR(100) NOT NULL,
+<<<<<<< HEAD
+=======
+  datNasc DATE NOT NULL,
+>>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   PRIMARY KEY(id_aluno)
 );
-  
+
 CREATE TABLE disciplina(
-  id_disciplina INT NOT NULL,
+  id_disciplina INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(20) NOT NULL,
   quant_tempos INT NOT NULL,
   PRIMARY KEY (id_disciplina)
 );
 
 CREATE TABLE aluno_disciplina(
-	id_aluno INT NOT NULL,
+	id_aluno INT NOT NULL ,
 	id_disciplina INT NOT NULL,
 	frequencia FLOAT,
 	PRIMARY KEY(id_aluno, id_disciplina),
@@ -63,7 +78,7 @@ CREATE TABLE avaliacao(
 );
 
 CREATE TABLE responsavel(
-  id_responsavel INT NOT NULL,
+  id_responsavel INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
@@ -74,7 +89,7 @@ CREATE TABLE responsavel(
 );
 
 CREATE TABLE atendimento(
-  id_atendimento INT NOT NULL,
+  id_atendimento INT NOT NULL AUTO_INCREMENT,
   data DATE NOT NULL,
   hora TIME NOT NULL,
   descricao VARCHAR(1000),
@@ -95,5 +110,13 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
-
-
+CREATE TABLE calendario (
+id_evento INT NOT NULL AUTO_INCREMENT,
+id_aluno INT NOT NULL,
+matricula VARCHAR(11) NOT NULL,
+inicio DATETIME NOT NULL,
+duracao DATETIME NOT NULL,
+descricao VARCHAR(10000) NOT NULL,
+PRIMARY KEY(id_evento),
+FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+);

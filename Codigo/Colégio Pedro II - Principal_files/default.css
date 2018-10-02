@@ -1,0 +1,613 @@
+body { background: #06639C; }
+
+a { list-style:none; font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-size:14px; font-weight:bold; }
+
+a:visited    {
+	color:#ffffff;
+	text-decoration: none;
+}
+
+a:link    {
+	color: #ffffff;	text-decoration: none;
+}
+
+a:hover    {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a:active    {
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+a.none:hover    {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* form styles */
+textarea    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+}
+
+select    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+}
+
+input    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+}
+
+/* small event font */
+div.smallcalev    {
+	color: #0020A0;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 10;
+}
+
+div.smallcalevtime    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 10;
+}
+
+a.smallcalev    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 10;
+}
+
+a.smallcalev:hover    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 10;
+}
+
+td.smalleventtimeborder    {
+	border: solid #884084;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	background-color: #99FFFF;
+	font-weight: bold;
+}
+td.smalleventtimeborder_feriado    {
+	border: solid #884084;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	background-color: #FFCDCD;
+	font-weight: bold;
+}
+
+/* small cal month font */
+table.smallcalmth    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 13;
+	width: 98%;
+	background: #06639C;
+}
+
+div.smallcalmth    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	background: #06;
+	font-size: 14;
+	font-weight:bold;
+}
+
+a.smallcalmth    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-weight:bold;
+}
+
+a.smallcalmth:visited    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-weight:bold;
+}
+
+td.smallcalmth    {
+	background-color:#04507f;
+	
+}
+
+td.smallcalmth_feriado    {
+	background-color:#04507f;
+}
+
+/* message to signal progress */
+h4 {font-family:Arial, Helvetica, sans-serif; color:#006; }
+
+/* font for calendar and company names at top of month calendar */
+table.companynamefont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #06639C;
+}
+
+table.calendarnamefont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #06639C;
+}
+
+/* calendar top header setting */
+table.todaytop    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+	background: #06639C;
+}
+
+/* font for calendar day name */
+
+
+div.dayfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	display:block;
+	font-size: 13;
+	font-style: normal;
+	font-weight: bold;
+
+	
+}
+
+.cinza { background:#063; }
+
+/* font for calendar date numbers */
+div.datenumfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 13;
+	font-style: normal;
+	font-weight: bold;
+}
+
+a.datenumfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 13;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.datenumfont:visited    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 13;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* month calendar table view setting */
+table.monthview    {
+	width: 98%;
+	border-width: thin;
+	background-color: #06639C;;
+	color: #ffffff;
+	border: 0px thin #FFFFFF;
+	border-collapse: separate;
+	border-spacing: 1px;
+	padding: 0px;
+	spacing: 1px;
+}
+
+td.monthview    {
+	height: 30px;
+}
+
+td.sundaytopcolor    {
+	height: 50px;
+	color: #ffffff;
+	background-color: #06639C;
+	width: 14%;
+}
+
+td.weekdaytopcolor    {
+	height: 50px;
+	color: #ffffff;
+	background-color: #06639C;
+	width: 14%;
+}
+
+td.sundayemptyclr    {
+	height: 50px;
+	background-color: #06639C;
+}
+
+td.weekdayemptyclr    {
+	height: 50px;
+	background-color: #06639C;
+}
+
+td.todayclr    {
+	background-color: #aaaaaa;
+	border:2px #ffffff solid;
+}
+
+td.feriado    {
+	background-color:#036;
+	border:2px #ffffff solid;
+}
+
+td.sundayclr    {
+	height: 50px;
+	background-color: #06639C;
+	border:2px #ffffff solid;
+}
+
+td.weekdayclr    {
+	height: 50px;
+	background-color: #06639C;
+	border:2px #ffffff solid;
+}
+
+/* link to month navigation font */
+a.calfontnav    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 18;
+	font-style: normal;
+	font-weight: bold;
+}
+
+a.calfontnav:hover    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 18;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontnav:link    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 18;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontnav:visited    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 18;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* link to asked month font */
+div.calfontasked    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontasked    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontasked:hover    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontasked:link    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a.calfontasked:visited    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 24;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font for menu items */
+div.menufont    {
+	
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.menufont:link    {
+	color: #0000FF;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.menufont:visited    {
+	color: #0000FF;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.menufont:hover    {
+	color: #0000FF;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/* menu option background color */
+table.menufont    {
+	background: #FAFAFF;
+	width: 100%;
+}
+
+/* font for search header */
+div.searchheaderfont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 16;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #F0F0F0;
+}
+
+/* font for search result events title */
+div.searchtitlefont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* font for search result events */
+div.searchtextfont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font for headers */
+div.headerfont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 16;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #F0F0F0;
+}
+
+table.headerfont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 16;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #F0F0F0;
+}
+
+a.headerfont:link    {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.headerfont:visited    {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a.headerfont:hover    {
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* font for titles */
+div.titlefont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.titlefont    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-style: normal;
+	font-weight: normal;
+	background-color: #C0C0C0;
+}
+
+a.titlefont:link    {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.titlefont:visited    {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a.titlefont:hover    {
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* font for event popup title */
+div.popupeventtitlefont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 14;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: underline;
+	background: #06;
+}
+
+/* font for event popup content */
+div.popupeventfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	background: #06;
+}
+
+/* color and font for event content text in day calendar */
+table.dayevent    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	background: #F0F0FF;
+	text-decoration: none;
+}
+
+/* color and font for event content text in week calendar */
+table.weekevent    {
+	color: #000000;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	background: #F0F0FF;
+	text-decoration: none;
+}
+
+/* color and font for normal text */
+div.normalfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+table.normalfont    {
+	color: #ffffff;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.normalfont:link    {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.normalfont:visited    {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.normalfont:hover    {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/* format event borders in calendar month view */
+table.eventborder    {
+	border: solid #D0C0C8;
+	border-bottom-width: 1;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+td.eventborder    {
+	border: solid #D0C0C8;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	border-left-width: 1;
+	border-right-width: 0;
+}
+
+td.eventborder_feriado    {
+	border: solid #D0C0C8;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	border-left-width: 1;
+	border-right-width: 0;
+	background-color: #FFCDCD;
+}
+
+td.eventtimeborder    {
+	border: solid #884084;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+/* lines and boxes */
+table.txtbox    {
+	border:none;
+}
+
+td.txtbox {
+	border:#884422 thin solid;
+}
+
+hr    {
+	height: 1px;
+	background-color: #804000;
+	border: #804000;
+	color: #804000;
+	border: 0px;
+	border-style: none;
+}
+
+
