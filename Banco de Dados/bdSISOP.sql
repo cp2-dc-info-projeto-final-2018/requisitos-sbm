@@ -5,6 +5,7 @@ CREATE TABLE usuario (
   sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
   senha VARCHAR(12) NOT NULL,
+  datNasc DATE NOT NULL,
   PRIMARY KEY(id_usuario)
 );
 
@@ -24,8 +25,9 @@ CREATE TABLE sesop(
 
 CREATE TABLE aluno (
   id_aluno INT NOT NULL	AUTO_INCREMENT,
-  nome VARCHAR(35) NOT NULL,
   matricula VARCHAR(10) NOT NULL,
+  nome VARCHAR(35) NOT NULL,
+  sobrenome VARCHAR (35) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50),
   turma VARCHAR(7) NOT NULL,
@@ -101,6 +103,7 @@ CREATE TABLE responsavel_aluno(
 CREATE TABLE calendario (
 id_evento INT NOT NULL AUTO_INCREMENT,
 id_aluno INT NOT NULL,
+matricula VARCHAR(11) NOT NULL,
 inicio DATETIME NOT NULL,
 duracao DATETIME NOT NULL,
 descricao VARCHAR(10000) NOT NULL,
