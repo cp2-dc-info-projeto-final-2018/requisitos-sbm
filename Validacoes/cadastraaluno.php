@@ -57,7 +57,7 @@ if ($email == 'email')
 {
 $erros [] = " Já existe um gmail cadastrado!";
 }
-$telefone = $request['$telefone'];
+$telefone = $request['telefone'];
 if ($telefone == null)
 {
   $erros [] = "Preencha o telefone!";
@@ -80,13 +80,13 @@ if ($turma == false)
 {
   $erros[] = "Turma não preenchida!";
 }
-else if(strlen($turma)<4 || strlen($turma)> 9)
+else if(strlen($turma)<3 || strlen($turma)> 7)
 {
-  $erros[] = "A Turma tem que ter ao menos 4 letras e no máximo 9!";
+  $erros[] = "A Turma tem que ter ao menos 3 letras e no máximo 7!";
 }
 $datNasc = $request['datNasc'];
 
-$data = DateTime::createFromFormat('d-m-Y', $datnasc);
+$data = DateTime::createFromFormat('d-m-Y', $datNasc);
 
 if ($datNasc == false){
 $erros[] = "Valor de Data inválido";
@@ -99,10 +99,11 @@ $erros[] = "Valor de Data inválido";
       'sobrenome' => $request['sobrenome'],
       'email' => $request['email'],
       'telefone' => $request['telefone'],
-      'turma'=> $request['turma']
-      'endereco' => $request['endereco']
+      'turma'=> $request['turma'],
+      'endereco' => $request['endereco'],
+      'datNasc' => $request['datNasc']
     ];
-   InsereAluno($dadosnovoAluno);
+   InsereAluno($novoAluno);
 }
 else
 {
