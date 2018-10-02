@@ -1,5 +1,5 @@
 <?php
-	//require_once('../Tabelas/dadosClientes.php');
+	require_once('../Validacoes/salvasesopdirecao.php');
 
 	$erro = null;
 
@@ -17,27 +17,35 @@
 	{
 		$erro = "Matrícula não informado";
 	}
-	else if (array_key_exists($matricula, $dadosusuario) == false)
-	{
-		$erro = "Nenhum usuário encontrado com esta Matrícula";
-	}
+
 	else if ($senha == false)
 	{
 		$erro = "Senha não informada";
 	}
+
+	else {
+		$resultados = BuscaUsuarioPorMatricula($matricula);
+		if (empty($resultados))
+		{
+			$erro = "Nenhuma Matrícula encontrada para este usuário";
+		}
+		/*
+		}
+		}
 	 else if (password_verify($request['senha'],
 							  $dadosusuario[$matricula]['senha']))
 	 {
 	 	session_start();
 
 	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-		header('Location: /codigo/entrada.php');
+		header('Location: /Codigo/entrada.php');
 	 	exit();
 	 }
 	else
 	{
 		$erro = "Senha inválida";
-	}
+	} */
+	//terminar de progrmar a conexão via bd com o login
 	session_start();
 	$_SESSION['erros']= $erro;
 	header('Location: /Codigo/login.html');
