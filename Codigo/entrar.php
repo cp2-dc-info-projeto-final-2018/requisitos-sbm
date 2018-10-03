@@ -29,24 +29,24 @@
 		{
 			$erro = "Nenhuma Matrícula encontrada para este usuário";
 		}
-		/*
-		}
-		}
 	 else if (password_verify($request['senha'],
-							  $dadosusuario[$matricula]['senha']))
+							  $resultados['senha']))
 	 {
 	 	session_start();
 
 	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-		header('Location: /Codigo/entrada.php');
+		header('Location: entrada.html');
 	 	exit();
 	 }
 	else
 	{
 		$erro = "Senha inválida";
-	} */
+	}
+}
+
 	//terminar de progrmar a conexão via bd com o login
 	session_start();
 	$_SESSION['erros']= $erro;
-	header('Location: /Codigo/login.html');
+	echo $erro;
+	//header('Location: login.html');
 ?>

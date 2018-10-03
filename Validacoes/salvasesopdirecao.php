@@ -38,4 +38,18 @@ $sql = $bd -> prepare(
 
 }
 
+function BuscaUsuarioPorMatricula($matricula)
+{
+	$bd = Conexão();
+
+	$sql = $bd->prepare('SELECT senha FROM usuario WHERE matricula = :matricula');
+
+	$sql->bindValue(':matricula', $matricula);
+
+	$sql->execute();
+
+	return $sql->fetch();
+}
+
+
  ?>
