@@ -4,7 +4,9 @@
   <head>
       <meta charset="utf-8">
       <title> SISOP </title>
+      <link rel="stylesheet" type="text/css" href="style1.css">
       <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
 
   <body>
@@ -15,7 +17,45 @@
         </div>
       </div>
     </div>
-  <br> <br> <br>
+
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    }
+    </style>
+    </head>
+    <body>
+
+    <ul>
+      <li><a href="login.html">Tela inicial</a></li>
+      <li><a href="atendimentos.html"> Atendimentos</a></li>
+      <li><a href="agendamentos.html"> Agendamentos</a></li>
+      <li><a href="tabela.php"> Calendário</a></li>
+      <li><a href= "cadastra.html">Cadastramento</a></li>
+      <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
+    </ul>
   <div class="caixinhadoform">
   <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastrarsesopdirecao.php">
 
