@@ -22,15 +22,6 @@ else if(strlen($nome)<3 || strlen($nome)>35)
 {
   $erros[] = "O nome tem que ter ao menos 3 letras e no máximo 35!";
 }
-$sobrenome = $request['sobrenome'];
-if($sobrenome == false)
-{
-  $erros[] = "Sobrenome não preenchido!";
-}
-else if(strlen($sobrenome)<3 || strlen($sobrenome)>35)
-{
-  $erros[] = "O nome tem que ter ao menos 3 letras e no máximo 35!";
-}
 $email = $request['email'];
 if ($email = false)
 {
@@ -68,7 +59,6 @@ else if(strlen($endereco)<20 || strlen($endereco)>1000)
 {
       $novoResponsavel = [
       'nome' => $request['nome'],
-      'sobrenome' => $request['sobrenome'],
       'email' => $request['email'],
       'telefone' => $request['telefone'],
       'endereco' => $request['endereco']
