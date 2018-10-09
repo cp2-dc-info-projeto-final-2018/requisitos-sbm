@@ -5,10 +5,8 @@ CREATE TABLE usuario (
   sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
   senha VARCHAR(12) NOT NULL,
-<<<<<<< HEAD
-=======
   datNasc DATE NOT NULL,
->>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
+  atuacao BOOLEAN NOT NULL,
   PRIMARY KEY(id_usuario)
 );
 
@@ -30,19 +28,12 @@ CREATE TABLE aluno (
   id_aluno INT NOT NULL	AUTO_INCREMENT,
   matricula VARCHAR(10) NOT NULL,
   nome VARCHAR(35) NOT NULL,
-<<<<<<< HEAD
   sobrenome VARCHAR(35) NOT NULL,
-=======
-  sobrenome VARCHAR (35) NOT NULL,
->>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   telefone INT NOT NULL,
   email VARCHAR(50),
   turma VARCHAR(7) NOT NULL,
   endereco VARCHAR(100) NOT NULL,
-<<<<<<< HEAD
-=======
   datNasc DATE NOT NULL,
->>>>>>> 94b8f8a031caca436c96cd6bb8b8ceb2121b536b
   PRIMARY KEY(id_aluno)
 );
 
