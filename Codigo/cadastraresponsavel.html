@@ -49,10 +49,11 @@
     <body>
 
     <ul>
-      <li><a href="login.html">Tela inicial</a></li>
+      <li><a href="entradasesop.html">Pesquisa</a></li>
       <li><a href="atendimentos.html"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="tabela.php"> Calendário</a></li>
+      <li><a href="cadastra.html"> Cadastramento</a></li>
       <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
     </ul>
     <br><br><Br>
@@ -60,11 +61,12 @@
   <div class="caixinhadoform">
   <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraresp.php">
 
-                <input name="nome" type="text" minlength='3' maxlength='35' title="Informe a Nome do responsável do aluno - Obrigatrio"placeholder="Nome" required />
-  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' title="Informe a Sobrenome - Obrigatrio" placeholder="Sobrenome" required />
-  				      <input name="email" type="email" title="Informe o Email do responsável do aluno - Obrigatrio" placeholder="E-Mail" required />
-                <input name="telefone" type="int" title="Informe a Matrículao telefone do responsável do aluno- Obrigatrio" placeholder="Telefone" required />
+                <input name="nome" type="text" minlength='3' maxlength='35' title="Informe a Nome do responsável do aluno - Obrigatório"placeholder="Nome" required />
+  				      <input name="endereco" type="text" minlength='3' maxlength='1000' title="Informe o Endereço - Obrigatório" placeholder="Endereço" required />
+  				      <input name="email" type="email" title="Informe o Email do responsável do aluno - Obrigatório" placeholder="E-Mail" required />
+                <input name="telefone" type="int" title="Informe o telefone do responsável do aluno- Obrigatório" placeholder="Telefone" required />
 ​<br>
+                <input name="matricula" type="text" title="Informe a Matrícula do aluno- Obrigatório" placeholder="Matrícula" required/>
 							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="cadastrar responsável"/>
 							        </form>
 						</div>
@@ -76,4 +78,3 @@
   </body>
 
 </html>
-

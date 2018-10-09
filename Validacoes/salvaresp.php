@@ -11,38 +11,50 @@ function Conexão()
 $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $bd;
 }
+function BuscaIddoAluno($matriculaalu)
+{
+	$bd = Conexão();
+	$sql = $bd->prepare('SELECT id_aluno FROM aluno WHERE matricula = :matricula');
 
-function InsereAluno($dadosnovoResponsavel)
+	$sql->bindValue(':matricula', $matriculaalu);
+
+	$sql->execute();
+
+	$resultado = $sql->fetch();
+if(empty($resultado) == true)
+{
+  return  0;
+
+}
+else
+{
+  return $resultado['id_aluno'];
+}
+}
+
+function InsereResponsavel($dadosnovoResponsavel)
 
 {
 $bd = Conexão();
-$nome = $dadosnovoResponsavel['nome'];
+/*$nome = $dadosnovoResponsavel['nome'];
+$endereco = $dadosnovoResponsavel['endereco'];
 $telefone = $dadosnovoResponsavel['telefone'];
 $email = $dadosnovoResponsavel['email'];
-$endereco = $dadosnovoResponsavel['endereco'];
+$id = $dadosnovoResponsavel['id_aluno'];
+*/
 $sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,telefone,email,endereco)
-  VALUES (:valnome,:valtelefone,:valemail,:valendereco,:valdat);");
+  "INSERT INTO responsavel(nome,telefone,email,endereco,id_aluno)
+  VALUES (:valnome,:valtelefone,:valemail,:valendereco,:valid_aluno);");
 
  $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
- $sql -> bindValue(':valdat',$dadosnovoResponsavel['telefone']);
+ $sql -> bindValue(':valtelefone',$dadosnovoResponsavel['telefone']);
  $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
- $sql -> bindValue(':valendereco',$dadosnovoResponsavel['endereco']);
+$sql -> bindValue(':valendereco',$dadosnovoResponsavel['endereco']);
+$sql -> bindValue(':valid_aluno',$dadosnovoResponsavel['id_aluno']);
  $sql -> execute();
 
 }
 
-////function BuscaUsuarioPor($matricula)
-{
-	$bd = Conexão();
 
-	$sql = $bd->prepare('SELECT senha FROM usuarios WHERE matricula = :matricula');
-
-	$sql->bindValue(':matricula', $matricula);
-
-	$sql->execute();
-
-	return $sql->fetch();
-}
 
  ?>

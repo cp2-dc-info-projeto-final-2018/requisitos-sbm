@@ -6,13 +6,15 @@ $erros = [];
     $request,
     [
       'nome' => FILTER_DEFAULT,
-      'sobrenome' => FILTER_DEFAULT,
+            'endereco' => FILTER_DEFAULT,
       'email' => FILTER_VALIDATE_EMAIL,
       'telefone' => FILTER_DEFAULT,
-      'turma' => FILTER_DEFAULT,
-      'endereco' => FILTER_DEFAULT
+      'matricula' => FILTER_DEFAULT
+
+
     ]
   );
+  $id_aluno = BuscaIddoAluno()==0;
 $nome = $request['nome'];
 if ($nome == false)
 {
@@ -55,15 +57,32 @@ else if(strlen($endereco)<20 || strlen($endereco)>1000)
 {
   $erros[] = "O endereço tem que ter ao menos 20 letras e no máximo 1000!";
 }
+$matriculaalu = $request['matricula'];
+if($matriculaalu == false)
+{
+  $erros[] = "Matrícula não preenchida!";
+}
+else if(strlen($matriculaalu)<9 || strlen($matriculaalu)>11)
+{
+   $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
+}
+
+else if ($id_aluno==0)
+{
+  $erros[] = "Aluno inexistente";
+}
+
   if (empty($erros))
 {
       $novoResponsavel = [
       'nome' => $request['nome'],
+            'endereco' => $request['endereco'],
       'email' => $request['email'],
       'telefone' => $request['telefone'],
-      'endereco' => $request['endereco']
+      'id_aluno' => $id_aluno
+
     ];
-   InsereAluno($novoResponsavel);
+   InsereResponsavel($novoResponsavel);
 }
 else
 {
