@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+  <head>
+      <meta charset="utf-8">
+      <title> SISOP </title>
+      <link rel="stylesheet" type="text/css" href="style1.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+    <div id="topo">
+      <div id="topo2">
+        <div class="primeira"> <b>COLÉGIO <br> </div>
+          <div class= "segunda"> PEDRO II<b>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    }
+    </style>
+    </head>
+    <body>
+
+    <ul>
+      <li><a href="login.html">Tela inicial</a></li>
+      <li><a href="atendimentos.html"> Atendimentos</a></li>
+      <li><a href="agendamentos.html"> Agendamentos</a></li>
+      <li><a href="tabela.php"> Calendário</a></li>
+      <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
+    </ul>
+    
+  <div class="caixinhadoform">
+  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraresp.php">
+
+                <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
+  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' placeholder="Sobrenome" required />
+  				      <input name="email" type="email" placeholder="E-Mail" required />
+                <input name="telefone" type="int" placeholder="Telefone" required />
+                <input name="datNasc" type="date" placeholder="Data de Nascimento" required />
+                  <br>​
+                  <fieldset>
+                  	<legend> Qual área da atuação no Colégio Pedro II?</legend>
+                    <input type="radio" name="atuacao" value= "sesop"> SESOP<br>
+                    <input type="radio" name="atuacao" value="direcao"> Direção<br><br>
+
+​                   </fieldset>
+                  </fieldset>
+​                  <br>
+							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="Continuar o cadastramento"/>
+							        </form>
+						</div>
+					</div>
+
+  </div>
+</div>
+    </div>
+  </body>
+
+</html>
