@@ -2,16 +2,7 @@ html, body {
   padding: 0px;
   margin: 0px;
 }
-#menu
-{
 
-  max-height:20px;
-  background: url("topo.png") repeat;
-  max-width: 990px;
-  margin: auto;
-  margin-top: 10px;
-  padding: 10px;
-}
 
 #divBusca{
   background-color:#c4c6e1;
