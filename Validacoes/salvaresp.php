@@ -17,17 +17,15 @@ function InsereAluno($dadosnovoResponsavel)
 {
 $bd = Conexão();
 $nome = $dadosnovoResponsavel['nome'];
-$sobrenome = $dadosnovoResponsavel['sobrenome'];
 $telefone = $dadosnovoResponsavel['telefone'];
 $email = $dadosnovoResponsavel['email'];
 $endereco = $dadosnovoResponsavel['endereco'];
 $sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,sobrenome,telefone,email,endereco)
-  VALUES (:valnome,:valsobrenome,:valtelefone,:valemail,:valendereco,:valdat);");
+  "INSERT INTO responsavel(nome,telefone,email,endereco)
+  VALUES (:valnome,:valtelefone,:valemail,:valendereco,:valdat);");
 
  $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
- $sql -> bindValue(':valsobrenome',$dadosnovoResponsavel['sobrenome']);
-  $sql -> bindValue(':valdat',$dadosnovoResponsavel['telefone']);
+ $sql -> bindValue(':valdat',$dadosnovoResponsavel['telefone']);
  $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
  $sql -> bindValue(':valendereco',$dadosnovoResponsavel['endereco']);
  $sql -> execute();
