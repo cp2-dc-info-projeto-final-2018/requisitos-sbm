@@ -55,25 +55,17 @@
       <li><a href="tabela.php"> Calendário</a></li>
       <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
     </ul>
-    
+    <br><br><Br>
+
   <div class="caixinhadoform">
   <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraresp.php">
 
-                <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
-  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' placeholder="Sobrenome" required />
-  				      <input name="email" type="email" placeholder="E-Mail" required />
-                <input name="telefone" type="int" placeholder="Telefone" required />
-                <input name="datNasc" type="date" placeholder="Data de Nascimento" required />
-                  <br>​
-                  <fieldset>
-                  	<legend> Qual área da atuação no Colégio Pedro II?</legend>
-                    <input type="radio" name="atuacao" value= "sesop"> SESOP<br>
-                    <input type="radio" name="atuacao" value="direcao"> Direção<br><br>
-
-​                   </fieldset>
-                  </fieldset>
-​                  <br>
-							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="Continuar o cadastramento"/>
+                <input name="nome" type="text" minlength='3' maxlength='35' title="Informe a Nome do responsável do aluno - Obrigatrio"placeholder="Nome" required />
+  				      <input name="sobrenome" type="text" minlength='3' maxlength='35' title="Informe a Sobrenome - Obrigatrio" placeholder="Sobrenome" required />
+  				      <input name="email" type="email" title="Informe o Email do responsável do aluno - Obrigatrio" placeholder="E-Mail" required />
+                <input name="telefone" type="int" title="Informe a Matrículao telefone do responsável do aluno- Obrigatrio" placeholder="Telefone" required />
+​<br>
+							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="cadastrar responsável"/>
 							        </form>
 						</div>
 					</div>
@@ -84,3 +76,4 @@
   </body>
 
 </html>
+
