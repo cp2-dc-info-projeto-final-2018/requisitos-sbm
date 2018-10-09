@@ -32,13 +32,13 @@ $sql = $bd -> prepare(
 
 }
 
-////function BuscaUsuarioPor($matricula)
+function BuscaUsuarioPorID($nome)
 {
 	$bd = Conexão();
 
 	$sql = $bd->prepare('SELECT senha FROM usuarios WHERE matricula = :matricula');
 
-	$sql->bindValue(':matricula', $matricula);
+	$sql->bindValue(':nome', $nome);
 
 	$sql->execute();
 

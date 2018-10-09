@@ -2,6 +2,8 @@
 
 require_once('salvasesopdirecao.php');
 
+
+
 $erros = [];
   $request = array_map('trim',$_REQUEST);
   $request = filter_var_array(
@@ -13,7 +15,8 @@ $erros = [];
       'email' => FILTER_VALIDATE_EMAIL,
       'senha' => FILTER_DEFAULT,
       'confirmaSenha' => FILTER_DEFAULT,
-      'datNasc' => FILTER_DEFAULT
+      'datNasc' => FILTER_DEFAULT,
+      'atuacao' => FILTER_VALIDATE_BOOLEAN
     ]
   );
 $matricula = $request['matricula'];
@@ -64,7 +67,7 @@ if($senha == false)
 {
   $erros[] = "Senha não encontrada";
 }
-else if(strlen($senha)<6 || strlen($sobrenome)>12)
+else if(strlen($senha)<6 || strlen($senha)>12)
 {
  $erros [] = "Senha deve ter no minímo 6 caracteres e no máximo 12";
 }
@@ -94,6 +97,15 @@ if ($senha != $confirma)
     $erros[] = "Valor de Data inválido";
   }
 
+  /*if ($request ['atuacao'])
+      FZR VALIDAÇÃO PARA Q N SEJA NULO, TO VAZANDO E DPS EU FAÇO ISSO
+  */
+  if else ($request ['atuacao'] == 'sesop' ){
+    $atuacao = 0;
+  }
+  else {
+    $atuacao = 1;
+  }
 if (empty($erros))
 {
       $novoUsuario = [
@@ -103,7 +115,8 @@ if (empty($erros))
       'email' => $request['email'],
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
-      'datNasc'=> $request['datNasc']
+      'datNasc'=> $request['datNasc'],
+      'atuacao'=> $atuacao['atuacao']
     ];
 
    InsereUsuario($novoUsuario);
