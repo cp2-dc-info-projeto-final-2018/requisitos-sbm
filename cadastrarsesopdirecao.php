@@ -84,17 +84,8 @@ if ($senha != $confirma)
 {
  $erros[] = "Senhas não são iguais";
 }
-$atuacao = $request['atuacao'];
-if ($atuacao == false){
-  $erros[] = "Atuação não informada";
-}
-else if ($atuacao = sesop){
-   $atuacaonova = 0;
-}
-else if ($atuacao = direcao){
-   $atuacaonova = 1;
-}
-else
+
+  else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
@@ -125,7 +116,7 @@ if (empty($erros))
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
       'datNasc'=> $request['datNasc'],
-      'atuacao'=> [$atuacaonova];
+      'atuacao'=> $atuacao['atuacao']
     ];
 
    InsereUsuario($novoUsuario);
