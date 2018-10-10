@@ -55,6 +55,12 @@ $sql -> bindValue(':valid_aluno',$dadosnovoResponsavel['id_aluno']);
 
 }
 
+function BuscaUsuarioPorID($nome)
+{
+	$bd = Conexão();
 
+	$sql = $bd->prepare('SELECT senha FROM usuarios WHERE matricula = :matricula');
+
+	$sql->bindValue(':nome', $nome);
 
  ?>
