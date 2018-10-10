@@ -16,8 +16,10 @@ function MostreSemanas()
    <?php
 
 }
+}
 ?>
 <?php
+
 function GetNumeroDias( $mes )
 {
 	$numero_dias = array(
@@ -82,7 +84,7 @@ function MostreCalendario( $mes  )
 <?php
 		  if( ($diacorrente == ( date('d') - 1) && date('m') == $mes) )
 		  {
-			   echo " dia_atual " $diasemana;
+			   echo " dia_atual ".$diasemana;
 		  }
 		  else
 		  {
@@ -90,11 +92,11 @@ function MostreCalendario( $mes  )
 			     {
 			         if( $coluna < $diasemana && $linha == 0)
 				           {
-					                echo " dia_branco " $coluna;
+					                echo " dia_branco ".$coluna;
 				           }
 				       else
 				           {
-				  	              echo "dia_comum " $diacorrente;
+				  	              echo "dia_comum ".$diacorrente;
 				           }
 			     }
 			     else
@@ -177,5 +179,4 @@ MostreCalendario('05');
 <?php
 MostreCalendarioCompleto();
 ?>
-
 </html>
