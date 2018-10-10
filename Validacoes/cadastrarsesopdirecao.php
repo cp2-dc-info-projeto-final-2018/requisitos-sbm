@@ -13,7 +13,8 @@ $erros = [];
       'email' => FILTER_VALIDATE_EMAIL,
       'senha' => FILTER_DEFAULT,
       'confirmaSenha' => FILTER_DEFAULT,
-      'datNasc' => FILTER_DEFAULT
+      'datNasc' => FILTER_DEFAULT,
+      'atuacao' => FILTER_VALIDATE_BOOLEAN
     ]
   );
 $matricula = $request['matricula'];
@@ -81,8 +82,17 @@ if ($senha != $confirma)
 {
  $erros[] = "Senhas não são iguais";
 }
-
-  else
+$atuacao = $request['atuacao'];
+if ($atuacao == false){
+  $erros[] = "Atuação não informada";
+}
+else if ($atuacao = sesop){
+   $atuacaonova = 0;
+}
+else if ($atuacao = direcao){
+   $atuacaonova = 1;
+}
+else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
@@ -103,7 +113,8 @@ if (empty($erros))
       'email' => $request['email'],
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
-      'datNasc'=> $request['datNasc']
+      'datNasc'=> $request['datNasc'],
+      'atuacao'=> [$atuacaonova];
     ];
 
    InsereUsuario($novoUsuario);
