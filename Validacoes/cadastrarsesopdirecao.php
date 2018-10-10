@@ -88,12 +88,13 @@ $atuacao = $request['atuacao'];
 if ($atuacao == false){
   $erros[] = "Atuação não informada";
 }
-else if ($atuacao = sesop){
-   $atuacaonova = 0;
+else if ($request ['atuacao'] == 'sesop'){
+   $atuacao = 0;
 }
-else if ($atuacao = direcao){
-   $atuacaonova = 1;
+else if ($request ['atuacao'] == 'direcao'){
+   $atuacao = 1;
 }
+//testa, se der merda confere se as validacoes do atuacao ta certo
 else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
@@ -104,17 +105,7 @@ else
 
   if ($data == false){
     $erros[] = "Valor de Data inválido";
-  }
 
-  /*if ($request ['atuacao'])
-      FZR VALIDAÇÃO PARA Q N SEJA NULO, TO VAZANDO E DPS EU FAÇO ISSO
-  */
-  if else ($request ['atuacao'] == 'sesop' ){
-    $atuacao = 0;
-  }
-  else {
-    $atuacao = 1;
-  }
 if (empty($erros))
 {
       $novoUsuario = [
@@ -125,7 +116,7 @@ if (empty($erros))
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
       'datNasc'=> $request['datNasc'],
-      'atuacao'=> [$atuacaonova];
+      'atuacao'=> $atuacao; //vê tb se aqui ta certo
     ];
 
    InsereUsuario($novoUsuario);
