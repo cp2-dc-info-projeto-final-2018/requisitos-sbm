@@ -103,8 +103,9 @@ else
 
   $data = DateTime::createFromFormat('Y-m-d', $datnasc);
 
-  if ($data == false){
+if ($data == false){
     $erros[] = "Valor de Data inválido";
+  }
 
 if (empty($erros))
 {
@@ -116,7 +117,7 @@ if (empty($erros))
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
       'datNasc'=> $request['datNasc'],
-      'atuacao'=> $atuacao; //vê tb se aqui ta certo
+      'atuacao'=> $atuacao //vê tb se aqui ta certo
     ];
 
    InsereUsuario($novoUsuario);
@@ -128,7 +129,7 @@ else
   echo '<ul>';
   foreach ($erros as $msgErro)
   {
-      echo "<li>$msgErro</li>";
+    echo '<li>$msgErro</li>';
     echo '</ul>';
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }

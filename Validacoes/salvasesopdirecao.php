@@ -36,7 +36,7 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valsenha',$dadosnovoUsuario['senha']);
  //$sql -> bindValue(':valdatanasc',$dadosnovoUsuario['datNasc']);
  //consertar esse erro dps
- $sql -> bindValue(':valatuacao',$dadosnovoUsuario[$atuacaonova]) //vê se aqui tá certo tbm 
+ $sql -> bindValue(':valatuacao',$dadosnovoUsuario[$atuacao]); //vê se aqui tá certo tbm 
  $sql -> execute();
 
 }
