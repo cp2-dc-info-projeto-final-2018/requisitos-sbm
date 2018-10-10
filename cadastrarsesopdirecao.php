@@ -84,18 +84,8 @@ if ($senha != $confirma)
 {
  $erros[] = "Senhas não são iguais";
 }
-$atuacao = $request['atuacao'];
-if ($atuacao == false){
-  $erros[] = "Atuação não informada";
-}
-else if ($request ['atuacao'] == 'sesop'){
-   $atuacao = 0;
-}
-else if ($request ['atuacao'] == 'direcao'){
-   $atuacao = 1;
-}
-//testa, se der merda confere se as validacoes do atuacao ta certo
-else
+
+  else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
@@ -103,10 +93,19 @@ else
 
   $data = DateTime::createFromFormat('Y-m-d', $datnasc);
 
-if ($data == false){
+  if ($data == false){
     $erros[] = "Valor de Data inválido";
   }
 
+  /*if ($request ['atuacao'])
+      FZR VALIDAÇÃO PARA Q N SEJA NULO, TO VAZANDO E DPS EU FAÇO ISSO
+  */
+  if else ($request ['atuacao'] == 'sesop' ){
+    $atuacao = 0;
+  }
+  else {
+    $atuacao = 1;
+  }
 if (empty($erros))
 {
       $novoUsuario = [
@@ -117,7 +116,7 @@ if (empty($erros))
       'senha' => $request['senha'],
       'confirmaSenha' => $request['confirmaSenha'],
       'datNasc'=> $request['datNasc'],
-      'atuacao'=> $atuacao //vê tb se aqui ta certo
+      'atuacao'=> $atuacao['atuacao']
     ];
 
    InsereUsuario($novoUsuario);
@@ -129,7 +128,7 @@ else
   echo '<ul>';
   foreach ($erros as $msgErro)
   {
-    echo '<li>$msgErro</li>';
+      echo "<li>$msgErro</li>";
     echo '</ul>';
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }
