@@ -4,7 +4,6 @@
   <head>
       <meta charset="utf-8">
       <title> SISOP </title>
-      <link rel="stylesheet" type="text/css" href="style1.css">
       <link rel="stylesheet" type="text/css" href="style.css">
 
   </head>
@@ -49,15 +48,30 @@
     <body>
 
     <ul>
-      <li><a href="login.html">Tela inicial</a></li>
+      <li><a href="entradasesop.html">Pesquisa</a></li>
       <li><a href="atendimentos.html"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
-      <li><a href="tabela.php"> Calendário</a></li>
+        <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href= "cadastra.html">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
     </ul>
-    <br> <br> <br> 
+    <br> <br> <br>
+    <div class="caixinhadoform">
+      <form name="formdelogin" method="post" action=".php" >
+        <h4> Cadastre um novo atendimento!</h4>
+          <p>Preencha todos os campos:</p>
+        <input type="text" name="matricula" title="Informe a matrícula da pessoa que irá atender - Obrigatório" placeholder="Matrícula"><br>
+        <input type="text" name="Nome do Aluno" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
+        <input name ="data" type="date"title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
+        <div>
+          <br>
+          <label for="msg">Descrição:</label>
+          <br><br>
 
+          <textarea id="msg" title="Informe uma pequena descrição - Obrigatório"></textarea>
+      </div>
+      <button type="submit">Cadastrar</button>
+        <br>
   </div>
   </body>
     </html>
