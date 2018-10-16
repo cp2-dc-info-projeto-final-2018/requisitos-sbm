@@ -50,14 +50,13 @@ $resultado_events = mysqli_query($conn,$result_events);
 	</head>
 	<body>
 
-	<ul>
-		<li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
-		<li><a href="../Codigo/atendimentos.html"> Atendimentos</a></li>
-		<li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
-		<li><a href="index.php"> Calendário</a></li>
-		<li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
-		<li style="float:right"><a class="active" href="../Codigo/sair.php">Sair</a></li>
-	</ul>
+    <ul>
+      <li><a href="entradasesop.html">Pesquisa</a></li>
+      <li><a href="agendamentos.html"> Agendamentos</a></li>
+      <li><a href=""> Calendário </a></li>
+      <li><a href="cadastra.html">Cadastramento</a></li>
+      <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
+    </ul>
 	<br><br><br>
 <meta charset='utf-8' />
 <link href='css/fullcalendar.min.css' rel='stylesheet' />

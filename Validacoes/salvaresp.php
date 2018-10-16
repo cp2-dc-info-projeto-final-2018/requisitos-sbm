@@ -62,5 +62,5 @@ function BuscaUsuarioPorID($nome)
 	$sql = $bd->prepare('SELECT senha FROM usuarios WHERE matricula = :matricula');
 
 	$sql->bindValue(':nome', $nome);
-
+}
  ?>
