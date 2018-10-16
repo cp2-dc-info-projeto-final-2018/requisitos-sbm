@@ -14,7 +14,7 @@ $erros = [];
 
     ]
   );
-  $id_aluno = BuscaIddoAluno()==0;
+
 $nome = $request['nome'];
 if ($nome == false)
 {
@@ -58,6 +58,7 @@ else if(strlen($endereco)<20 || strlen($endereco)>1000)
   $erros[] = "O endereço tem que ter ao menos 20 letras e no máximo 1000!";
 }
 $matriculaalu = $request['matricula'];
+$id_aluno = BuscaIddoAluno($matriculaalu) ;
 if($matriculaalu == false)
 {
   $erros[] = "Matrícula não preenchida!";
@@ -71,6 +72,7 @@ else if ($id_aluno==0)
 {
   $erros[] = "Aluno inexistente";
 }
+
 
   if (empty($erros))
 {
