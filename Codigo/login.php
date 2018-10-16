@@ -49,9 +49,6 @@ session_start();
         <input type="text" name="matricula" placeholder="Matrícula"><br>
         <input type="password" name="senha"  placeholder="Senha"><br>
         <br>
-        <a href= "cadastrausuario.html">
-          <font color= "green">Quero me cadastrar</font><br></a>
-          <br><br>
         <input type="submit" value="Entrar">
       </form>
     </div>
