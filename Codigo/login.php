@@ -49,7 +49,10 @@ session_start();
         <input type="text" name="matricula" placeholder="Matrícula"><br>
         <input type="password" name="senha"  placeholder="Senha"><br>
         <br>
+<<<<<<< HEAD
+=======
           <br><br>
+>>>>>>> 3115452b6329634eaa9174cbca456b2e56be137f
         <input type="submit" value="Entrar">
       </form>
     </div>
