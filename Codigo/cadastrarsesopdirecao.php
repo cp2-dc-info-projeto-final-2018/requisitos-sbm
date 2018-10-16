@@ -106,6 +106,7 @@ if ($senha != $confirma)
   else {
     $atuacao = 1;
   }
+
 if (empty($erros))
 {
       $novoUsuario = [
@@ -119,8 +120,9 @@ if (empty($erros))
       'atuacao'=> $atuacao['atuacao']
     ];
 
-   InsereUsuario($novoUsuario);
+   InsereUsuario($dadosnovoUsuario);
 }
+
 else
 {
   //Redirecionar
@@ -128,7 +130,7 @@ else
   echo '<ul>';
   foreach ($erros as $msgErro)
   {
-      echo "<li>$msgErro</li>";
+    echo "<li>$msgErro</li>";
     echo '</ul>';
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }
