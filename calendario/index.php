@@ -51,10 +51,10 @@ $resultado_events = mysqli_query($conn,$result_events);
 	<body>
 
     <ul>
-      <li><a href="entradasesop.html">Pesquisa</a></li>
-      <li><a href="agendamentos.html"> Agendamentos</a></li>
+      <li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
+      <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
       <li><a href=""> Calendário </a></li>
-      <li><a href="cadastra.html">Cadastramento</a></li>
+      <li><a href="../Codigo/cadastra.html">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
     </ul>
 	<br><br><br>

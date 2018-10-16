@@ -129,7 +129,7 @@ else
   echo '<ul>';
   foreach ($erros as $msgErro)
   {
-    echo '<li>$msgErro</li>';
+    echo "<li>$msgErro</li>";
     echo '</ul>';
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }
