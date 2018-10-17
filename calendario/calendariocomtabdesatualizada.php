@@ -1,8 +1,4 @@
-<?php
-include_once("conexion.php");
-$result_events = "SELECT id_atendimento,data,hora,descricao,id_sesop,id_aluno,id_responsavel FROM atendimento ";
-$resultado_events = mysqli_query($conn,$result_events);
- ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,13 +46,13 @@ $resultado_events = mysqli_query($conn,$result_events);
 	</head>
 	<body>
 
-    <ul>
-      <li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
-      <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
-      <li><a href=""> Calendário </a></li>
-      <li><a href="../Codigo/cadastra.html">Cadastramento</a></li>
-      <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
-    </ul>
+	<ul>
+		<li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
+		<li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
+		<li><a href="index.php"> Calendário</a></li>
+		<li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
+		<li style="float:right"><a class="active" href="../Codigo/sair.php">Sair</a></li>
+	</ul>
 	<br><br><br>
 <meta charset='utf-8' />
 <link href='css/fullcalendar.min.css' rel='stylesheet' />
@@ -79,20 +75,7 @@ $resultado_events = mysqli_query($conn,$result_events);
 						editable: true,
 						eventLimit: true, // allow "more" link when too many events
 						events: [
-							<?php
-									while($row_events = mysqli_fetch_array($resultado_events))
-									{ ?>
-									id: '<?php echo $row_events['id_atendimento']; ?>',
-									data: '<?php echo $row_events['data']; ?>',
-									hora: '<?php echo $row_events['hora']; ?>',
-									descricao: '<?php echo $row_events['descricao']; ?>',
-									id_sesop: '<?php echo $row_events['id_sesop']; ?>',
-									id_aluno: '<?php echo $row_events['id_aluno']; ?>',
-									id_responsavel: '<?php echo $row_events['id_responsavel']; ?>',
-								},
-									<?php
-									}
-							 ?>
+						
 						]
 					});
 		});
