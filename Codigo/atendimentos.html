@@ -58,10 +58,15 @@
     <br> <br> <br>
     <div class="caixinhadoform">
       <form name="formdelogin" method="post" action=".php" >
-        <h4> Cadastre um novo atendimento!</h4>
-          <p>Preencha todos os campos:</p>
+        <h4>Seja Bem-Vindo!</h4>
+          <p>Cadastre um novo atendimento:</p>
+          <?php if ($erro != null) { ?>
+               <p> <?= $erro ?> </p>
+               <?php }?>
         <input type="text" name="matricula" title="Informe a matrícula da pessoa que irá atender - Obrigatório" placeholder="Matrícula"><br>
         <input type="text" name="Nome do Aluno" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
+        <input type="text" name="Nome do Responsável" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável">
+        <input type="DateTime" name="Hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora">
         <input name ="data" type="date"title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
         <div>
           <br>

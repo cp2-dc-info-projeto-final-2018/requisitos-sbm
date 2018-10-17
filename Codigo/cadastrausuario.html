@@ -43,12 +43,26 @@
         background-color: #111;
     }
 
-    }
     </style>
     </head>
     <body>
+
+      <ul>
+        <li><a href="entradasesop.html">Pesquisa</a></li>
+        <li><a href="atendimentos.html"> Atendimentos</a></li>
+        <li><a href="agendamentos.html"> Agendamentos</a></li>
+        <li><a href="../calendario/index.php"> Calendário</a></li>
+        <li><a href="cadastra.html"> Cadastramento</a></li>
+        <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
+      </ul>
+      <br> <br> <br>
   <div class="caixinhadoform">
   <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastrarsesopdirecao.php">
+    <h4>Seja Bem-Vindo!</h4>
+      <p>Cadastre o Usuário:</p>
+      <?php if ($erro != null) { ?>
+           <p> <?= $erro ?> </p>
+           <?php }?>
 
 								<input name="matricula" class="formcss" required="" tabindex="1" title="Informe sua Matricula - Obrigatrio" placeholder="Matricula" autocomplete="off" type="text"  id="matricula"/>
                 <input name="nome" type="text" minlength='3' maxlength='35' placeholder="Nome" required />
