@@ -6,7 +6,7 @@ $erros = [];
     $request,
     [
       'nome' => FILTER_DEFAULT,
-            'endereco' => FILTER_DEFAULT,
+      'endereco' => FILTER_DEFAULT,
       'email' => FILTER_VALIDATE_EMAIL,
       'telefone' => FILTER_DEFAULT,
       'matricula' => FILTER_DEFAULT
@@ -58,7 +58,7 @@ else if(strlen($endereco)<20 || strlen($endereco)>1000)
   $erros[] = "O endereço tem que ter ao menos 20 letras e no máximo 1000!";
 }
 $matriculaalu = $request['matricula'];
-$id_aluno = BuscaIddoAluno($matriculaalu) ;
+$id_aluno = BuscaIddoAluno($matriculaalu);
 if($matriculaalu == false)
 {
   $erros[] = "Matrícula não preenchida!";
