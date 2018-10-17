@@ -16,7 +16,7 @@ $erros = [];
       'senha' => FILTER_DEFAULT,
       'confirmaSenha' => FILTER_DEFAULT,
       'datNasc' => FILTER_DEFAULT,
-      'atuacao' => FILTER_VALIDATE_BOOLEAN
+      'atuacao' => FILTER_DEFAULT
     ]
   );
 $matricula = $request['matricula'];
@@ -84,6 +84,9 @@ if ($senha != $confirma)
 {
  $erros[] = "Senhas não são iguais";
 }
+
+if($datNasc = $request['datNasc'])
+
 $atuacao = $request['atuacao'];
 if ($atuacao == false){
   $erros[] = "Atuação não informada";
@@ -94,31 +97,32 @@ else if ($request ['atuacao'] == 'sesop'){
 else if ($request ['atuacao'] == 'direcao'){
    $atuacao = 1;
 }
-//testa, se der merda confere se as validacoes do atuacao ta certo
+
+$datNasc = $request['datNasc'];
+
+$data = DateTime::createFromFormat('Y-m-d', $datNasc);
+
+if ($datNasc == false){
+$erros[] = "Valor de Data inválido";
+}
+
 else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
-    $datnasc = $request['datNasc'];
-
-  $data = DateTime::createFromFormat('Y-m-d', $datnasc);
-
-if ($data == false){
-    $erros[] = "Valor de Data inválido";
-  }
 
 if (empty($erros))
 {
-      $novoUsuario = [
-      'matricula' => $request['matricula'],
-      'nome' => $request['nome'],
-      'sobrenome' => $request['sobrenome'],
-      'email' => $request['email'],
-      'senha' => $request['senha'],
-      'confirmaSenha' => $request['confirmaSenha'],
-      'datNasc'=> $request['datNasc'],
-      'atuacao'=> $atuacao //vê tb se aqui ta certo
-    ];
+    $novoUsuario = [
+        'matricula' => $request['matricula'],
+        'nome' => $request['nome'],
+        'sobrenome' => $request['sobrenome'],
+        'email' => $request['email'],
+        'senha' => $request['senha'],
+        'confirmaSenha' => $request['confirmaSenha'],
+        'datNasc'=> $request['datNasc'],
+        'atuacao'=> $atuacao //vê tb se aqui ta certo
+      ];
 
    InsereUsuario($novoUsuario);
 }
