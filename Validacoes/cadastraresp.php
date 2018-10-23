@@ -44,7 +44,7 @@ if ($telefone == null)
 {
   $erros [] = "Preencha o telefone!";
 }
-else if (strlen($telefone)<8 || strlen($telefone)> 9)
+else if (strlen($telefone)< 8 || strlen($telefone)> 14) //(21)96445-8444
 {
   $erros [] = "Telefone tem ao menos 8 digítos e no máximo 9!";
 }
