@@ -60,7 +60,11 @@
   <br> <br> <br>
   <div class="caixinhadoform">
   <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraaluno.php">
-
+    <h4>Seja Bem-Vindo!</h4>
+      <p>Cadastre um novo aluno:</p>
+      <?php if ($erro != null) { ?>
+           <p> <?= $erro ?> </p>
+           <?php }?>
 								<input class="formcss" required="" tabindex="1" title="Informe a Matrícula do aluno - Obrigatório" placeholder="Matricula" autocomplete="off" type="text" name="matricula" id="matricula"/>
                 <input name="nome" type="text" minlength='3' maxlength='35' title="Informe o Nome do aluno - Obrigatório" placeholder="Nome" required />
   				      <input name="sobrenome" type="text" minlength='3' maxlength='35' title="Informe o Sobrenome do aluno - Obrigatório" placeholder="Sobrenome" required />

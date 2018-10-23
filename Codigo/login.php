@@ -17,7 +17,6 @@ session_start();
   {
   	$erro = null;
   }
-	$fmt = new NumberFormatter('pt_BR', NumberFormatter::CURRENCY);
 ?>
 <!DOCTYPE HTML>
 
