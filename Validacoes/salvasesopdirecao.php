@@ -15,8 +15,6 @@ function InsereUsuario($dadosnovoUsuario)
 {
 $bd = Conexão();
 
-$senha = $dadosnovoUsuario['senha'];
-$hash = password_hash($senha, PASSWORD_DEFAULT);
 
 $sql = $bd -> prepare(
   "INSERT INTO usuario(matricula,nome,sobrenome,email,senha,datNasc,atuacao)
@@ -26,7 +24,7 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valnome',$dadosnovoUsuario['nome']);
  $sql -> bindValue(':valsobrenome',$dadosnovoUsuario['sobrenome']);
  $sql -> bindValue(':valemail',$dadosnovoUsuario['email']);
- $sql -> bindValue(':valsenha',$hash);
+ $sql -> bindValue(':valsenha',$dadosnovoUsuario['senha']);
  $sql -> bindValue(':valdatNasc',$dadosnovoUsuario['datNasc']);
  $sql -> bindValue(':valatuacao',$dadosnovoUsuario['atuacao']);
  $sql -> execute();

@@ -35,7 +35,7 @@
 	 	session_start();
 
 	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-		header('Location: entrada.html');
+		header('Location: entradasesop.html');
 	 	exit();
 	 }
 	else
