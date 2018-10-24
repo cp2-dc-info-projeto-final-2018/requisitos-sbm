@@ -110,6 +110,10 @@ else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
+    if(VerificaEmail($request['email']) != null)
+    {
+      $erros[] = "O Email informado já está cadastrado.";
+    }
 
 if (empty($erros))
 {
