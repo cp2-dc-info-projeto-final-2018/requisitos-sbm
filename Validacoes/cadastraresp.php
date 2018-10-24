@@ -72,6 +72,10 @@ else if ($id_aluno==0)
 {
   $erros[] = "Aluno inexistente";
 }
+if(VerificacaodeEmail($request['email']) != null)
+{
+  $erros [] = "Já existe um usuário cadastrado com esse email.";
+}
 
 
   if (empty($erros))

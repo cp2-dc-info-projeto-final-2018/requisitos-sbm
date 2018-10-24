@@ -1,3 +1,15 @@
+<?php session_start();
+//if (empty($_SESSION['erros']))
+if(array_key_exists('erros',$_SESSION))
+{
+	$erro = $_SESSION['erros'];
+	unset($_SESSION['erros']);
+}
+else
+{
+	$erro=null;
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -49,7 +61,7 @@
 
     <ul>
       <li><a href="entradasesop.html">Pesquisa</a></li>
-      <li><a href="atendimentos.html"> Atendimentos</a></li>
+      <li><a href="atendimentos.php"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href= "cadastra.html">Cadastramento</a></li>
@@ -57,23 +69,23 @@
     </ul>
     <br> <br> <br>
     <div class="caixinhadoform">
-      <form name="formdelogin" method="post" action=".php" >
+      <form name="formdelogin" method="post" action="../Validacoes/cadastraaten.php" >
         <h4>Seja Bem-Vindo!</h4>
           <p>Cadastre um novo atendimento:</p>
           <?php if ($erro != null) { ?>
                <p> <?= $erro ?> </p>
                <?php }?>
         <input type="text" name="matricula" title="Informe a matrícula da pessoa que irá atender - Obrigatório" placeholder="Matrícula"><br>
-        <input type="text" name="Nome do Aluno" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
-        <input type="text" name="Nome do Responsável" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável">
-        <input type="DateTime" name="Hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora">
+        <input type="text" name="nomealu" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
+        <input type="text" name="nomeresp" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável">
+        <input type="DateTime" name="hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora">
         <input name ="data" type="date"title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
         <div>
           <br>
           <label for="msg">Descrição:</label>
           <br><br>
 
-          <textarea id="msg" title="Informe uma pequena descrição - Obrigatório"></textarea>
+          <textarea id="descricao" title="Informe uma pequena descrição - Obrigatório"></textarea>
       </div>
       <button type="submit">Cadastrar</button>
         <br>

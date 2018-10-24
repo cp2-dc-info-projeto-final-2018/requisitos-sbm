@@ -63,4 +63,16 @@ function BuscaUsuarioPorID($nome)
 
 	$sql->bindValue(':nome', $nome);
 }
+function VerificacaodeEmail(string $email)
+{
+    $bd = Conexão();
+    $sql = $bd->prepare('SELECT * FROM usuario WHERE email = :valemail');
+    $sql -> bindValue(':email',$email);
+    $sucesso = $cmdSql ->execute();
+    if($sucesso == false)
+    {
+      throw new Exception('Erro ao executar comando SQL');
+    }
+    return $sql->fetch();
+}
  ?>

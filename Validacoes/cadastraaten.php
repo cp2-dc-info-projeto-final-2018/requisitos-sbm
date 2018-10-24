@@ -1,3 +1,4 @@
+
 <?php
 require_once('salvatendimento.php');
 $erros = [];
@@ -5,12 +6,11 @@ $erros = [];
   $request = filter_var_array(
     $request,
     [
-      data,hora,descricao,nomealu,nomeresp,matricula
-      $sql = $bd -> prepare(
+
       'data' => FILTER_DEFAULT,
       'hora' => FILTER_DEFAULT,
       'descricao' => FILTER_VALIDATE_EMAIL,
-      '$nomealu' => FILTER_DEFAULT,
+      'nomealu' => FILTER_DEFAULT,
       'nomeresp' => FILTER_DEFAULT,
       'matricula' => FILTER_DEFAULT
 
@@ -41,6 +41,7 @@ $data = DateTime::createFromFormat('d-m-Y', $data);
 if ($data == false){
 $erros[] = "Valor de Data inválido";
 }
+$matricula = $request['matricula'];
 if($matricula == false)
 {
   $erros[] = "Matrícula não preenchida!";
@@ -58,7 +59,7 @@ else if (strlen($hora)>0 || strlen($hora)<24)
 {
   $erros[] = "Hora Inválida!";
 }
-$descricao = $request['$descricao'];
+$descricao = $request['descricao'];
 if ($descricao == false)
 {
   $erros[] = "Descrição não preenchido!";
@@ -78,7 +79,6 @@ else if(strlen($matricula)<9 || strlen($matricula)>11)
 }
 
 $matriculaalu = $request['matricula'];
-$id_aluno = BuscaIddoAluno($matriculaalu) ;
 if($matriculaalu == false)
 {
   $erros[] = "Matrícula não preenchida!";
@@ -87,10 +87,9 @@ else if(strlen($matriculaalu)<9 || strlen($matriculaalu)>11)
 {
    $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
 }
-
-else if ($id_aluno==0)
+if(VerificaEmail($request['email']) != null)
 {
-  $erros[] = "Aluno inexistente";
+  $erros[] = "O Email informado já está cadastrado.";
 }
 
   foreach ($erros as $msgErro)
@@ -99,5 +98,6 @@ else if ($id_aluno==0)
     echo '</ul>';
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }
-}
+
+
 ?>
