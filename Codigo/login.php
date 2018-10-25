@@ -4,7 +4,7 @@ session_start();
 
   if(array_key_exists('matriculaUsuárioLogado', $_SESSION))
   {
-  	header ('Location: entrada.html');
+  	header ('Location: entradasesop.html');
   	exit();
   }
   if (array_key_exists('erro',$_SESSION))

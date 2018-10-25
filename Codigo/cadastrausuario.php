@@ -1,3 +1,15 @@
+<?php session_start();
+//if (empty($_SESSION['erros']))
+if(array_key_exists('erros',$_SESSION))
+{
+	$erro = $_SESSION['erros'];
+	unset($_SESSION['erros']);
+}
+else
+{
+	$erro=null;
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -49,7 +61,7 @@
 
       <ul>
         <li><a href="entradasesop.html">Pesquisa</a></li>
-        <li><a href="atendimentos.html"> Atendimentos</a></li>
+        <li><a href="atendimentos.php"> Atendimentos</a></li>
         <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="cadastra.html"> Cadastramento</a></li>
