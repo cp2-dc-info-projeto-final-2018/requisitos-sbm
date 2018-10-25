@@ -29,15 +29,27 @@
 		{
 			$erro = "Nenhuma Matrícula encontrada para este usuário";
 		}
-	 else if (password_verify($request['senha'],
-							  $resultados['senha']))
+	 else if (password_verify($request['senha'], $resultados['senha']))
 	 {
+		 $sesopoudirecao = Verificaratuacao($matricula);
+		 if ($sesopoudirecao == 0)
+		{
 	 	session_start();
 
 	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
 		header('Location: entradasesop.html');
 	 	exit();
-	 }
+	 	}
+		else if ($sesopoudirecao == 1)
+		{
+			session_start();
+
+		 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
+			header('Location: entradadirecao.html');
+		 	exit();
+		}
+
+	}
 	else
 	{
 		$erro = "Senha inválida";
@@ -48,5 +60,5 @@
 	session_start();
 	$_SESSION['erros']= $erro;
 	echo $erro;
-	//header('Location: login.html');
+	header('Location: login.php');
 ?>

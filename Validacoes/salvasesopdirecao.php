@@ -33,7 +33,7 @@ function BuscaUsuarioPorMatricula($matricula)
 {
 	$bd = Conexão();
 	$sql = $bd->prepare('SELECT senha FROM usuario WHERE matricula = :matricula');
-	$sql->bindValue(':matricula', $matricula);
+	$sql->bindValue(':valmatricula', $matricula); //tinha um erro aqui, procurar bizarro dps
 	$sql->execute();
 	return $sql->fetch();
 }
@@ -54,9 +54,9 @@ function Verificaratuacao(string $matricula)
 {
     $bd = Conexão();
     $sql = $bd->prepare('SELECT atuacao FROM usuario WHERE matricula = :valmatricula');
-    $sql -> bindValue(':valmatricula',$matricula);
+    $sql -> bindValue(':valmatricula', $matricula);
     $sql -> execute();
-    return $sql -> fetch();
+    return $sql ->fetch();
 
 }
  ?>

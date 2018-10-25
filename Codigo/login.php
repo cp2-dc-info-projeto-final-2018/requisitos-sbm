@@ -4,7 +4,7 @@ session_start();
 
   if(array_key_exists('matriculaUsuárioLogado', $_SESSION))
   {
-      //Colocar if caso seja sejop ou direção
+
     header ('Location: entradasesop.html');
   	exit();
   }
@@ -18,6 +18,7 @@ session_start();
   {
   	$erro = null;
   }
+
 ?>
 <!DOCTYPE HTML>
 
