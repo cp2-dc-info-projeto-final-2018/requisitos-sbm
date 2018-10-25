@@ -43,13 +43,13 @@ html, body {
   #topo{
     width: 100%;
     height: 125px;
-    background: url("topo.png") repeat;
+    background: url("../Imagens/topo.png") repeat;
   }
 
   #topo2{
     width: 960px;
     height: 125px;
-    background: url("editado.png") no-repeat;
+    background: url("../Imagens/editado.png") no-repeat;
     margin-left: auto;
     margin-right: auto;
 
