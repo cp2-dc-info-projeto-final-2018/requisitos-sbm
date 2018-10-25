@@ -17,13 +17,8 @@ $bd = Conexão();
 
 
 $sql = $bd -> prepare(
-<<<<<<< HEAD
-  "INSERT INTO usuario(matricula, nome, sobrenome, email, senha, datNasc, atuacao)
-  VALUES (:valmatricula, :valnome, :valsobrenome, :valemail, :valsenha, :valdatNasc, :valatuacao);");
-=======
   "INSERT INTO usuario(matricula,nome,sobrenome,email,senha,datNasc,atuacao)
   VALUES (:valmatricula,:valnome,:valsobrenome,:valemail,:valsenha,:valdatNasc,:valatuacao);");
->>>>>>> 01fefd08a31a9ba24cc1c5d9b303133fca5adea6
 
  $sql -> bindValue(':valmatricula',$dadosnovoUsuario['matricula']);
  $sql -> bindValue(':valnome',$dadosnovoUsuario['nome']);
