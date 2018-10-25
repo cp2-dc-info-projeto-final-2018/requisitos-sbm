@@ -129,6 +129,8 @@ if (empty($erros))
       ];
 
    InsereUsuario($novoUsuario);
+
+   header('Location: ../Codigo/login.php');
 }
 else
 {

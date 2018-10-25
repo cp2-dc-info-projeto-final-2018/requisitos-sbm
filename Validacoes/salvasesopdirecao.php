@@ -42,12 +42,21 @@ function VerificaEmail(string $email)
   $bd = Conexão();
   $sql = $bd->prepare('SELECT email FROM usuario WHERE email = :valemail');
   $sql -> bindValue(':valemail',$email);
-  $sucesso = $sql->execute();
+  $sucesso = $sql -> execute();
   if($sucesso == false)
   {
     throw new Exception('Erro ao executar comando SQL');
   }
   return $sql -> fetch();
+
+}
+function Verificaratuacao(string $matricula)
+{
+    $bd = Conexão();
+    $sql = $bd->prepare('SELECT atuacao FROM usuario WHERE matricula = :valmatricula');
+    $sql -> bindValue(':valmatricula',$matricula);
+    $sql -> execute();
+    return $sql -> fetch();
 
 }
  ?>
