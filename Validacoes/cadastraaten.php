@@ -9,7 +9,7 @@ $erros = [];
 
       'data' => FILTER_DEFAULT,
       'hora' => FILTER_DEFAULT,
-      'descricao' => FILTER_VALIDATE_EMAIL,
+      'descricao' => FILTER_DEFAULT,
       'nomealu' => FILTER_DEFAULT,
       'nomeresp' => FILTER_DEFAULT,
       'matricula' => FILTER_DEFAULT
