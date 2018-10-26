@@ -56,7 +56,8 @@ function Verificaratuacao(string $matricula)
     $sql = $bd->prepare('SELECT atuacao FROM usuario WHERE matricula = :valmatricula');
     $sql -> bindValue(':valmatricula', $matricula);
     $sql -> execute();
-    return $sql ->fetch();
-
+    $resultado = $sql -> fetch();
+    assert($resultado != false);
+    return $resultado['atuacao'];
 }
  ?>

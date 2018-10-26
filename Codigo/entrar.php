@@ -32,7 +32,7 @@
 	 else if (password_verify($request['senha'], $resultados['senha']))
 	 {
 		 $sesopoudirecao = Verificaratuacao($matricula);
-		 if ($sesopoudirecao == 0)
+		 if ($sesopoudirecao['atuacao'] == 0)
 		{
 	 	session_start();
 
@@ -40,7 +40,7 @@
 		header('Location: entradasesop.html');
 	 	exit();
 	 	}
-		else if ($sesopoudirecao == 1)
+		else if ($sesopoudirecao['atuacao'] == 1)
 		{
 			session_start();
 
