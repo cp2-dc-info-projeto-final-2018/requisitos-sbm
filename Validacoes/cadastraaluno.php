@@ -104,6 +104,7 @@ $erros[] = "Valor de Data inválido";
       'datNasc' => $request['datNasc']
     ];
    InsereAluno($novoAluno);
+  header('Location: ../Codigo/login.php');
 }
 else
 {

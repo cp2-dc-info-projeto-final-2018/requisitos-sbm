@@ -89,6 +89,7 @@ if(VerificacaodeEmail($request['email']) != null)
 
     ];
    InsereResponsavel($novoResponsavel);
+   header('Location: ../Codigo/login.php');
 }
 else
 {

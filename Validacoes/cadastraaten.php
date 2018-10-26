@@ -91,7 +91,7 @@ if(VerificaEmail($request['email']) != null)
 {
   $erros[] = "O Email informado já está cadastrado.";
 }
-
+  //header('Location: ../Codigo/login.php');
   foreach ($erros as $msgErro)
   {
       echo "<li>$msgErro</li>";
