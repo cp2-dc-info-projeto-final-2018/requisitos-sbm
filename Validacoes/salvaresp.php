@@ -67,7 +67,7 @@ function VerificacaodeEmail(string $email)
 {
     $bd = Conexão();
     $sql = $bd->prepare('SELECT * FROM usuario WHERE email = :valemail');
-    $sql -> bindValue(':email',$email);
+    $sql -> bindValue(':valemail',$email);
     $sucesso = $cmdSql ->execute();
     if($sucesso == false)
     {
