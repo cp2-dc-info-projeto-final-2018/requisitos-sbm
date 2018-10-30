@@ -103,6 +103,7 @@ else
     {
       $erros[] = "O Email informado já está cadastrado.";
     }
+
 if (empty($erros))
 {
     $novoUsuario = [

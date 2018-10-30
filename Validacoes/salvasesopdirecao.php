@@ -23,7 +23,7 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valnome',$dadosnovoUsuario['nome']);
  $sql -> bindValue(':valsobrenome',$dadosnovoUsuario['sobrenome']);
  $sql -> bindValue(':valemail',$dadosnovoUsuario['email']);
- $sql -> bindValue(':valsenha',$hash);
+ $sql -> bindValue(':valsenha',$dadosnovoUsuario['senha']);
  $sql -> bindValue(':valdatNasc',$dadosnovoUsuario['datNasc']);
  $sql -> bindValue(':valatuacao',$dadosnovoUsuario['atuacao']);
  $sql -> execute();
@@ -47,5 +47,6 @@ function VerificaEmail(string $email)
     throw new Exception('Erro ao executar comando SQL');
   }
   return $sql -> fetch();
+
 }
  ?>
