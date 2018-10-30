@@ -1,3 +1,20 @@
+<?php session_start();
+if(array_key_exists('emailUsuárioLogado',$_SESSION))
+{
+	header('Location: pedidos.php');
+	exit();
+}
+//if (empty($_SESSION['erros']))
+if(array_key_exists('erros',$_SESSION))
+{
+	$erro = $_SESSION['erros'];
+	unset($_SESSION['erros']);
+}
+else
+{
+	$erro=null;
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -25,11 +42,9 @@
         overflow: hidden;
         background-color: black;
     }
-
     li {
         float: left;
     }
-
     li a {
         display: block;
         color: white;
@@ -37,11 +52,9 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-
     li a:hover:not(.active) {
         background-color: #111;
     }
-
     }
     </style>
     </head>
@@ -49,7 +62,7 @@
 
     <ul>
       <li><a href="entradasesop.html">Pesquisa</a></li>
-      <li><a href="atendimentos.html"> Atendimentos</a></li>
+      <li><a href="atendimentos.php"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href="cadastra.html"> Cadastramento</a></li>
@@ -71,7 +84,7 @@
                 <input name="telefone" type="int" title="Informe o telefone do responsável do aluno- Obrigatório" placeholder="Telefone" required />
 
                 <input name="matricula" type="text" title="Informe a matrícula do aluno- Obrigatório" placeholder="Matrícula do Aluno" required/>
-    
+
 							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="cadastrar responsável"/>
 							        </form>
 						</div>

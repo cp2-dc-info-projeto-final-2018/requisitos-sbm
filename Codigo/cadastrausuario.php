@@ -1,3 +1,15 @@
+<?php session_start();
+//if (empty($_SESSION['erros']))
+if(array_key_exists('erros',$_SESSION))
+{
+	$erro = $_SESSION['erros'];
+	unset($_SESSION['erros']);
+}
+else
+{
+	$erro=null;
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -26,11 +38,9 @@
         overflow: hidden;
         background-color: black;
     }
-
     li {
         float: left;
     }
-
     li a {
         display: block;
         color: white;
@@ -38,18 +48,16 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-
     li a:hover:not(.active) {
         background-color: #111;
     }
-
     </style>
     </head>
     <body>
 
       <ul>
         <li><a href="entradasesop.html">Pesquisa</a></li>
-        <li><a href="atendimentos.html"> Atendimentos</a></li>
+        <li><a href="atendimentos.php"> Atendimentos</a></li>
         <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="cadastra.html"> Cadastramento</a></li>

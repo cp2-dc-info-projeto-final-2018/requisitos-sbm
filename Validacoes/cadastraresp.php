@@ -10,11 +10,8 @@ $erros = [];
       'email' => FILTER_VALIDATE_EMAIL,
       'telefone' => FILTER_DEFAULT,
       'matricula' => FILTER_DEFAULT
-
-
     ]
   );
-
 $nome = $request['nome'];
 if ($nome == false)
 {
@@ -67,13 +64,14 @@ else if(strlen($matriculaalu)<9 || strlen($matriculaalu)>11)
 {
    $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
 }
-
 else if ($id_aluno==0)
 {
   $erros[] = "Aluno inexistente";
 }
-
-
+if(VerificacaodeEmail($request['email']) != null)
+{
+  $erros [] = "Já existe um usuário cadastrado com esse email.";
+}
   if (empty($erros))
 {
       $novoResponsavel = [
@@ -82,7 +80,6 @@ else if ($id_aluno==0)
       'email' => $request['email'],
       'telefone' => $request['telefone'],
       'id_aluno' => $id_aluno
-
     ];
    InsereResponsavel($novoResponsavel);
 }

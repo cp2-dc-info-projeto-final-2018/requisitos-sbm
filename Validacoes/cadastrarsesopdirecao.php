@@ -1,9 +1,5 @@
 <?php
-
 require_once('salvasesopdirecao.php');
-
-
-
 $erros = [];
   $request = array_map('trim',$_REQUEST);
   $request = filter_var_array(
@@ -51,7 +47,6 @@ if ($email = false)
 {
 $erros[] = "O email informado é invalido";
 }
-
 $email = $request['email'];
 if ($email == null)
 {
@@ -84,9 +79,7 @@ if ($senha != $confirma)
 {
  $erros[] = "Senhas não são iguais";
 }
-
 if($datNasc = $request['datNasc'])
-
 $atuacao = $request['atuacao'];
 if ($atuacao == false){
   $erros[] = "Atuação não informada";
@@ -97,20 +90,19 @@ else if ($request ['atuacao'] == 'sesop'){
 else if ($request ['atuacao'] == 'direcao'){
    $atuacao = 1;
 }
-
 $datNasc = $request['datNasc'];
-
 $data = DateTime::createFromFormat('Y-m-d', $datNasc);
-
 if ($datNasc == false){
 $erros[] = "Valor de Data inválido";
 }
-
 else
     {
       $request['senha']  = password_hash($senha, PASSWORD_DEFAULT);
     }
-
+    if(VerificaEmail($request['email']) != null)
+    {
+      $erros[] = "O Email informado já está cadastrado.";
+    }
 if (empty($erros))
 {
     $novoUsuario = [
@@ -123,7 +115,6 @@ if (empty($erros))
         'datNasc'=> $request['datNasc'],
         'atuacao'=> $atuacao //vê tb se aqui ta certo
       ];
-
    InsereUsuario($novoUsuario);
 }
 else
@@ -138,5 +129,4 @@ else
     echo '<a href = "javascript:history.back()"> voltar</a>';
   }
 }
-
 ?>

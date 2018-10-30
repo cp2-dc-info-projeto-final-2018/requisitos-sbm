@@ -1,4 +1,3 @@
-
 <?php
 function Conexão()
 {
@@ -14,20 +13,12 @@ return $bd;
 function InsereUsuario($dadosnovoUsuario)
 {
 $bd = Conexão();
-
 $senha = $dadosnovoUsuario['senha'];
 $hash = password_hash($senha, PASSWORD_DEFAULT);
-
 $sql = $bd -> prepare(
-<<<<<<< HEAD
-  "INSERT INTO usuario(matricula,nome,sobrenome,email,senha,atuacao)
-  VALUES (:valmatricula,:valnome,:valsobrenome,:valemail,:valsenha,:valatuacao);");
+  "INSERT INTO usuario(matricula,nome,sobrenome,email,senha,datNasc,atuacao)
+  VALUES (:valmatricula,:valnome,:valsobrenome,:valemail,:valsenha,:valdatNasc,:valatuacao);");
  $hash = password_hash($senha, PASSWORD_DEFAULT);
-=======
-  "INSERT INTO usuario(matricula, nome, sobrenome, email, senha, datNasc, atuacao)
-  VALUES (:valmatricula, :valnome, :valsobrenome, :valemail, :valsenha, :valdatNasc, :valatuacao);");
-
->>>>>>> 3ec81b41650ea3dd451679bb384341d92b1f6f44
  $sql -> bindValue(':valmatricula',$dadosnovoUsuario['matricula']);
  $sql -> bindValue(':valnome',$dadosnovoUsuario['nome']);
  $sql -> bindValue(':valsobrenome',$dadosnovoUsuario['sobrenome']);
@@ -44,5 +35,17 @@ function BuscaUsuarioPorMatricula($matricula)
 	$sql->bindValue(':matricula', $matricula);
 	$sql->execute();
 	return $sql->fetch();
+}
+function VerificaEmail(string $email)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT email FROM usuario WHERE email = :valemail');
+  $sql -> bindValue(':valemail',$email);
+  $sucesso = $sql->execute();
+  if($sucesso == false)
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql -> fetch();
 }
  ?>
