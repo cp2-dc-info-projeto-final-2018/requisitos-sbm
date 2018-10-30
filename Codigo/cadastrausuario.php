@@ -61,7 +61,6 @@ else
 
       <ul>
         <li><a href="entradasesop.html">Pesquisa</a></li>
-        <li><a href="atendimentos.php"> Atendimentos</a></li>
         <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="cadastra.html"> Cadastramento</a></li>
