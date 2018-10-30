@@ -82,6 +82,7 @@ if(VerificacaodeEmail($request['email']) != null)
       'id_aluno' => $id_aluno
     ];
    InsereResponsavel($novoResponsavel);
+   header('Location: ../Codigo/login.php');
 }
 else
 {

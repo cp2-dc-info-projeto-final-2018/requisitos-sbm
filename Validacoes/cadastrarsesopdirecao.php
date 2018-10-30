@@ -117,6 +117,8 @@ if (empty($erros))
         'atuacao'=> $atuacao //vê tb se aqui ta certo
       ];
    InsereUsuario($novoUsuario);
+
+   header('Location: ../Codigo/login.php');
 }
 else
 {

@@ -106,6 +106,7 @@ if (empty($erros))
       ];
    InsereAtendimento($novoAtendimento);
 }
+  //header('Location: ../Codigo/login.php');
   foreach ($erros as $msgErro)
   {
       echo "<li>$msgErro</li>";
