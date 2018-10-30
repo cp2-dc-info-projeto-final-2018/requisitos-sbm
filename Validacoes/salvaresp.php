@@ -43,13 +43,12 @@ $email = $dadosnovoResponsavel['email'];
 $id = $dadosnovoResponsavel['id_aluno'];
 */
 $sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,telefone,email,endereco,id_aluno)
-  VALUES (:valnome,:valtelefone,:valemail,:valendereco,:valid_aluno);");
+  "INSERT INTO responsavel(nome,telefone,email,id_aluno)
+  VALUES (:valnome,:valtelefone,:valemail,:valid_aluno);");
 
  $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
  $sql -> bindValue(':valtelefone',$dadosnovoResponsavel['telefone']);
  $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
-$sql -> bindValue(':valendereco',$dadosnovoResponsavel['endereco']);
 $sql -> bindValue(':valid_aluno',$dadosnovoResponsavel['id_aluno']);
  $sql -> execute();
 
