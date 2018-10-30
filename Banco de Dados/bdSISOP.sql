@@ -32,7 +32,6 @@ CREATE TABLE aluno (
   telefone INT NOT NULL,
   email VARCHAR(50),
   turma VARCHAR(7) NOT NULL,
-  endereco VARCHAR(100) NOT NULL,
   datNasc DATE NOT NULL,
   PRIMARY KEY(id_aluno)
 );
@@ -73,7 +72,6 @@ CREATE TABLE responsavel(
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
-  endereco VARCHAR(100),
   id_aluno INT NOT NULL,
   PRIMARY KEY(id_responsavel),
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)

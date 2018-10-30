@@ -1,4 +1,4 @@
-<?php session_start();
+2<?php session_start();
 //if (empty($_SESSION['erros']))
 if(array_key_exists('erros',$_SESSION))
 {
@@ -79,13 +79,13 @@ else
         <input type="text" name="nomealu" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
         <input type="text" name="nomeresp" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável">
         <input type="DateTime" name="hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora">
-        <input name ="data" type="date"title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
+        <input name ="data" type="date" title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
         <div>
           <br>
           <label for="msg">Descrição:</label>
           <br><br>
 
-          <textarea id="descricao" title="Informe uma pequena descrição - Obrigatório"></textarea>
+          <textarea id="descricao" title="Informe uma pequena descrição - Obrigatório"> </textarea>
       </div>
       <button type="submit">Cadastrar</button>
         <br>

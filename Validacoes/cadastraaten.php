@@ -9,7 +9,7 @@ $erros = [];
 
       'data' => FILTER_DEFAULT,
       'hora' => FILTER_DEFAULT,
-      'descricao' => FILTER_VALIDATE_EMAIL,
+      'descricao' => FILTER_DEFAULT,
       'nomealu' => FILTER_DEFAULT,
       'nomeresp' => FILTER_DEFAULT,
       'matricula' => FILTER_DEFAULT
@@ -91,7 +91,7 @@ if(VerificaEmail($request['email']) != null)
 {
   $erros[] = "O Email informado já está cadastrado.";
 }
-
+  //header('Location: ../Codigo/login.php');
   foreach ($erros as $msgErro)
   {
       echo "<li>$msgErro</li>";
