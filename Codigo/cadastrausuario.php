@@ -38,11 +38,9 @@ else
         overflow: hidden;
         background-color: black;
     }
-
     li {
         float: left;
     }
-
     li a {
         display: block;
         color: white;
@@ -50,11 +48,9 @@ else
         padding: 14px 16px;
         text-decoration: none;
     }
-
     li a:hover:not(.active) {
         background-color: #111;
     }
-
     </style>
     </head>
     <body>

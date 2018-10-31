@@ -17,18 +17,16 @@ function InsereAtendimento($dadosnovoAtendimento)
 {
 $bd = Conexão();
 $matricula = $dadosnovoAtendimento['Matricula'];
-$Data = $dadosnovoAtendimento['Data'];
-$Inicio = $dadosnovoAtendimento['Inicio'];
-$fim = $dadosnovoAtendimento['fim'];
+$data = $dadosnovoAtendimento['data'];
+$hora = $dadosnovoAtendimento['hora'];
 $desc = $dadosnovoAtendimento['desc'];
 $sql = $bd -> prepare(
   "INSERT INTO calendario(dat,matricula,inicio,fim,descricao)
-  VALUES (:valdat, :valmatricula, :valinicio, :valfim,:valdescricao);");
+  VALUES ( :valmatricula,:valdat, :valhora,:valdescricao);");
 
  $sql -> bindValue(':valmatricula',$dadosnovoAtendimento['Matricula']);
- $sql -> bindValue(':valdat',$dadosnovoAtendimento['Data']);
- $sql -> bindValue(':valinicio', $dadosnovoAtendimento['Inicio'])
- $sql -> bindValue(':valfim',$dadosnovoAtendimento['fim']);
+ $sql -> bindValue(':valdat',$dadosnovoAtendimento['data']);
+ $sql -> bindValue(':valhora', $dadosnovoAtendimento['hora'])
  $sql -> bindValue(':valdescricao',$dadosnovoAtendimento['desc']);
  $sql -> execute();
 

@@ -51,7 +51,7 @@ $data = DateTime::createFromFormat('d-m-Y', $datNasc);
 
   if ($datNasc == false)
   {
-    $erros[] = "Valor de Data inválido";
+    $erros[] = "Valor de Data inválida!";
   }
 
 $turma = $request['turma'];

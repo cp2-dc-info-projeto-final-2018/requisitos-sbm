@@ -7,71 +7,28 @@ function Conexão()
                   'bd_sisop',
                   'sisop123'
                 );
+                $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $bd;
+                }
 
-$bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-return $bd;
-}
-function BuscaIddoAluno($matriculaalu)
-{
-	$bd = Conexão();
-	$sql = $bd->prepare('SELECT id_aluno FROM aluno WHERE matricula = :matricula');
+                function InsereEvento($dadosnovoEvento)
 
-	$sql->bindValue(':matricula', $matriculaalu);
+                {
+                $bd = Conexão();
+                $evento = $dadosnovoEvento['evento'];
+                $data = $dadosnovoAtendimento['data'];
+                $hora = $dadosnovoEvento['hora'];
+                $descricao = $dadosnovoAtendimento['descricao'];
+                $sql = $bd -> prepare(
+                  "INSERT INTO calendario(evento,data,hora,descricao)
+                  VALUES (:valevento,:valdata, :valhora, :valdescricao);");
 
-	$sql->execute();
+                 $sql -> bindValue(':valevento',$dadosnovoEvento['evento']);
+                 $sql -> bindValue(':valdata',$dadosnovoEvento['data']);
+                 $sql -> bindValue(':valhora', $dadosnovoEvento['hora'];
+                 $sql -> bindValue(':valdescricao',$dadosnovoEvento['descricao']);
+                 $sql -> execute();
 
-	$resultado = $sql->fetch();
-if(empty($resultado) == true)
-{
-  return  0;
+                }
 
-}
-else
-{
-  return $resultado['id_aluno'];
-}
-}
-
-function InsereResponsavel($dadosnovoResponsavel)
-
-{
-$bd = Conexão();
-/*$nome = $dadosnovoResponsavel['nome'];
-$endereco = $dadosnovoResponsavel['endereco'];
-$telefone = $dadosnovoResponsavel['telefone'];
-$email = $dadosnovoResponsavel['email'];
-$id = $dadosnovoResponsavel['id_aluno'];
-*/
-$sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,telefone,email,id_aluno)
-  VALUES (:valnome,:valtelefone,:valemail,:valid_aluno);");
-
- $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
- $sql -> bindValue(':valtelefone',$dadosnovoResponsavel['telefone']);
- $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
-$sql -> bindValue(':valid_aluno',$dadosnovoResponsavel['id_aluno']);
- $sql -> execute();
-
-}
-
-function BuscaUsuarioPorID($nome)
-{
-	$bd = Conexão();
-
-	$sql = $bd->prepare('SELECT senha FROM usuarios WHERE matricula = :matricula');
-
-	$sql->bindValue(':nome', $nome);
-}
-function VerificacaodeEmail(string $email)
-{
-    $bd = Conexão();
-    $sql = $bd->prepare('SELECT * FROM usuario WHERE email = :valemail');
-    $sql -> bindValue(':valemail',$email);
-    $sucesso = $cmdSql ->execute();
-    if($sucesso == false)
-    {
-      throw new Exception('Erro ao executar comando SQL');
-    }
-    return $sql->fetch();
-}
- ?>
+                 ?>
