@@ -36,20 +36,14 @@ function InsereResponsavel($dadosnovoResponsavel)
 
 {
 $bd = Conexão();
-/*$nome = $dadosnovoResponsavel['nome'];
-$endereco = $dadosnovoResponsavel['endereco'];
-$telefone = $dadosnovoResponsavel['telefone'];
-$email = $dadosnovoResponsavel['email'];
-$id = $dadosnovoResponsavel['id_aluno'];
-*/
+
 $sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,telefone,email,id_aluno)
-  VALUES (:valnome,:valtelefone,:valemail,:valid_aluno);");
+  "INSERT INTO responsavel(nome,telefone,email)
+  VALUES (:valnome,:valtelefone,:valemail);");
 
  $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
  $sql -> bindValue(':valtelefone',$dadosnovoResponsavel['telefone']);
  $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
-$sql -> bindValue(':valid_aluno',$dadosnovoResponsavel['id_aluno']);
  $sql -> execute();
 
 }
@@ -62,17 +56,15 @@ $bd = Conexão();
 $matricula = $dadosnovoAluno['matricula'];
 $nome = $dadosnovoAluno['nome'];
 $sobrenome = $dadosnovoAluno['sobrenome'];
-$email = $dadosnovoAluno['email'];
 $turma = $dadosnovoAluno['turma'];
 $datNasc = $dadosnovoAluno['datNasc'];
 $sql = $bd -> prepare(
-  "INSERT INTO aluno(matricula,nome,sobrenome,email,turma,datNasc)
-  VALUES (:valmatricula, :valnome,:valsobrenome,:valemail,:valturma,:valdat);");
+  "INSERT INTO aluno(matricula,nome,sobrenome,turma,datNasc)
+  VALUES (:valmatricula, :valnome,:valsobrenome,:valturma,:valdat);");
 
  $sql -> bindValue(':valmatricula',$dadosnovoAluno['matricula']);
  $sql -> bindValue(':valnome',$dadosnovoAluno['nome']);
  $sql -> bindValue(':valsobrenome',$dadosnovoAluno['sobrenome']);
- $sql -> bindValue(':valemail',$dadosnovoAluno['email']);
  $sql -> bindValue(':valturma',$dadosnovoAluno['turma']);
  $sql -> bindValue(':valdat',$dadosnovoAluno['datNasc']);
  $sql -> execute();

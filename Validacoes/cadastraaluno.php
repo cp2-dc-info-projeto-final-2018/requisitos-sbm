@@ -125,7 +125,7 @@ $email = $request['email'];
   ];
 
   InsereResponsavel($novoResponsavel);
-  header('Location: ../Codigo/entradasesop.html');
+  header('Location: ../Codigo/cadastra.html');
 }
 else
 {
