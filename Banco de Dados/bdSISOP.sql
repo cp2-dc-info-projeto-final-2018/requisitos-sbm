@@ -72,7 +72,6 @@ CREATE TABLE responsavel(
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
-  id_aluno INT NOT NULL,
   PRIMARY KEY(id_responsavel)
 );
 
