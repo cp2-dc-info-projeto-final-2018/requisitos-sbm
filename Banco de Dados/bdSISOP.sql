@@ -73,8 +73,7 @@ CREATE TABLE responsavel(
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
   id_aluno INT NOT NULL,
-  PRIMARY KEY(id_responsavel),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+  PRIMARY KEY(id_responsavel)
 );
 
 CREATE TABLE atendimento(
