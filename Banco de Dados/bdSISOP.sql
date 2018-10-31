@@ -72,9 +72,7 @@ CREATE TABLE responsavel(
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
-  id_aluno INT NOT NULL,
-  PRIMARY KEY(id_responsavel),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+  PRIMARY KEY(id_responsavel)
 );
 
 CREATE TABLE atendimento(
@@ -100,7 +98,6 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
 CREATE TABLE calendario (
-id_evento INT NOT NULL AUTO_INCREMENT,
 id_aluno INT NOT NULL,
 matricula VARCHAR(11) NOT NULL,
 inicio DATETIME NOT NULL,
@@ -108,4 +105,12 @@ duracao DATETIME NOT NULL,
 descricao VARCHAR(10000) NOT NULL,
 PRIMARY KEY(id_evento),
 FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+);
+CREATE TABLE evento (
+id_evento INT NOT NULL AUTO_INCREMENT,
+data DATETIME NOT NULL,
+hora INT NOT NULL,
+turno BOOLEAN NOT NULL,
+descricao VARCHAR(1000) NOT NULL
+PRIMARY KEY (id_aluno)
 );

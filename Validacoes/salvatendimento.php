@@ -20,15 +20,17 @@ $nomealu = $dadosnovoAtendimento['nomealu'];
 $nomeresp = $dadosnovoAtendimento['nomeresp'];
 $hora = $dadosnovoAtendimento['hora'];
 $data = $dadosnovoAtendimento['data'];
+$id = $dadosnovoAtendimento['idalu'];
+$idresp = $dadosnovoAtendimento['idresp'];
 $sql = $bd -> prepare(
-  "INSERT INTO atendimento(data,hora,descricao,nomealu,nomeresp,matricula)
-  VALUES (:valdata,:valhora,:valdescricao,:valnomealu,:valnomeresp,:valmatricula);");
+  "INSERT INTO atendimento(data,hora,descricao,id)
+  //pegar sesop da sessão, listar usuário.
+  VALUES (:valdata,:valhora,:valdescricao,:validalu,:validresp);");
  $sql -> bindValue(':valdata',$dadosnovoAtendimento['data']);
  $sql -> bindValue(':valhora',$dadosnovoAtendimento['hora']);
  $sql -> bindValue(':valdescricao',$dadosnovoAtendimento['descricao']);
- $sql -> bindValue(':valnomealu',$dadosnovoAtendimento['nomealu']);
- $sql -> bindValue(':valnomeresp',$dadosnovoAtendimento['nomeresp']);
- $sql -> bindValue(':valmatricula',$dadosnovoAtendimento['matricula']);
+ $sql -> bindValue(':validalu',$dadosnovoAtendimento['idalu']);
+ $sql -> bindValue(':validresp',$dadosnovoAtendimento['idresp']);
  $sql -> execute();
 }
 function BuscaUsuarioPorAtendimento($matricula)
@@ -51,11 +53,11 @@ function VerificaHora($hora)
   }
   return $sql -> fetch();
 }
-function VerificaAluno($matricula)
+function VerificaAluno($nomealu)
 {
   $bd = Conexão();
-  $sql = $bd->prepare('SELECT matricula FROM aluno WHERE matricula = :valmatricula');
-  $sql->bindValue(':valmatricula',$matricula);
+  $sql = $bd->prepare('SELECT id FROM aluno WHERE nome = :valnomealu');
+  $sql->bindValue(':valnomealu',$nomealu);
   $sucesso = $sql->execute();
   if($sucesso == false)
   {
@@ -63,4 +65,17 @@ function VerificaAluno($matricula)
   }
   return $sql-> fetch();
 }
+function VerificaResponsável($nomeresp)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT id FROM responsavel WHERE nome = :valnomeresp ');
+  $sql->bindValue(':valnomeresp',$nomeresp);
+  $sucesso = $sql->execute();
+  if($sucesso == false)
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql-> fetch();
+}
+
  ?>

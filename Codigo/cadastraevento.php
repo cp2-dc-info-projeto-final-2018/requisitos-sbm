@@ -1,7 +1,7 @@
 <?php session_start();
 if(array_key_exists('emailUsuárioLogado',$_SESSION))
 {
-	header('Location: pedidos.php');
+	header('Location: .php');
 	exit();
 }
 //if (empty($_SESSION['erros']))
@@ -70,25 +70,33 @@ else
     <br><br><Br>
 
   <div class="caixinhadoform">
-  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraresp.php">
+  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraevento.php">
     <h4>Seja Bem-Vindo!</h4>
-      <p>Cadastre um novo responsável::</p>
+      <p>Cadastre um novo evento:</p>
       <?php if ($erro != null) { ?>
            <p> <?= $erro ?> </p>
            <?php }?>
 
-                <input name="nome" type="text" minlength='3' maxlength='35' title="Informe a nome do responsável do aluno - Obrigatório"placeholder="Nome" required />
-  				      <input name="endereco" type="text" minlength='3' maxlength='1000' title="Informe o endereço - Obrigatório" placeholder="Endereço" required />
-  				      <input name="email" type="email" title="Informe o e-mail do responsável do aluno - Obrigatório" placeholder="E-Mail" required />
-                <input name="telefone" type="int" title="Informe o telefone do responsável do aluno- Obrigatório" placeholder="Telefone" required />
+        <input type="text" name="evento" title="Informe o nome do evento - Obrigatório" placeholder="Nome do Evento">
+        <input type="Date" name="data" title="Informe a data do agendamento- Obrigatório" placeholder="Data">
+				<br><br>
+				<fieldset>
+					<legend> Horário do evento:</legend>
+					<input type="radio" name="turno" value= "manha"> Manhã<br>
+					<input type="radio" name="turno" value="tarde"> Tarde<br>
+					<input type="radio" name="turno" value= "integral"> Integral<br>
+					<input type="radio" name="turno" value="noite">Noite<br>
+​        </fieldset>
+          <br><br>
+          <label for="msg">Descrição:</label>
+          <br><br>
 
-                <input name="matricula" type="text" title="Informe a matrícula do aluno- Obrigatório" placeholder="Matrícula do Aluno" required/>
+          <textarea name="descricao" title="Informe uma pequena descrição - Obrigatório"></textarea>
+					<button type="submit">Cadastrar</button>
+				</div>
 
-							           <input type="submit" id="submitPrimeiroAcesso" class="btn btn-small" value="cadastrar responsável"/>
-							        </form>
-						</div>
-					</div>
-
+					<br>
+				</form>
   </div>
 </div>
     </div>

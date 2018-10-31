@@ -90,9 +90,16 @@ if(VerificaHora($request['hora'])!= null)
 {
   $erros[] = "Horário já ocupado.";
 }
-if(VerificaAluno($request['matricula'])== null)
+
+$aluno = VerificaAluno($request['nomealu']);
+if($aluno == null)
 {
   $erros[] = "Aluno inexistente.";
+}
+$resp = VerificaResponsável($request['nomeresp']);
+if($resp == null)
+{
+  $erros[] = "Responsável inexistente.";
 }
 if (empty($erros))
 {
@@ -102,7 +109,9 @@ if (empty($erros))
         'descricao' => $request['descricao'],
         'nomealu' => $request['nomealu'],
         'nomeresp' => $request['nomeresp'],
-        'matricula' => $request['matricula']
+        'matricula' => $request['matricula'],
+        'idalu' => $aluno['id_aluno'],
+        'idresp' => $resp['id_responsavel']
       ];
    InsereAtendimento($novoAtendimento);
 }
