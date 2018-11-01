@@ -1,4 +1,4 @@
-2<?php session_start();
+<?php session_start();
 //if (empty($_SESSION['erros']))
 if(array_key_exists('erros',$_SESSION))
 {
