@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -56,15 +58,29 @@
       </ul>
 
 
-<?php
+      <h3><center>Primeiro Ano do Integrado:</h3>
+        <?php
+        $listaAluno = ListaAluno();
 
-function BuscaAluno(int $id):array
-{
-  $id = $_POST['id_aluno'];
-  $busca = mysql_query("SELECT aluno FROM atendimento WHERE turma like "IN%"");
-  $dado = mysql_fetch_array($busca);
-
-}
+        foreach ($listaAluno as $aluno) { ?>
+      		<div>
+            	<table>
+      			<h4><?= $aluno[0] ?></h4>
+              <tr>
+      				<td>Data do Atendimento:</td>
+      				<td><?= $aluno[1] ?></td>
+            </tr>
+              <tr>
+      				<td>Turma:</td>
+      				<td><?= $aluno[2] ?></a></td>
+            </tr>
+            <tr>
+      				<td>Hora do Atendimento:</td>
+      				<td><?= $aluno[3] ?></td>
+      			</tr>
+          </table>
+      		</div>
+      	<?php } ?>
 
   </body>
     </html>
