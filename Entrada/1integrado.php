@@ -55,5 +55,16 @@
         <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
       </ul>
 
+
+<?php
+
+function BuscaAluno(int $id):array
+{
+  $id = $_POST['id_aluno'];
+  $busca = mysql_query("SELECT aluno FROM atendimento WHERE turma like "IN%"");
+  $dado = mysql_fetch_array($busca);
+
+}
+
   </body>
     </html>
