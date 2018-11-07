@@ -88,8 +88,7 @@ $resultado_events = mysqli_query($conn,$result_events);
 									descricao: '<?php echo $row_events['descricao']; ?>',
 									id_sesop: '<?php echo $row_events['id_sesop']; ?>',
 									id_aluno: '<?php echo $row_events['id_aluno']; ?>',
-									id_responsavel: '<?php echo $row_events['id_responsavel']; ?>',
-								},
+									id_responsavel: '<?php echo $row_events['id_responsavel']; ?>'
 									<?php
 									}
 							 ?>

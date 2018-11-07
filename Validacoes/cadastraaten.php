@@ -11,7 +11,8 @@ $erros = [];
       'descricao' => FILTER_DEFAULT,
       'nomealu' => FILTER_DEFAULT,
       'nomeresp' => FILTER_DEFAULT,
-      'matricula' => FILTER_DEFAULT
+      'matricula' => FILTER_DEFAULT,
+      'nomeusu' => FILTER_DEFAULT
     ]
   );
   var_dump($request['data']);
@@ -21,7 +22,15 @@ $erros = [];
   if ($data == false){
   $erros[] = "Valor de Data inválido";
   }
-
+$nomeusu = $request['nomeusu'];
+if($nomeusu==false)
+{
+  $erros[] = "Nome não preenchido!";
+}
+else if(strlen($nomeusu)<3 || strlen($nomeusu)>35)
+{
+  $erros[] ="O nome tem que ter ao menoss 3 letras e no máximo 35!";
+}
 $nomealu = $request['nomealu'];
 if ($nomealu == false)
 {
@@ -101,6 +110,11 @@ if($resp == null)
 {
   $erros[] = "Responsável inexistente.";
 }
+$usu = VerificaUsuário($request['nomeusu']);
+if($usu == null)
+{
+  $erros[] = "Usuário inexistente.";
+}
 if (empty($erros))
 {
     $novoAtendimento = [
@@ -111,7 +125,8 @@ if (empty($erros))
         'nomeresp' => $request['nomeresp'],
         'matricula' => $request['matricula'],
         'idalu' => $aluno['id_aluno'],
-        'idresp' => $resp['id_responsavel']
+        'idresp' => $resp['id_responsavel'],
+        'idusu' => $usu['id_usuario']
       ];
    InsereAtendimento($novoAtendimento);
 }
