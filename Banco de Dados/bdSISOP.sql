@@ -24,6 +24,14 @@ CREATE TABLE sesop(
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
+CREATE TABLE turma (
+  id_turma INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(10) NOT NULL,
+  ano INT NOT NULL,
+  serie VARCHAR(1) NOT NULL,
+  PRIMARY KEY (id_turma)
+);
+
 CREATE TABLE aluno (
   id_aluno INT NOT NULL	AUTO_INCREMENT,
   matricula VARCHAR(10) NOT NULL,
@@ -31,9 +39,10 @@ CREATE TABLE aluno (
   sobrenome VARCHAR(35) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50),
-  turma VARCHAR(7) NOT NULL,
+  turma INT NOT NULL,
   datNasc DATE NOT NULL,
-  PRIMARY KEY(id_aluno)
+  PRIMARY KEY(id_aluno),
+  FOREIGN KEY(turma) REFERENCES turma(id_turma)
 );
 
 CREATE TABLE disciplina(
@@ -98,19 +107,19 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
 CREATE TABLE calendario (
-id_aluno INT NOT NULL,
-matricula VARCHAR(11) NOT NULL,
-inicio DATETIME NOT NULL,
-duracao DATETIME NOT NULL,
-descricao VARCHAR(10000) NOT NULL,
-PRIMARY KEY(id_evento),
-FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+  id_aluno INT NOT NULL,
+  matricula VARCHAR(11) NOT NULL,
+  inicio DATETIME NOT NULL,
+  duracao DATETIME NOT NULL,
+  descricao VARCHAR(10000) NOT NULL,
+  PRIMARY KEY(id_evento),
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
 );
 CREATE TABLE evento (
-id_evento INT NOT NULL AUTO_INCREMENT,
-data DATETIME NOT NULL,
-hora INT NOT NULL,
-turno BOOLEAN NOT NULL,
-descricao VARCHAR(1000) NOT NULL
-PRIMARY KEY (id_aluno)
+  id_evento INT NOT NULL AUTO_INCREMENT,
+  data DATETIME NOT NULL,
+  hora INT NOT NULL,
+  turno BOOLEAN NOT NULL,
+  descricao VARCHAR(1000) NOT NULL
+  PRIMARY KEY (id_aluno)
 );
