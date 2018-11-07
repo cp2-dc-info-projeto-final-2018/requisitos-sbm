@@ -58,7 +58,9 @@
       </ul>
 
 
-      <h3><center>Primeiro Ano do Integrado:</h3>
+        //fazer validção da turma pois pode n vir nenhuma turma
+
+      <h3><center><?= $_REQUEST['turma'] ?>: </h3>
         <?php
         $listaAluno = ListaAluno();
 
