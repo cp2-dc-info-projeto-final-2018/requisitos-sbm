@@ -4,7 +4,7 @@ CREATE TABLE usuario (
   nome VARCHAR(35) NOT NULL,
   sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
-  senha VARCHAR(12) NOT NULL,
+  senha VARCHAR(60) NOT NULL,
   datNasc DATE NOT NULL,
   atuacao BOOLEAN NOT NULL,
   PRIMARY KEY(id_usuario)
@@ -106,6 +106,7 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
+<<<<<<< HEAD
 CREATE TABLE calendario (
   id_aluno INT NOT NULL,
   matricula VARCHAR(11) NOT NULL,
@@ -123,3 +124,5 @@ CREATE TABLE evento (
   descricao VARCHAR(1000) NOT NULL
   PRIMARY KEY (id_aluno)
 );
+=======
+>>>>>>> 7b310f5d964bd2341682eb3508c7f6c6093ea08c
