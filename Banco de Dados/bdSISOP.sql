@@ -106,23 +106,3 @@ CREATE TABLE responsavel_aluno(
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
-<<<<<<< HEAD
-CREATE TABLE calendario (
-  id_aluno INT NOT NULL,
-  matricula VARCHAR(11) NOT NULL,
-  inicio DATETIME NOT NULL,
-  duracao DATETIME NOT NULL,
-  descricao VARCHAR(10000) NOT NULL,
-  PRIMARY KEY(id_evento),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
-);
-CREATE TABLE evento (
-  id_evento INT NOT NULL AUTO_INCREMENT,
-  data DATETIME NOT NULL,
-  hora INT NOT NULL,
-  turno BOOLEAN NOT NULL,
-  descricao VARCHAR(1000) NOT NULL
-  PRIMARY KEY (id_aluno)
-);
-=======
->>>>>>> 7b310f5d964bd2341682eb3508c7f6c6093ea08c
