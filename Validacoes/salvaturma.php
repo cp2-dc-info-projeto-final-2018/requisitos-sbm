@@ -25,5 +25,20 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valserie',$dadosnovoAluno['serie']);
  $sql -> execute();
 }
+function Procuraturmaparaexibir()
+{
+  $bd = conexÃ£o();
 
+  $sql = $bd -> prepare("SELECT nome FROM turma");
+  $sql -> execute();
+  $resultado = $sql->fetch();
+if(empty($resultado) == true)
+  {
+    return  0;
+  }
+else
+  {
+    return $resultado;
+  }
+}
 ?>
