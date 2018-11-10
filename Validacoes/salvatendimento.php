@@ -1,4 +1,3 @@
-
 <?php
 function Conexão()
 {
@@ -11,71 +10,32 @@ function Conexão()
 $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $bd;
 }
-function InsereAtendimento($dadosnovoAtendimento)
+function InsereUsuario($dadosnovoAtendimento)
 {
 $bd = Conexão();
-$descricao = $dadosnovoAtendimento['descricao'];
 $matricula = $dadosnovoAtendimento['matricula'];
-$nomealu = $dadosnovoAtendimento['nomealu'];
+$nomealu = $dadosnovoAtendimento['nome'];
 $nomeresp = $dadosnovoAtendimento['nomeresp'];
 $hora = $dadosnovoAtendimento['hora'];
 $data = $dadosnovoAtendimento['data'];
-$id = $dadosnovoAtendimento['idalu'];
-$idresp = $dadosnovoAtendimento['idresp'];
 $sql = $bd -> prepare(
-  "INSERT INTO atendimento(data,hora,descricao,id)
-  //pegar sesop da sessão, listar usuário.
-  VALUES (:valdata,:valhora,:valdescricao,:validalu,:validresp);");
+  "INSERT INTO atendimento(data,hora,descricao,nomealu,nomeresp,matricula)
+  VALUES (:valdata,:valmatricula,:valhora,:valdescricao,:valnomealu,:valnomeresp,);");
  $sql -> bindValue(':valdata',$dadosnovoAtendimento['data']);
  $sql -> bindValue(':valhora',$dadosnovoAtendimento['hora']);
  $sql -> bindValue(':valdescricao',$dadosnovoAtendimento['descricao']);
- $sql -> bindValue(':validalu',$dadosnovoAtendimento['idalu']);
- $sql -> bindValue(':validresp',$dadosnovoAtendimento['idresp']);
+ $sql -> bindValue(':valnomealu',$dadosnovoAtendimento['nomealu']);
+ $sql -> bindValue(':valnomeresp',$dadosnovoAtendimento['nomeresp']);
+ $sql -> bindValue(':valmatricula',$dadosnovoAtendimento['matricula']);
+
  $sql -> execute();
 }
 function BuscaUsuarioPorAtendimento($matricula)
 {
 	$bd = Conexão();
 	$sql = $bd->prepare('SELECT senha FROM usuario WHERE matricula = :matricula');
-	$sql->bindValue(':valmatricula', $matricula);
+	$sql->bindValue(':matricula', $matricula);
 	$sql->execute();
 	return $sql->fetch();
 }
-function VerificaHora($hora)
-{
-  $bd = Conexão();
-  $sql = $bd->prepare('SELECT  hora FROM atendimento WHERE hora = :valhora');
-  $sql -> bindValue(':valhora',$hora);
-  $sucesso = $sql->execute();
-  if($sucesso == false)
-  {
-     throw new Exception('Erro ao executar comando SQL');
-  }
-  return $sql -> fetch();
-}
-function VerificaAluno($nomealu)
-{
-  $bd = Conexão();
-  $sql = $bd->prepare('SELECT id FROM aluno WHERE nome = :valnomealu');
-  $sql->bindValue(':valnomealu',$nomealu);
-  $sucesso = $sql->execute();
-  if($sucesso == false)
-  {
-     throw new Exception('Erro ao executar comando SQL');
-  }
-  return $sql-> fetch();
-}
-function VerificaResponsável($nomeresp)
-{
-  $bd = Conexão();
-  $sql = $bd->prepare('SELECT id FROM responsavel WHERE nome = :valnomeresp ');
-  $sql->bindValue(':valnomeresp',$nomeresp);
-  $sucesso = $sql->execute();
-  if($sucesso == false)
-  {
-    throw new Exception('Erro ao executar comando SQL');
-  }
-  return $sql-> fetch();
-}
-
  ?>

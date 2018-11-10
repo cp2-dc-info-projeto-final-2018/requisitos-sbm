@@ -1,74 +1,66 @@
-<!DOCTYPE HTML>
+<?php
+require_once('salvaturma.php');
+$erros = [];
+  $request = array_map('trim',$_REQUEST);
+  $request = filter_var_array(
+    $request,
+    [
+      'nome' => FILTER_DEFAULT,
+      'serie' => FILTER_VALIDATE_INT,
+      'ano' => FILTER_VALIDATE_INT,
+    ]
+  );
 
-<html lang="pt-br">
-  <head>
-      <meta charset="utf-8">
-      <title> SISOP </title>
-      <link rel="stylesheet" type="text/css" href="style.css">
+$nome = $request['nome'];
+  if ($nome == false)
+  {
+    $erros[] = "Nome não preenchido!";
+  }
+  else if(strlen($nome)<3 || strlen($nome)>10)
+  {
+    $erros[] = "O nome tem que ter ao menos 3 letras e no máximo 15!";
+  }
 
-  </head>
+$serie = $request['serie'];
+  if ($serie == false)
+  {
+    $erros[] = "Série não preenchida!";
+  }
+  else if(strlen($serie)<1)
+  {
+    $erros[] = "A Turma tem que ter 1 número que indica a série!";
+  }
 
-  <body>
-    <div id="topo">
-      <div id="topo2">
-        <div class="primeira"> <b>COLÉGIO <br> </div>
-          <div class= "segunda"> PEDRO II<b>
-        </div>
-      </div>
-    </div>
+$ano = $request['ano'];
+  if ($ano == false)
+  {
+    $erros[] = "Ano não preenchido!";
+  }
+  else if(strlen($ano)<4 || strlen($ano)>4)
+  {
+    $erros[] = "O ano da turma está incorreto! Ex:2018";
+  }
 
-    <style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: black;
-    }
-    li {
-        float: left;
-    }
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    li a:hover:not(.active) {
-        background-color: #111;
-    }
-    }
-    </style>
-    </head>
-    <body>
+  if (empty($erros))
+{
+      $novaturma = [
+      'nome' => $request['nome'],
+      'serie' => $request['serie'],
+      'ano' => $request['ano'],
+    ];
 
-    <ul>
-      <li><a href="entradasesop.html">Pesquisa</a></li>
-      <li><a href="agendamentos.html"> Agendamentos</a></li>
-      <li><a href="../calendario/index.php"> Calendário</a></li>
-      <li><a href= "cadastra.html">Cadastramento</a></li>
-      <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
-    </ul>
-
-
-  <br> <br> <br>
-  <div class="caixinhadoform">
-  <form name ="primeiroAcesso" id="primeiroAcesso" method="post" action="..\Validacoes\cadastraturma.php">
-      <p>Cadastre uma nova turma:</p>
-                Informações da Turma:
-                <input name="nome" type="text" minlength='3' maxlength='35' title="Informe o Nome do aluno - Obrigatório" placeholder="Nome" required />
-  				      <input name="serie" type="number" maxlength='1' title="Informe o Sobrenome do aluno - Obrigatório" placeholder="Série" required />
-                <input name="ano" type="number" title="Informe o Ano da Turma" maxlength="4" placeholder ="Ano da Turma" required/>
-                <br>
-							           <input type="submit" id="submitAluno" class="btn btn-small" value="Cadastrar Turma">
-                        </form>
-						</div>
-					</div>
-
-  </div>
-</div>
-    </div>
-  </body>
-
-</html>
+  Inserenovaturma($novaturma);
+  header('Location: ../Codigo/cadastra.html');
+}
+else
+{
+  echo '<h1>Dados Inválidos</h1>';
+  echo '<ul>';
+  foreach ($erros as $msgErro)
+  {
+      echo "<li>$msgErro</li>";
+    echo '</ul>';
+    echo '<a href = "javascript:history.back()"> voltar</a>';
+  }
+}
+?>

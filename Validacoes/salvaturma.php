@@ -26,4 +26,20 @@ $sql = $bd -> prepare(
  $sql -> execute();
 }
 
+function Procuraturmaparaexibir()
+{
+  $bd = conexão();
+
+  $sql = $bd -> prepare("SELECT nome FROM turma");
+  $sql -> execute();
+  $resultado = $sql->fetch();
+if(empty($resultado) == true)
+  {
+    return  0;
+  }
+else
+  {
+    return $resultado;
+  }
+}
 ?>
