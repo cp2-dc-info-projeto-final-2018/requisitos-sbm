@@ -27,8 +27,7 @@ $sql = $bd -> prepare(
 }
 function Procuraturmaparaexibir()
 {
-  $bd = conexÃ£o();
-
+  $bd = conexão();
   $sql = $bd -> prepare("SELECT nome FROM turma");
   $sql -> execute();
   $resultado = $sql->fetch();
