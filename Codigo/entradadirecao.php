@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
+{
+  header('Location: login.php');
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -44,7 +51,7 @@
     <body>
 
     <ul>
-      <li><a href="login.html">Tela inicial</a></li>
+      <li><a href="login.php">Pesquisa</a></li>
       <li><a href="atendimentos.php"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="tabela.php"> Calendário</a></li>

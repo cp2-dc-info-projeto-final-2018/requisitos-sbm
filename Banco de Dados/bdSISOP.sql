@@ -4,7 +4,7 @@ CREATE TABLE usuario (
   nome VARCHAR(35) NOT NULL,
   sobrenome VARCHAR(35) NOT NULL,
   email VARCHAR(50) NOT NULL,
-  senha VARCHAR(12) NOT NULL,
+  senha VARCHAR(100) NOT NULL,
   datNasc DATE NOT NULL,
   atuacao BOOLEAN NOT NULL,
   PRIMARY KEY(id_usuario)
@@ -52,27 +52,15 @@ CREATE TABLE aluno_disciplina(
 	FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
 );
 
-CREATE TABLE avaliacao(
-  id_aluno INT NOT NULL,
-  id_disciplina INT NOT NULL,
-  c1 FLOAT,
-  c2 FLOAT,
-  c3 FLOAT,
-  apoio1 FLOAT,
-  apoio2 FLOAT,
-  media FLOAT,
-  PFV FLOAT,
-  PRIMARY KEY (id_aluno, id_disciplina),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
-  FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
-);
 
 CREATE TABLE responsavel(
   id_responsavel INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   telefone INT NOT NULL,
   email VARCHAR(50) NOT NULL,
-  PRIMARY KEY(id_responsavel)
+  id_aluno INT NOT NULL,
+  PRIMARY KEY(id_responsavel),
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
 );
 
 CREATE TABLE atendimento(
@@ -84,7 +72,7 @@ CREATE TABLE atendimento(
   id_aluno INT NOT NULL,
   id_responsavel INT NOT NULL,
   PRIMARY KEY(id_atendimento),
-  FOREIGN KEY (id_sesop) REFERENCES sesop(id_sesop),
+  FOREIGN KEY (id_sesop) REFERENCES usuario(id_usuario),
   FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );

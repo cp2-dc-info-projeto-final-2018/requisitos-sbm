@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
+{
+  header('Location: login.php');
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">

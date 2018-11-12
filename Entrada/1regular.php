@@ -49,7 +49,7 @@
     <body>
 
       <ul>
-        <li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
+        <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
         <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
@@ -109,7 +109,7 @@
     <body>
 
       <ul>
-        <li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
+        <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
         <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>

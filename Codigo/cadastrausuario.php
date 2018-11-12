@@ -56,7 +56,7 @@ else
     <body>
 
       <ul>
-        <li><a href="entradasesop.html">Pesquisa</a></li>
+        <li><a href="entradasesop.php">Pesquisa</a></li>
         <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="cadastra.html"> Cadastramento</a></li>

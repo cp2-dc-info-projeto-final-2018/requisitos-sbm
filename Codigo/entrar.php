@@ -13,6 +13,7 @@
 	$matricula = $request['matricula'];
 	$senha = $request['senha'];
 
+
 	if ($matricula == false)
 	{
 		$erro = "Matrícula não informado";
@@ -29,7 +30,7 @@
 		{
 			$erro = "Nenhuma Matrícula encontrada para este usuário";
 		}
-	 else if (password_verify($request['senha'], $resultados['senha']))
+	 else if (password_verify($senha, $resultados['senha']))
 	 {
 		 $sesopoudirecao = Verificaratuacao($matricula);
 		 if ($sesopoudirecao['atuacao'] == 0)
