@@ -81,16 +81,15 @@ $resultado_events = mysqli_query($conn,$result_events);
 						events: [
 							<?php	while($row_events = mysqli_fetch_array($resultado_events)) { ?>
                   {
-  									id_atendimento: '<?php echo $row_events['id_atendimento']; ?>',
-  									data: '<?php echo $row_events['data']; ?>',
-  									hora: '<?php echo $row_events['hora']; ?>',
-  									descricao: '<?php echo $row_events['descricao']; ?>',
-  									id_sesop: '<?php echo $row_events['id_sesop']; ?>',
-  									id_aluno: '<?php echo $row_events['id_aluno']; ?>',
-  									id_responsavel: '<?php echo $row_events['id_responsavel']; ?>'
+  									id: '<?php echo $row_events['id_atendimento']; ?>',
+  								  start: '<?php echo $row_events['data'], 'T', $row_events['hora']; ?>',
+  									title: '<?php echo $row_events['descricao']; ?>',
+  									constraint: '<?php echo $row_events['id_sesop']; ?>',
+  									constraint: '<?php echo $row_events['id_aluno']; ?>',
+  									constraint: '<?php echo $row_events['id_responsavel']; ?>'
                   },
 						<?php	} ?>
-						]
+          ]
 					});
 		});
 </script>
