@@ -6,6 +6,7 @@ session_start();
   if(array_key_exists('matriculaUsuárioLogado', $_SESSION))
   {
     $atuacao = Verificaratuacao($_SESSION['matriculaUsuárioLogado']);
+    $_SESSION['atuacao'] = $atuacao;
     if($atuacao==0){
     header ('Location: entradasesop.php');
                    }

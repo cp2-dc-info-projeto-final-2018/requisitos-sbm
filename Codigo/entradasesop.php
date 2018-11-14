@@ -54,7 +54,7 @@ if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
       <li><a href=""> Pesquisa</a> </li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="../calendario/index.php"> Calendário</a></li>
-      <li><a href="cadastra.html">Cadastramento</a></li>
+      <li><a href="cadastra.php">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
     </ul>
   <br><br><br>

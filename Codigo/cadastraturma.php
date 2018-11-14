@@ -50,7 +50,7 @@ $ano = $request['ano'];
     ];
 
   Inserenovaturma($novaturma);
-  header('Location: ../Codigo/cadastra.html');
+  header('Location: ../Codigo/cadastra.php');
 }
 else
 {

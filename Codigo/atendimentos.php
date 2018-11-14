@@ -1,4 +1,11 @@
 <?php session_start();
+require_once('login.php');
+if($_SESSION['atuacao'] == 1)
+{
+
+	$erro = $_SESSION['erros'];
+	unset($_SESSION['erros']);
+}
 //if (empty($_SESSION['erros']))
 if(array_key_exists('erros',$_SESSION))
 {
@@ -9,7 +16,9 @@ else
 {
 	$erro=null;
 }
+
 ?>
+
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -60,7 +69,7 @@ else
       <li><a href="atendimentos.php"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
-      <li><a href= "cadastra.html">Cadastramento</a></li>
+      <li><a href= "cadastra.php">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
     </ul>
     <br> <br> <br>
