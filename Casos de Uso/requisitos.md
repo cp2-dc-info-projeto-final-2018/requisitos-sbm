@@ -42,18 +42,15 @@ Será solicitado a matricula e uma senha para aqueles que terão acesso para ace
 
 Para constar a segurança do software serão testados com um banco de dados fake, elaborado pelos componentes do grupo, pois não podemos ter acesso as informações do SESOP. Logo, depois de testado poderá ser utilizado pelo alvo.
 
+
 ### RNF 5
-
-Terá uma conexão com o Excel para o acesso da notas e faltas.
-
-### RNF 6
 
 Haverá abas e menus para auxiliar o usúario a achar a informação que procura.
 
-### RNF 7
+### RNF 6
 
 O software será disponibilizado em português, sem versões internacionais.
 
-### RNF 8
+### RNF 7
  
 O sistema poderá ser modificado apenas on-line, mas pode ser visualizado off-line.
