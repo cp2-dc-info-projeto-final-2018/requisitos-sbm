@@ -59,24 +59,14 @@ if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
     </ul>
   <br><br><br>
     <div class="caixinhadoform">
-    <select>
-    <option value="turma">Primeiro Ano Regular</option>
-    <option value="turma">Segundo Ano Regular</option>
-    <option value="turma">Terceiro Ano Regular</option>
-    <option value="turma">PROEJA Primeiro Ano</option>
-    <option value="turma">PROEJA Segundo Ano</option>
-    <option value="turma">PROEJA Terceiro Ano</option>
-    <option value="turma">Primeiro Ano Integrado</option>
-    <option value="turma">Segundo Ano Integrado</option>
-    <option value="turma">Terceiro Ano Integrado</option>
-    <option value="Repetente">Repetente Regular</option>
-    <option value="Repetente">Repetente Integrado</option>
-    <option value="Repetente">Repetente PROEJA</option>
-    <option value="Mais de 3 apoios">Mais de 3 apoios Regular</option>
-    <option value="Mais de 3 apoios">Mais de 3 apoios Integrado</option>
-    <option value="Mais de 3 apoios">Mais de 3 apoios PROEJA</option>
-
-    </select>
+      <select name="isso" onchange="location = this.value;">
+      <option value="0" selected disabled>--Escolha uma opção--</option>
+      <?php
+        require_once('../Validacoes/salvaturma.php');
+        $turma = Procuraturmaparaexibir();
+      foreach ($turma as $value) { ?>
+          <option value="<?=$value ?>"> <?=$value ?> </option> <? ;}?>
+      </select>
     <br>
     <p><input type = "button" value="Entrar"></input></p>
   </div>
