@@ -51,7 +51,7 @@
 		<li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
 		<li><a href="index.php"> Calendário</a></li>
 		<li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
-		<li style="float:right"><a class="active" href="../Codigo/sair.php">Sair</a></li>
+		<li style="float:right"><a class="active" href="../Codigo//requisitos-sbm/Codigo/sair.php">Sair</a></li>
 	</ul>
 	<br><br><br>
 <meta charset='utf-8' />
