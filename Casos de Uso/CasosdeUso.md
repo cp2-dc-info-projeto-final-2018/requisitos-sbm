@@ -23,12 +23,10 @@
 1.	Usuário deve acessar a tela de cadastramento de aluno;
 2.	Usuário deve inserir os dados do aluno: 
 	- Nome;
-	- E-mail(alunos - opcional); 
+	- Sobrenome;
 	- Matrícula;
-	- Telefone;
-	- E-mail(pais);
 	- Turma;
-	- Endereço.
+	- Data de nascimento;
 3.	Sistema irá guardar os dados;
 4.  Usuário poderá atualizar o sistema. 
 
@@ -57,6 +55,8 @@
 	- Nome; 
 	- E-mail;
 	- Matrícula; 
+	- Sobrenome;
+	- Data de Nascimento;
 	- Categoria - se atua no SESOP ou na direção.
 
 3. Sistema irá cadastrar o usuário e atualizar o sistema.
