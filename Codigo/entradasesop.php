@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
+{
+  header('Location: login.php');
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -56,13 +63,13 @@
     </ul>
   <br><br><br>
     <div class="caixinhadoform">
-    <select name="isso" onchange="location = this.value;">
-    <option value="0" selected disabled>--Escolha uma opção--</option>
-    <?php
-      require_once('../Validacoes/salvaturma.php');
-      $turma = Procuraturmaparaexibir();
-    foreach ($turma as $value) { ?>
-        <option value="<?=$value ?>"> <?=$value ?> </option> <? ;}?>
+      <select name="isso" onchange="location = this.value;">
+      <option value="0" selected disabled>--Escolha uma opção--</option>
+      <?php
+        require_once('../Validacoes/salvaturma.php');
+        $turma = Procuraturmaparaexibir();
+      foreach ($turma as $value) { ?>
+          <option value="<?=$value ?>"> <?=$value ?> </option> <? ;}?>
     </select>
 
   </div>

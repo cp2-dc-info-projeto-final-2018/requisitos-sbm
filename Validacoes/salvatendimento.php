@@ -18,15 +18,18 @@ $nomealu = $dadosnovoAtendimento['nome'];
 $nomeresp = $dadosnovoAtendimento['nomeresp'];
 $hora = $dadosnovoAtendimento['hora'];
 $data = $dadosnovoAtendimento['data'];
+$id = $dadosnovoAtendimento['idalu'];
+$idresp = $dadosnovoAtendimento['idresp'];
+$idusu = $dadosnovoAtendimento['idusu'];
 $sql = $bd -> prepare(
-  "INSERT INTO atendimento(data,hora,descricao,nomealu,nomeresp,matricula)
-  VALUES (:valdata,:valmatricula,:valhora,:valdescricao,:valnomealu,:valnomeresp,);");
+  "INSERT INTO atendimento(data,hora,descricao,id_sesop,id_aluno,id_responsavel)
+  VALUES (:valdata,:valhora,:valdescricao,:validsesop,:validalu,:validresp);");
  $sql -> bindValue(':valdata',$dadosnovoAtendimento['data']);
  $sql -> bindValue(':valhora',$dadosnovoAtendimento['hora']);
  $sql -> bindValue(':valdescricao',$dadosnovoAtendimento['descricao']);
- $sql -> bindValue(':valnomealu',$dadosnovoAtendimento['nomealu']);
- $sql -> bindValue(':valnomeresp',$dadosnovoAtendimento['nomeresp']);
- $sql -> bindValue(':valmatricula',$dadosnovoAtendimento['matricula']);
+ $sql -> bindValue(':validsesop',$dadosnovoAtendimento['idusu']);
+ $sql -> bindValue(':validalu',$dadosnovoAtendimento['idalu']);
+ $sql -> bindValue(':validresp',$dadosnovoAtendimento['idresp']);
 
  $sql -> execute();
 }
@@ -38,4 +41,53 @@ function BuscaUsuarioPorAtendimento($matricula)
 	$sql->execute();
 	return $sql->fetch();
 }
+function VerificaHora($hora)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT  hora FROM atendimento WHERE hora = :valhora');
+  $sql -> bindValue(':valhora',$hora);
+  $sucesso = $sql->execute();
+  if($sucesso == false)
+  {
+     throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql -> fetch();
+}
+function VerificaAluno($nomealu)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT id_aluno FROM aluno WHERE nome = :valnomealu');
+  $sql->bindValue(':valnomealu',$nomealu);
+  $sucesso = $sql->execute();
+  if($sucesso == false)
+  {
+     throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql-> fetch();
+}
+function VerificaResponsável($nomeresp)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT id_responsavel FROM responsavel WHERE nome = :valnomeresp ');
+  $sql->bindValue(':valnomeresp',$nomeresp);
+  $sucesso = $sql->execute();
+  if($sucesso == false)
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql-> fetch();
+}
+function VerificaUsuário($nomeusu)
+{
+  $bd = Conexão();
+  $sql =  $bd->prepare('SELECT id_usuario FROM usuario WHERE nome = :valnomeusu');
+  $sql-> bindValue(':valnomeusu',$nomeusu);
+  $sucesso = $sql->execute();
+  if($sucesso==false)
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql-> fetch();
+}
+
  ?>

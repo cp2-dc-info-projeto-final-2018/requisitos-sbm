@@ -4,8 +4,7 @@
   <head>
       <meta charset="utf-8">
       <title> SISOP </title>
-      <link rel="stylesheet" type="text/css" href="style1.css">
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="../Codigo/style.css">
 
   </head>
 
@@ -49,10 +48,10 @@
     <body>
 
       <ul>
-        <li><a href="entradasesop.php">Pesquisa</a></li>
-        <li><a href=""> Agendamentos </a></li>
+        <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
+        <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
-        <li><a href="cadastra.html">Cadastramento</a></li>
+        <li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
         <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
       </ul>
 

@@ -56,7 +56,7 @@ else
     <body>
 
     <ul>
-      <li><a href="entradasesop.html">Pesquisa</a></li>
+      <li><a href="entradasesop.php">Pesquisa</a></li>
       <li><a href="atendimentos.php"> Atendimentos</a></li>
       <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
@@ -71,15 +71,16 @@ else
           <?php if ($erro != null) { ?>
                <p> <?= $erro ?> </p>
                <?php }?>
-        <input type="text" name="matricula" title="Informe a matrícula da pessoa que irá atender - Obrigatório" placeholder="Matrícula"><br>
-        <input type="text" name="nomealu" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno">
-        <input type="text" name="nomeresp" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável">
-        <input type="DateTime" name="hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora">
+        <input type="text" name="matricula" title="Informe a matrícula da pessoa que irá atender - Obrigatório" placeholder="Matrícula" required><br>
+        <input type="text" name="nomealu" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno" required>
+        <input type="text" name="nomeresp" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável" required>
+				<input type="text" name="nomeusu" title="Informe o nome de quem irá atender - Obrigatório" placeholder ="Nome do Atendente" required>
+				<input type="DateTime" name="hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora" required>
         <input name ="data" type="date" title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
         <div>
           <br>
           <label for="msg">Descrição:</label>
-          <br><br>
+          <br><br>-
 
           <textarea name="descricao" title="Informe uma pequena descrição - Obrigatório"></textarea>
 

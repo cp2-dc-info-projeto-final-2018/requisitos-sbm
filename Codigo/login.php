@@ -1,23 +1,32 @@
 <?php
+require_once('../Validacoes/salvasesopdirecao.php');
 
 session_start();
 
   if(array_key_exists('matriculaUsuárioLogado', $_SESSION))
   {
-
+    $atuacao = Verificaratuacao($_SESSION['matriculaUsuárioLogado']);
+    if($atuacao==0){
     header ('Location: entradasesop.html');
+                   }
+    else
+    {
+      header('Location:entradadirecao.html');
+    }
   	exit();
   }
-  if (array_key_exists('erro',$_SESSION))
-  {
-  	$erro = $_SESSION ['erro'];
 
-  	unset ($_SESSION['erro']);
+  if (array_key_exists('erros',$_SESSION))
+  {
+  	$erro = $_SESSION ['erros'];
+
+  	unset ($_SESSION['erros']);
   }
   else
   {
   	$erro = null;
   }
+
 
 ?>
 <!DOCTYPE HTML>

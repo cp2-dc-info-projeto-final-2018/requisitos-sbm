@@ -32,18 +32,19 @@ else
   return $resultado['id_aluno'];
 }
 }
-function InsereResponsavel($dadosnovoResponsavel)
+function InsereResponsavel($novoResponsavel)
 
 {
 $bd = Conexão();
 
 $sql = $bd -> prepare(
-  "INSERT INTO responsavel(nome,telefone,email)
-  VALUES (:valnome,:valtelefone,:valemail);");
+  "INSERT INTO responsavel(nome,telefone,email,id_aluno)
+  VALUES (:valnome,:valtelefone,:valemail,:validaluno);");
 
- $sql -> bindValue(':valnome',$dadosnovoResponsavel['nome']);
- $sql -> bindValue(':valtelefone',$dadosnovoResponsavel['telefone']);
- $sql -> bindValue(':valemail',$dadosnovoResponsavel['email']);
+ $sql -> bindValue(':valnome',$novoResponsavel['nome']);
+ $sql -> bindValue(':valtelefone',$novoResponsavel['telefone']);
+ $sql -> bindValue(':valemail',$novoResponsavel['email']);
+ $sql -> bindValue(':validaluno',$novoResponsavel['id_aluno']);
  $sql -> execute();
 
 }

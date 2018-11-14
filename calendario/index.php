@@ -51,7 +51,7 @@ $resultado_events = mysqli_query($conn,$result_events);
 	<body>
 
     <ul>
-      <li><a href="../Codigo/entradasesop.html">Pesquisa</a></li>
+      <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
       <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
       <li><a href=""> Calendário </a></li>
       <li><a href="../Codigo/cadastra.html">Cadastramento</a></li>
@@ -79,21 +79,17 @@ $resultado_events = mysqli_query($conn,$result_events);
 						editable: true,
 						eventLimit: true, // allow "more" link when too many events
 						events: [
-							<?php
-									while($row_events = mysqli_fetch_array($resultado_events))
-									{ ?>
-									id: '<?php echo $row_events['id_atendimento']; ?>',
-									data: '<?php echo $row_events['data']; ?>',
-									hora: '<?php echo $row_events['hora']; ?>',
-									descricao: '<?php echo $row_events['descricao']; ?>',
-									id_sesop: '<?php echo $row_events['id_sesop']; ?>',
-									id_aluno: '<?php echo $row_events['id_aluno']; ?>',
-									id_responsavel: '<?php echo $row_events['id_responsavel']; ?>',
-								},
-									<?php
-									}
-							 ?>
-						]
+							<?php	while($row_events = mysqli_fetch_array($resultado_events)) { ?>
+                  {
+  									id: '<?php echo $row_events['id_atendimento']; ?>',
+  								  start: '<?php echo $row_events['data'], 'T', $row_events['hora']; ?>',
+  									title: '<?php echo $row_events['descricao']; ?>',
+  									constraint: '<?php echo $row_events['id_sesop']; ?>',
+  									constraint: '<?php echo $row_events['id_aluno']; ?>',
+  									constraint: '<?php echo $row_events['id_responsavel']; ?>'
+                  },
+						<?php	} ?>
+          ]
 					});
 		});
 </script>
