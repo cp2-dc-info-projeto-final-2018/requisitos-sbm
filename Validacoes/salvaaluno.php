@@ -41,7 +41,7 @@ $sql = $bd -> prepare(
   "INSERT INTO responsavel(nome,telefone,email,id_aluno)
   VALUES (:valnome,:valtelefone,:valemail,:validaluno);");
 
- $sql -> bindValue(':valnome',$novoResponsavel['nome']);
+ $sql -> bindValue(':valnome',$novoResponsavel['nomeResp']);
  $sql -> bindValue(':valtelefone',$novoResponsavel['telefone']);
  $sql -> bindValue(':valemail',$novoResponsavel['email']);
  $sql -> bindValue(':validaluno',$novoResponsavel['id_aluno']);
@@ -70,6 +70,30 @@ $sql = $bd -> prepare(
  $sql -> bindValue(':valdat',$dadosnovoAluno['datNasc']);
  $sql -> execute();
 
+}
+function VerificaEmail(string $email)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT email FROM responsavel WHERE email = :valemail');
+  $sql -> bindValue(':valemail',$email);
+  $sucesso = $sql -> execute();
+  if($sucesso == false)
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql -> fetch();
+}
+function VerificaTurma(string $turma)
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT nome FROM turma WHERE id_turma = :valturma');
+  $sql -> bindValue(':valturma',$turma);
+  $sucesso = $sql -> execute();
+  if($sucesso == false )
+  {
+    throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql -> fetch();
 }
 
 ?>

@@ -1,3 +1,20 @@
+    <?php
+      require_once('../Validacoes/salvaturma.php');
+
+$i = 1;
+         session_start();
+         //if (empty($_SESSION['erros']))
+         if(array_key_exists('erros',$_SESSION))
+         {
+         	$erro = $_SESSION['erros'];
+         	unset($_SESSION['erros']);
+         }
+         else
+         {
+         	$erro=null;
+         }
+      $turma = Procuraturmaparaexibir();
+     ?>
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -65,7 +82,11 @@
                 <input name="nome" type="text" minlength='3' maxlength='35' title="Informe o Nome do aluno - Obrigatório" placeholder="Nome" required />
   				      <input name="sobrenome" type="text" minlength='3' maxlength='35' title="Informe o Sobrenome do aluno - Obrigatório" placeholder="Sobrenome" required />
                 <input name ="datNasc" type="date"title="Informe a data de nascimento - Obrigatório" placeholder ="Data de Nascimento" required/>
-                <input name="turma" type="text" minlength='3' maxlength='7' title="Informe a turma do aluno - Obrigatório" placeholder="Turma" required />
+                <select name="turma">
+                  <option value="0" selected disabled>--Escolha uma opção--</option>
+                  <?php foreach ($turma as $value) { ?>
+                      <option value="<?=$i?>"> <?=$value['nome'] ?> </option>
+                    <?php }?>
                 <br><br>
                 Informações do Responsável:
                 <input name="nomeResp" type="text" minlengh = '3' maxlength = '35' title="Informe o nome do responsável do aluno." placeholder="Nome do Responsável" required/>

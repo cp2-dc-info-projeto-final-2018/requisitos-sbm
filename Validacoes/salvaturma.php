@@ -28,16 +28,15 @@ $sql = $bd -> prepare(
 function Procuraturmaparaexibir()
 {
   $bd = conexão();
-  $sql = $bd -> prepare("SELECT nome FROM turma");
+  $sql = $bd -> prepare("SELECT id_turma, nome FROM turma");
   $sql -> execute();
-  $resultado = $sql->fetch();
-if(empty($resultado) == true)
-  {
-    return  0;
-  }
-else
-  {
-    return $resultado;
-  }
+  return $sql->fetchAll();
 }
+//function ProcuraAlunosporTurma()
+//{
+//  $bd = Conexão();
+//  $sql = $bd ->prepare("SELECT * FROM aluno WHERE id_turma = :valturma");
+//  $sql -> execute();
+//  return $sql -> fetchAll();
+//}
 ?>

@@ -1,6 +1,6 @@
 <?php
 include_once("conexion.php");
-$result_events = "SELECT id_atendimento,data,hora,descricao,id_sesop,id_aluno,id_responsavel FROM atendimento ";
+$result_events = "SELECT id_atendimento,data,inicio,fim,descricao,id_sesop,id_aluno,id_responsavel FROM atendimento ";
 $resultado_events = mysqli_query($conn,$result_events);
  ?>
 
@@ -82,14 +82,18 @@ $resultado_events = mysqli_query($conn,$result_events);
 							<?php	while($row_events = mysqli_fetch_array($resultado_events)) { ?>
                   {
   									id: '<?php echo $row_events['id_atendimento']; ?>',
-  								  start: '<?php echo $row_events['data'], 'T', $row_events['hora']; ?>',
+  								  start: '<?php echo $row_events['data'], 'T', $row_events['inicio']; ?>',
+                    end:'<?php echo $row_events['data'], 'T', $row_events['fim']; ?>',
   									title: '<?php echo $row_events['descricao']; ?>',
   									constraint: '<?php echo $row_events['id_sesop']; ?>',
   									constraint: '<?php echo $row_events['id_aluno']; ?>',
   									constraint: '<?php echo $row_events['id_responsavel']; ?>'
                   },
+                  
 						<?php	} ?>
           ]
+
+
 					});
 		});
 </script>

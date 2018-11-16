@@ -43,17 +43,11 @@ else if(strlen($sobrenome)<3 || strlen($sobrenome)>35)
   $erros[] = "O nome tem que ter ao menos 3 letras e no máximo 35";
 }
 $email = $request['email'];
-if ($email = false)
+if ($email == false)
 {
 $erros[] = "O email informado é invalido";
 }
-$email = $request['email'];
-if ($email == null)
-{
-$erros [] = " Precisa cadastrar o gmail";
-}
-$email = $request['email'];
-if ($email == 'email')
+else if (VerificaEmail($email)!=false)
 {
 $erros [] = " Já existe um gmail cadastrado";
 }

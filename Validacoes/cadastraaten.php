@@ -7,7 +7,8 @@ $erros = [];
     $request,
     [
       'data' => FILTER_DEFAULT,
-      'hora' => FILTER_DEFAULT,
+      'inicio' => FILTER_DEFAULT,
+      'fim' => FILTER_DEFAULT,
       'descricao' => FILTER_DEFAULT,
       'nomealu' => FILTER_DEFAULT,
       'nomeresp' => FILTER_DEFAULT,
@@ -17,6 +18,8 @@ $erros = [];
   );
   var_dump($request['data']);
   var_dump($request['descricao']);
+  $inicio = $request['inicio'];
+  $fim = $request['fim'];
   $data = $request['data'];
   $data = DateTime::createFromFormat('Y-m-d', $data);
   if ($data == false){
@@ -58,13 +61,22 @@ else if(strlen($matricula)<9 || strlen($matricula)>11)
 {
    $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
 }
-$hora = $request['hora'];
-$strHora = substr("$hora", 0,2);
-if ($hora == false)
+$inicio = $request['inicio'];
+$strInicio = substr("$inicio", 0,2);
+if ($inicio == false)
 {
   $erros[] = "Hora não preenchida!";
 }
-else if ($strHora>=24){
+else if ($inicio>=24){
+echo "a hora não pode ser maior que 24";
+}
+$fim = $request['fim'];
+$strFim = substr("$fim", 0,2);
+if ($fim == false)
+{
+  $erros[] = "Hora não preenchida!";
+}
+else if ($fim>=24){
 echo "a hora não pode ser maior que 24";
 }
 $descricao = $request['descricao'];
@@ -95,10 +107,15 @@ else if(strlen($matriculaalu)<9 || strlen($matriculaalu)>11)
 {
    $erros[] = "A Matrícula tem que ter no mínimo 9 digítos e no máximo 11!";
 }
-if(VerificaHora($request['hora'])!= null)
+if(VerificaInicio($request['inicio'])!= null)
 {
   $erros[] = "Horário já ocupado.";
 }
+if(VerificaFim($request['fim'])!=null)
+{
+  $erros[] = "Horário já ocupado.";
+}
+
 
 $aluno = VerificaAluno($request['nomealu']);
 if($aluno == null)
@@ -119,7 +136,8 @@ if (empty($erros))
 {
     $novoAtendimento = [
         'data' => $request['data'],
-        'hora' => $request['hora'],
+        'inicio' => $request['inicio'],
+        'fim' => $request['fim'],
         'descricao' => $request['descricao'],
         'nomealu' => $request['nomealu'],
         'nomeresp' => $request['nomeresp'],

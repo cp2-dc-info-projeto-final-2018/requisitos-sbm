@@ -1,9 +1,33 @@
 <?php
-session_start();
-if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
-{
-  header('Location: login.php');
-}
+  require_once('../Validacoes/salvaturma.php');
+
+
+
+
+
+  session_start();
+  if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
+  {
+    header('Location: login.php');
+  }
+
+  $listaAlunos = null;
+
+  if(array_key_exists('id',$_REQUEST) != false)
+  {
+    function ProcuraAlunosporTurma($id)
+    {
+      $bd = Conexão();
+      $sql = $bd ->prepare('SELECT * FROM aluno WHERE turma = :valturma');
+      $sql -> bindValue(':valturma',$id);
+      $sql -> execute();
+      return $sql -> fetchAll();
+    }
+    $result_turma = ProcuraAlunosporTurma($_REQUEST['id']);
+  }
+
+  $turma = Procuraturmaparaexibir();
+
 ?>
 <!DOCTYPE HTML>
 
@@ -59,16 +83,22 @@ if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
     </ul>
   <br><br><br>
     <div class="caixinhadoform">
-      <select name="isso" onchange="location = this.value;">
-      <option value="0" selected disabled>--Escolha uma opção--</option>
-      <?php
-        require_once('../Validacoes/salvaturma.php');
-        $turma = Procuraturmaparaexibir();
-      foreach ($turma as $value) { ?>
-          <option value="<?=$value ?>"> <?=$value ?> </option> <?php }?>
+      <select name="isso" onchange="location = `?id=${this.value}`;">
+        <option value="0" selected disabled>--Escolha uma opção--</option>
+        <?php foreach ($turma as $value) { ?>
+            <option value="<?=$value['id_turma'] ?>"> <?=$value['nome'] ?> </option>
+          <?php }?>
       </select>
     <br>
-    <p><input type = "button" value="Entrar"></input></p>
+    <?php if(array_key_exists('id',$_REQUEST) != false) { ?>
+    <?php	foreach ($result_turma as $aluno) { ?>
+            <br>
+           <?php echo $aluno['matricula']; ?>
+           <?php echo $aluno['nome']; ?>
+           <?php echo $aluno['sobrenome']; ?>
+
+
+  <?php	} }?>
   </div>
   </body>
     </html>

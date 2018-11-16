@@ -1,5 +1,4 @@
 <?php session_start();
-require_once('login.php');
 if($_SESSION['atuacao'] == 1)
 {
 
@@ -84,7 +83,8 @@ else
         <input type="text" name="nomealu" title="Informe o nome do aluno - Obrigatório" placeholder="Nome do Aluno" required>
         <input type="text" name="nomeresp" title="Informe o nome do Responsável - Obrigatório" placeholder="Nome do Responsável" required>
 				<input type="text" name="nomeusu" title="Informe o nome de quem irá atender - Obrigatório" placeholder ="Nome do Atendente" required>
-				<input type="DateTime" name="hora" title="Informe a hora do agendamento- Obrigatório" placeholder="Hora" required>
+				<input type="time" name="inicio" title="Informe a hora do agendamento- Obrigatório" placeholder="Inicio" required>
+				<input type="time" name="fim" title="Informe a hora do agendamento- Obrigatório" placeholder="Fim" required>
         <input name ="data" type="date" title="Informe a data do agendamento - Obrigatório" placeholder ="Data do Agendamento" required/>
         <div>
           <br>

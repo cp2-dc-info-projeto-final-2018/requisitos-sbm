@@ -59,9 +59,9 @@ $turma = $request['turma'];
   {
     $erros[] = "Turma não preenchida!";
   }
-  else if(strlen($turma)<3 || strlen($turma)> 7)
+  else if(VerificaTurma($turma)==false)
   {
-    $erros[] = "A Turma tem que ter ao menos 3 letras e no máximo 7!";
+    $erros[] = "Turma inexistente!";
   }
 
 $nomeResp = $request['nomeResp'];
@@ -89,15 +89,9 @@ $email = $request['email'];
   {
     $erros[] = "O email informado é invalido!";
   }
-$email = $request['email'];
-  if ($email == null)
+  else if (VerificaEmail($email)!=false)
   {
-    $erros [] = " Precisa cadastrar o gmail!";
-  }
-$email = $request['email'];
-  if ($email == 'email')
-  {
-    $erros [] = " Já existe um gmail cadastrado!";
+  $erros [] = " Já existe um gmail cadastrado";
   }
 
   if (empty($erros))
@@ -117,7 +111,7 @@ $email = $request['email'];
     $id_aluno = BuscaIddoAluno($request['matricula']);
 
     $novoResponsavel = [
-    'nome' => $request['nome'],
+    'nomeResp' => $request['nomeResp'],
     'email' => $request['email'],
     'telefone' => $request['telefone'],
     'id_aluno' => $id_aluno

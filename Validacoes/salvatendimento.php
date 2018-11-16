@@ -10,22 +10,24 @@ function Conexão()
 $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $bd;
 }
-function InsereUsuario($dadosnovoAtendimento)
+function InsereAtendimento($dadosnovoAtendimento)
 {
 $bd = Conexão();
 $matricula = $dadosnovoAtendimento['matricula'];
-$nomealu = $dadosnovoAtendimento['nome'];
+$nomealu = $dadosnovoAtendimento['nomealu'];
 $nomeresp = $dadosnovoAtendimento['nomeresp'];
-$hora = $dadosnovoAtendimento['hora'];
+$inicio = $dadosnovoAtendimento['inicio'];
+$fim = $dadosnovoAtendimento['fim'];
 $data = $dadosnovoAtendimento['data'];
 $id = $dadosnovoAtendimento['idalu'];
 $idresp = $dadosnovoAtendimento['idresp'];
 $idusu = $dadosnovoAtendimento['idusu'];
 $sql = $bd -> prepare(
-  "INSERT INTO atendimento(data,hora,descricao,id_sesop,id_aluno,id_responsavel)
-  VALUES (:valdata,:valhora,:valdescricao,:validsesop,:validalu,:validresp);");
+  "INSERT INTO atendimento(data,inicio,fim,descricao,id_sesop,id_aluno,id_responsavel)
+  VALUES (:valdata,:valinicio,:valfim,:valdescricao,:validsesop,:validalu,:validresp);");
  $sql -> bindValue(':valdata',$dadosnovoAtendimento['data']);
- $sql -> bindValue(':valhora',$dadosnovoAtendimento['hora']);
+ $sql -> bindValue(':valinicio',$dadosnovoAtendimento['inicio']);
+ $sql -> bindValue(':valfim',$dadosnovoAtendimento['fim']);
  $sql -> bindValue(':valdescricao',$dadosnovoAtendimento['descricao']);
  $sql -> bindValue(':validsesop',$dadosnovoAtendimento['idusu']);
  $sql -> bindValue(':validalu',$dadosnovoAtendimento['idalu']);
@@ -41,11 +43,11 @@ function BuscaUsuarioPorAtendimento($matricula)
 	$sql->execute();
 	return $sql->fetch();
 }
-function VerificaHora($hora)
+function VerificaInicio($inicio)
 {
   $bd = Conexão();
-  $sql = $bd->prepare('SELECT  hora FROM atendimento WHERE hora = :valhora');
-  $sql -> bindValue(':valhora',$hora);
+  $sql = $bd->prepare('SELECT  inicio FROM atendimento WHERE inicio = :valinicio');
+  $sql -> bindValue(':valinicio',$inicio);
   $sucesso = $sql->execute();
   if($sucesso == false)
   {
@@ -53,6 +55,20 @@ function VerificaHora($hora)
   }
   return $sql -> fetch();
 }
+function VerificaFim($fim)
+
+{
+  $bd = Conexão();
+  $sql = $bd->prepare('SELECT fim FROM atendimento WHERE fim = :valfim');
+  $sql -> bindValue(':valfim',$fim);
+  $sucesso = $sql -> execute();
+  if($sucesso == false)
+  {
+     throw new Exception('Erro ao executar comando SQL');
+  }
+  return $sql -> fetch();
+}
+
 function VerificaAluno($nomealu)
 {
   $bd = Conexão();
