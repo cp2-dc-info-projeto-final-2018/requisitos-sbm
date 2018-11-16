@@ -35,20 +35,20 @@
 		 $sesopoudirecao = Verificaratuacao($matricula);
 		 if ($sesopoudirecao['atuacao'] == 0)
 		{
-	 	session_start();
-
-	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-		header('Location: entradasesop.php');
-	 	exit();
+		 	$destino = 'entradasesop.php';
 	 	}
 		else if ($sesopoudirecao['atuacao'] == 1)
 		{
-			session_start();
-
-		 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-			header('Location: entradadirecao.php');
-		 	exit();
+			$destino = 'entradadirecao.php';
 		}
+
+		session_start();
+
+		$_SESSION['matriculaUsuárioLogado'] = $matricula;
+		$_SESSION['atuacao'] = $sesopoudirecao;
+
+		header("Location: $destino");
+		exit();
 
 	}
 	else

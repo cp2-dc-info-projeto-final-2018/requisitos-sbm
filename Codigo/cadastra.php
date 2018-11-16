@@ -1,11 +1,12 @@
 <?php
-require_once('login.php');
-
-if($_SESSION['atuacao'] == 1)
+session_start();
+var_dump($_SESSION);
+if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
 {
-
-	$erro = $_SESSION['erros'];
-	unset($_SESSION['erros']);
+  header('Location: login.php');
+}else if($_SESSION['atuacao'] == 1)
+{
+header('Location: entradadirecao.php');
 }
 ?>
 <!DOCTYPE HTML>
