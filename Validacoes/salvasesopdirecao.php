@@ -47,7 +47,6 @@ function VerificaEmail(string $email)
     throw new Exception('Erro ao executar comando SQL');
   }
   return $sql -> fetch();
-
 }
 function Verificaratuacao(string $matricula)
 {

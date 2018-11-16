@@ -1,4 +1,3 @@
-
 <?php
 function Conexão()
 {
@@ -11,12 +10,11 @@ function Conexão()
 $bd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $bd;
 }
-function InsereAtendimento($dadosnovoAtendimento)
+function InsereUsuario($dadosnovoAtendimento)
 {
 $bd = Conexão();
-$descricao = $dadosnovoAtendimento['descricao'];
 $matricula = $dadosnovoAtendimento['matricula'];
-$nomealu = $dadosnovoAtendimento['nomealu'];
+$nomealu = $dadosnovoAtendimento['nome'];
 $nomeresp = $dadosnovoAtendimento['nomeresp'];
 $hora = $dadosnovoAtendimento['hora'];
 $data = $dadosnovoAtendimento['data'];
@@ -39,7 +37,7 @@ function BuscaUsuarioPorAtendimento($matricula)
 {
 	$bd = Conexão();
 	$sql = $bd->prepare('SELECT senha FROM usuario WHERE matricula = :matricula');
-	$sql->bindValue(':valmatricula', $matricula);
+	$sql->bindValue(':matricula', $matricula);
 	$sql->execute();
 	return $sql->fetch();
 }

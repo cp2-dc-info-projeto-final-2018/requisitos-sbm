@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 
 <html lang="pt-br">
@@ -52,8 +54,35 @@
         <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="../Codigo/cadastra.html"> Cadastramento</a></li>
-        <li style="float:right"><a class="active" href="sair.php">Sair</a></li>
+        <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
       </ul>
-//Lembrar de colocar 
+
+
+        //fazer validção da turma pois pode n vir nenhuma turma
+
+      <h3><center><?= $_REQUEST['turma'] ?>: </h3>
+        <?php
+        $listaAluno = ListaAluno();
+
+        foreach ($listaAluno as $aluno) { ?>
+      		<div>
+            	<table>
+      			<h4><?= $aluno[0] ?></h4>
+              <tr>
+      				<td>Data do Atendimento:</td>
+      				<td><?= $aluno[1] ?></td>
+            </tr>
+              <tr>
+      				<td>Turma:</td>
+      				<td><?= $aluno[2] ?></a></td>
+            </tr>
+            <tr>
+      				<td>Hora do Atendimento:</td>
+      				<td><?= $aluno[3] ?></td>
+      			</tr>
+          </table>
+      		</div>
+      	<?php } ?>
+
   </body>
     </html>

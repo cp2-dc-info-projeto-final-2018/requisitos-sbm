@@ -7,11 +7,11 @@ session_start();
   {
     $atuacao = Verificaratuacao($_SESSION['matriculaUsuárioLogado']);
     if($atuacao==0){
-    header ('Location: entradasesop.html');
+    header ('Location: entradasesop.php');
                    }
     else
     {
-      header('Location:entradadirecao.html');
+      header('Location:entradadirecao.php');
     }
   	exit();
   }

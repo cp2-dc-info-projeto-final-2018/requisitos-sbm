@@ -38,7 +38,7 @@
 	 	session_start();
 
 	 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-		header('Location: entradasesop.html');
+		header('Location: entradasesop.php');
 	 	exit();
 	 	}
 		else if ($sesopoudirecao['atuacao'] == 1)
@@ -46,7 +46,7 @@
 			session_start();
 
 		 	$_SESSION['matriculaUsuárioLogado'] = $matricula;
-			header('Location: entradadirecao.html');
+			header('Location: entradadirecao.php');
 		 	exit();
 		}
 
