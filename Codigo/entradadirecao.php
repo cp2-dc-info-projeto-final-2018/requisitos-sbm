@@ -1,9 +1,39 @@
 <?php
-session_start();
-if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
-{
-  header('Location: login.php');
-}
+
+  require_once('../Validacoes/salvaturma.php');
+
+
+
+
+
+  session_start();
+  if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
+  {
+    header('Location: login.php');
+  }
+  else if($_SESSION['atuacao'] == 0)
+  {
+  header('Location: entradasesop.php');
+  }
+
+  $listaAlunos = null;
+
+  if(array_key_exists('id',$_REQUEST) != false)
+  {
+    function ProcuraAlunosporTurma($id)
+    {
+      $bd = Conexão();
+      $sql = $bd ->prepare('SELECT * FROM aluno WHERE turma = :valturma');
+      $sql -> bindValue(':valturma',$id);
+      $sql -> execute();
+      return $sql -> fetchAll();
+    }
+    $result_turma = ProcuraAlunosporTurma($_REQUEST['id']);
+  }
+
+  $turma = Procuraturmaparaexibir();
+
+
 ?>
 <!DOCTYPE HTML>
 
@@ -59,18 +89,34 @@ if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
 
   <br><br><br>
   <div class="caixinhadoform">
-    <select name="isso" onchange="location = this.value;">
-  <option value="0" selected disabled>--Escolha uma opção--</option>
-  <?php
-    require_once('../Validacoes/salvaturma.php');
-    $turma = Procuraturmaparaexibir();
-  foreach ($turma as $value) { ?>
-      <option value="<?=$value ?>"> <?=$value ?> </option> <?php }?>
-  </select>
+    <select name="isso" onchange="location = `?id=${this.value}`;">
+      <option value="0" selected disabled>--Escolha uma opção--</option>
+      <?php foreach ($turma as $value) { ?>
+          <option value="<?=$value['id_turma'] ?>"> <?=$value['nome'] ?> </option>
+        <?php }?>
+    </select>
   <br>
-    <p><input type = "button" value="Entrar"></input></p>
-  </div>
+  <?php if(array_key_exists('id',$_REQUEST) != false) { ?>
+  <?php	foreach ($result_turma as $aluno) { ?>
+          <br>
+          <table border = '1'>
+          <tr>
+         <th> Matricula </th>
+         <th> Nome </th>
+         <th> Sobrenome</th>
+       </tr>
+       <tr>
+           <td><?php echo $aluno['matricula']; ?></td>
 
+           <td><?php echo $aluno['nome']; ?></td>
+
+
+         <td><?php echo $aluno['sobrenome']; ?> </td>
+       </tr>
+          <table>
+
+<?php	} }?>
+</div>
 
   </body>
     </html>

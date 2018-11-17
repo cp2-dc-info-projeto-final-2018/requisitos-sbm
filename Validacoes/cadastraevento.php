@@ -7,7 +7,7 @@ $erros = [];
     [
       'evento' => FILTER_DEFAULT,
       'data' => FILTER_DEFAULT,
-      'hora' => FILTER_DEFAULT,
+      'turno' => FILTER_DEFAULT,
       'descricao' => FILTER_DEFAULT
     ]
   );
@@ -21,19 +21,19 @@ else if(strlen($evento)<3 || strlen($evento)>35)
   $erros[] = "O evento tem que ter ao menos 3 letras e no máximo 100!";
 }
 $data = $resquest['data'];
-$data = DateTime::createFromFormat('d-m-Y', $datNasc)
+$data = DateTime::createFromFormat('d-m-Y', $data);
 if ($data == false)
 {
   $erros[] = "Valor de Data inválida!";
 }
-$hora = $request['hora'];
-$strHora = substr("$hora", 0,2);
-if ($hora == false)
+$turno = $request['turno'];
+
+if ($turno == false)
 {
-  $erros[] = "Hora não preenchida!";
+  $erros[] = "Horário não preenchido";
 }
-else if ($strHora>=24){
-echo "a hora não pode ser maior que 24";
+else if ($request['turno']=='manha'){
+$turno = 1;
 }
 $descricao = $request['descricao'];
 if ($descricao == false)

@@ -51,7 +51,6 @@
 
       <ul>
         <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
-        <li><a href="../Codigo/agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
         <li><a href="../Codigo/cadastra.php"> Cadastramento</a></li>
         <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>

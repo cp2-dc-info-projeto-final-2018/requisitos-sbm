@@ -9,6 +9,9 @@
   if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
   {
     header('Location: login.php');
+  }else if($_SESSION['atuacao'] == 1)
+  {
+  header('Location: entradadirecao.php');
   }
 
   $listaAlunos = null;
@@ -76,7 +79,6 @@
 
     <ul>
       <li><a href=""> Pesquisa</a> </li>
-      <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href="cadastra.php">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
@@ -93,10 +95,21 @@
     <?php if(array_key_exists('id',$_REQUEST) != false) { ?>
     <?php	foreach ($result_turma as $aluno) { ?>
             <br>
-           <?php echo $aluno['matricula']; ?>
-           <?php echo $aluno['nome']; ?>
-           <?php echo $aluno['sobrenome']; ?>
+            <table border = '1'>
+            <tr>
+           <th> Matricula </th>
+           <th> Nome </th>
+           <th> Sobrenome</th>
+         </tr>
+         <tr>
+             <td><?php echo $aluno['matricula']; ?></td>
 
+             <td><?php echo $aluno['nome']; ?></td>
+
+
+           <td><?php echo $aluno['sobrenome']; ?> </td>
+         </tr>
+            <table>
 
   <?php	} }?>
   </div>

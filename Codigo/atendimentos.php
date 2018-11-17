@@ -66,7 +66,6 @@ else
     <ul>
       <li><a href="entradasesop.php">Pesquisa</a></li>
       <li><a href="atendimentos.php"> Atendimentos</a></li>
-      <li><a href="agendamentos.html"> Agendamentos</a></li>
         <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href= "cadastra.php">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>

@@ -52,9 +52,8 @@ $resultado_events = mysqli_query($conn,$result_events);
 
     <ul>
       <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
-      <li><a href=""> Calendário </a></li>
+      <li><a href="index.php"> Calendário </a></li>
       <li><a href="../Codigo/cadastra.php">Cadastramento</a></li>
-      <li><a href ="lembrete.php"> Listagem</a> </li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
     </ul>
 	<br><br><br>
@@ -91,8 +90,22 @@ $resultado_events = mysqli_query($conn,$result_events);
                   },
 
 						<?php	} ?>
-          ]
+          ],
+          defaultView: 'listWeek',
 
+          // customize the button names,
+          // otherwise they'd all just say "list"
+          views: {
+            listDay: { buttonText: 'list day' },
+            listWeek: { buttonText: 'list week' },
+            listMonth: { buttonText: 'list month' }
+          },
+
+          header: {
+            left: 'title',
+            center: '',
+            right: 'listDay,listWeek,listMonth'
+          },
 
 
 

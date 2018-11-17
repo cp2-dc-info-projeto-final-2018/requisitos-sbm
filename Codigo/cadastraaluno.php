@@ -62,7 +62,6 @@ $i = 1;
 
     <ul>
       <li><a href="entradasesop.php">Pesquisa</a></li>
-      <li><a href="agendamentos.html"> Agendamentos</a></li>
       <li><a href="../calendario/index.php"> Calendário</a></li>
       <li><a href= "cadastra.php">Cadastramento</a></li>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
@@ -85,7 +84,7 @@ $i = 1;
                 <select name="turma">
                   <option value="0" selected disabled>--Escolha uma opção--</option>
                   <?php foreach ($turma as $value) { ?>
-                      <option value="<?=$i?>"> <?=$value['nome'] ?> </option>
+                      <option value="<?=$value['id_turma']?>"> <?=$value['nome'] ?> </option>
                     <?php }?>
                 <br><br>
                 Informações do Responsável:
