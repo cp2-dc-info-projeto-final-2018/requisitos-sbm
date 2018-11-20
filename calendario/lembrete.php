@@ -96,9 +96,9 @@ $resultado_events = mysqli_query($conn,$result_events);
           // customize the button names,
           // otherwise they'd all just say "list"
           views: {
-            listDay: { buttonText: 'list day' },
-            listWeek: { buttonText: 'list week' },
-            listMonth: { buttonText: 'list month' }
+            listDay: { buttonText: 'Eventos no dia' },
+            listWeek: { buttonText: 'Eventos na semana' },
+            listMonth: { buttonText: 'Eventos no mês' }
           },
 
           header: {

@@ -10,19 +10,6 @@ CREATE TABLE usuario (
   PRIMARY KEY(id_usuario)
 );
 
-CREATE TABLE direcao(
-  id_direcao INT NOT NULL AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
-  PRIMARY KEY(id_direcao),
-  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
-);
-
-CREATE TABLE sesop(
-  id_sesop INT NOT NULL  AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
-  PRIMARY KEY(id_sesop),
-  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
-);
 
 CREATE TABLE turma (
   id_turma INT NOT NULL AUTO_INCREMENT,
@@ -52,15 +39,6 @@ CREATE TABLE disciplina(
   PRIMARY KEY (id_disciplina)
 );
 
-CREATE TABLE aluno_disciplina(
-	id_aluno INT NOT NULL ,
-	id_disciplina INT NOT NULL,
-	frequencia FLOAT,
-	PRIMARY KEY(id_aluno, id_disciplina),
-	FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
-	FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
-);
-
 
 CREATE TABLE responsavel(
   id_responsavel INT NOT NULL AUTO_INCREMENT,
@@ -75,7 +53,8 @@ CREATE TABLE responsavel(
 CREATE TABLE atendimento(
   id_atendimento INT NOT NULL AUTO_INCREMENT,
   data DATE NOT NULL,
-  hora TIME NOT NULL,
+  inicio TIME NOT NULL,
+  fim TIME NOT NULL,
   descricao VARCHAR(1000),
   id_sesop INT NOT NULL,
   id_aluno INT NOT NULL,
@@ -86,11 +65,3 @@ CREATE TABLE atendimento(
   FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
 );
 
-CREATE TABLE responsavel_aluno(
-  id_aluno INT NOT NULL,
-  id_responsavel INT NOT NULL,
-  parentesco VARCHAR(20) NOT NULL,
-  PRIMARY KEY(id_aluno, id_responsavel),
-  FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
-  FOREIGN KEY (id_responsavel) REFERENCES responsavel(id_responsavel)
-);

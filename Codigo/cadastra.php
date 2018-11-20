@@ -68,14 +68,13 @@ header('Location: entradadirecao.php');
 <h3 center>Cadastramento</h3>
 
 <tr>
-<td> Evento </td>
+
 <td>Aluno</td>
 <td>Novo Usuário(Sesop e Direção)</td>
 <td>Atendimento</td>
 <td>Turma</td>
 </tr>
 <tr>
-<td><a href= "cadastraevento.php"><img src= "../Imagens/evento.jpg" height= "100" widht= "100"/></a></td>
 <td><a href="cadastraaluno.php"><img src="../Imagens/estudante.jpg" height="100" width="100"/></a></td>
 <td><a href="cadastrausuario.php"><img src="../Imagens/sedi.jpg" height="100" width="100"/></a></td>
 <td><a href="atendimentos.php"><img src="../Imagens/aten.jpg" height="100" width="100"/></a></td>
