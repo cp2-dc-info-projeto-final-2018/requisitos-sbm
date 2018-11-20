@@ -1,6 +1,6 @@
 <?php
 session_start();
-var_dump($_SESSION);
+
 if(array_key_exists('matriculaUsuárioLogado', $_SESSION)==false)
 {
   header('Location: login.php');
