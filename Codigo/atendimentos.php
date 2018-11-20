@@ -1,9 +1,7 @@
 <?php session_start();
 if($_SESSION['atuacao'] == 1)
 {
-
-	$erro = $_SESSION['erros'];
-	unset($_SESSION['erros']);
+header('Location: entradadirecao.php');
 }
 //if (empty($_SESSION['erros']))
 if(array_key_exists('erros',$_SESSION))

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("conexion.php");
 $result_events = "SELECT id_atendimento,data,inicio,fim,descricao,id_sesop,id_aluno,id_responsavel FROM atendimento ";
 $resultado_events = mysqli_query($conn,$result_events);
@@ -53,7 +54,14 @@ $resultado_events = mysqli_query($conn,$result_events);
     <ul>
       <li><a href="../Codigo/entradasesop.php">Pesquisa</a></li>
       <li><a href="index.php"> Calendário </a></li>
+      <?php
+      if($_SESSION['atuacao'] == 1)
+      {
+        //<li><a href="../Codigo/cadastra.php">Cadastramento</a></li>
+      }
+      else { ?>
       <li><a href="../Codigo/cadastra.php">Cadastramento</a></li>
+      <?php }  ?>
       <li style="float:right"><a class="active" href="/requisitos-sbm/Codigo/sair.php">Sair</a></li>
     </ul>
 	<br><br><br>
