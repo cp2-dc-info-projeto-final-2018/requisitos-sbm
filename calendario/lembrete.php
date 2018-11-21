@@ -57,7 +57,7 @@ $resultado_events = mysqli_query($conn,$result_events);
       <?php
       if($_SESSION['atuacao'] == 1)
       {
-        //<li><a href="../Codigo/cadastra.php">Cadastramento</a></li>
+        //<li><a href="../Codigo/cadastra.php">Cadastramentoo</a></li>
       }
       else { ?>
       <li><a href="../Codigo/cadastra.php">Cadastramento</a></li>
