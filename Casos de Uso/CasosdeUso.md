@@ -6,7 +6,7 @@
 - [CDU 2 - Autenticar](#cdu-2---autenticar)
 - [CDU 3 - Cadastrar Usuário](#cdu-3---cadastrar-usuario)
 - [CDU 4 - Visualizar Calendário](#cdu-4---visualizar-calendario)
-- [CDU 5 - Pesquisar Aluno](#cdu-5---pesquisar-aluno)
+- [CDU 5 -  Visualizar lista dos próximos atendimentos e eventos](#cdu-5---visualizar-lista-dos-próximos-atendimentos-e-eventos)
 - [CDU 6 - Gerenciar Calendário](#cdu-6---gerenciar-calendario)
 - [CDU 7 - Registrar Atendimento](#cdu-7---registrar-atendimento)
 - [CDU 8 - Visualizar Atendimento](#cdu-8---visualizar-atendimento)
@@ -27,8 +27,7 @@
 	- Matrícula;
 	- Turma;
 	- Data de nascimento;
-3.	Sistema irá guardar os dados;
-4.  Usuário poderá atualizar o sistema. 
+3.	Sistema irá guardar os dados.
 
 ## CDU 2 - Autenticar
 
@@ -38,7 +37,7 @@
 
 **Fluxo Principal:**
 
-1. Usuário informa login e senha;
+1. Usuário informa matrícula e senha;
 2. Sistema averigua e mostra a tela de acordo com o usuário;
 
 ## CDU 3 - Cadastrar Usuário
@@ -59,33 +58,29 @@
 	- Data de Nascimento;
 	- Categoria - se atua no SESOP ou na direção.
 
-3. Sistema irá cadastrar o usuário e atualizar o sistema.
+3. Sistema irá cadastrar o usuário e atualizar o banco de dados.
 
 ## CDU 4 - Visualizar Calendário
 
 **Autores:** SESOP e Direção.
 
-**Pré-Condições:** 
+**Pré-Condições:** Usuário deve estar autenticado.
 
 **Fluxo Principal:**
 
-1. Usuário acessa o calendário.
+1. Usuário acessa o calendário e visualiza as datas do mês.
 
-## CDU 5 - Pesquisar Aluno
+## CDU 5 - Visualizar lista dos próximos atendimentos e eventos.
 
-**Atores:** SESOP e Direção.
+**Autores:** SESOP.
 
-**Pré-condições:** Uma pequena busca por um aluno específico ou com especificações de filtros. 
+**Pré-Condições:** Usuário deve estar autenticado.
 
-**Fluxo Principal:** 
- 
- 1.	Duas formas de visualização onde uma foca no perfil/foto do aluno pra facilitar e a outra em lista evidenciando os nomes e informações;
- 2.	Filtros especializados em ambas as telas para facilitar a procura de informações mais específicas.
+**Fluxo Principal:**
 
-Uma tela de início irá aparecer a qual deverá ser informada a matrícula e senha do usuário, depois iram aparecer um menu de opções para a visualização do aluno como: exibir por foto de perfil, nome, matrícula ou gravidade. 
-Caso seja selecionado gravidade será aberto um submenu para escolher entre: quantidade(s) do(s) apoio(s), as faltas e atrasos.
-Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se encaixam na pesquisa até o usuário achar o aluno que procura.
-*Isto será válido para a direção e o SESOP, mas a única diferença é que o SESOP poderá adicionar, modificar ou excluir os dados da ficha dos alunos*
+1. Usuário acessa a listagem e ver os próximos atendimentos realizados pelo SESOP e eventos que irá acontecer na escola.
+2. Separados em dia, mês ou semana.
+
 
 ## CDU 6 - Gerenciar Calendário
 
@@ -96,10 +91,7 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 **Fluxo Principal:** 
 
 1. Usuário acessa o calendário;
-2. Usuário poderá gerenciar o calendário, inserindo a hora e o dia do atendimento;
-3. Sistema verifica se já possui algum evento no horário e dia determinados;
-4. Usuário atualizará o sistema.
-
+2. Usuário poderá gerenciar o calendário, inserindo a hora e o dia do atendimento ou do evento.
 ## CDU 7 - Registrar Atendimento
 
 **Ator:** SESOP. 
@@ -109,16 +101,16 @@ Logo, após ser selecionado as opções irá aparecer a ficha dos alunos que se 
 **Fluxo Principal:**
 
 1.  Usuário acessará a tela de cadastramento de atendimento.
-2.  Usuário irá informar o que aconteceu durante a reunião com o aluno.
-3.	Sistema irá atualizar o sistema.
+2.  Usuário irá informar uma breve descrição sobre o assunto que será tratado na reunião com o aluno.
+3.  Sistema irá atualizar o banco de dados, calendário e a listagem.
 
 ## CDU 8 - Visualizar Atendimento
 
 **Atores:** SESOP e Direção. 
 
-**Pré-condições:** 
+**Pré-condições:** Usuário deve estar autenticado.
 
 **Fluxo Principal:** 
 
 1. Usuário irá acessar a tela de atendimento.
-2. Sistema irá ordenar os próximos atendimentos e mostra-los. 
+2. O usúario irá acessar o calendário e visualizar os próximos atendimentos.
