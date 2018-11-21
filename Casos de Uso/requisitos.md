@@ -5,7 +5,7 @@
 
 # Sumário
 
-- [RF 01](#rf-1)
+- [RF 01](#rf-01)
 - [RF 02 - Autenticar](#cdu-2---autenticar)
 - [CDU 3 - Cadastrar Usuário](#cdu-3---cadastrar-usuario)
 - [CDU 4 - Visualizar Calendário](#cdu-4---visualizar-calendario)
